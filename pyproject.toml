@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnwatch"
+version = "0.1.0"
+description = "Self-selected A-share announcement watchboard: incremental fetch, rule-based tagging, local daily report."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "yuluo554" }]
+keywords = ["a-share", "announcements", "watchlist", "local-first", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+pdf = ["PyMuPDF>=1.23,<1.25"]
+
+[project.scripts]
+cnwatch = "cnwatch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yuluo554/cnwatch"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cnwatch = ["resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

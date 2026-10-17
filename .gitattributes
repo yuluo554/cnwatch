@@ -1,0 +1,10 @@
+# Normalize source line endings.
+* text=auto eol=lf
+
+# Frozen snapshots and any binary evidence must keep their exact bytes:
+# a normalizing checkout would break the recorded sha256.
+data/snapshots/** -text
+*.pdf binary
+*.PDF binary
+*.db binary
+*.sqlite binary

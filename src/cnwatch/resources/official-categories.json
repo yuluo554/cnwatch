@@ -1,0 +1,33 @@
+{
+  "source": "https://static.cninfo.com.cn/new/js/app/disclosure/notice/new-notice.js",
+  "captured_on": "2026-10-17",
+  "status": "verified",
+  "categories": [
+    {"id": "category_ndbg_szsh", "name": "年报"},
+    {"id": "category_bndbg_szsh", "name": "半年报"},
+    {"id": "category_yjdbg_szsh", "name": "一季报"},
+    {"id": "category_sjdbg_szsh", "name": "三季报"},
+    {"id": "category_yjygjxz_szsh", "name": "业绩预告"},
+    {"id": "category_qyfpxzcs_szsh", "name": "权益分派"},
+    {"id": "category_dshgg_szsh", "name": "董事会"},
+    {"id": "category_jshgg_szsh", "name": "监事会"},
+    {"id": "category_gddh_szsh", "name": "股东会"},
+    {"id": "category_rcjy_szsh", "name": "日常经营"},
+    {"id": "category_gszl_szsh", "name": "公司治理"},
+    {"id": "category_zj_szsh", "name": "中介报告"},
+    {"id": "category_sf_szsh", "name": "首发"},
+    {"id": "category_zf_szsh", "name": "增发"},
+    {"id": "category_gqjl_szsh", "name": "股权激励"},
+    {"id": "category_pg_szsh", "name": "配股"},
+    {"id": "category_jj_szsh", "name": "解禁"},
+    {"id": "category_gszq_szsh", "name": "公司债"},
+    {"id": "category_kzzq_szsh", "name": "可转债"},
+    {"id": "category_qtrz_szsh", "name": "其他融资"},
+    {"id": "category_gqbd_szsh", "name": "股权变动"},
+    {"id": "category_bcgz_szsh", "name": "补充更正"},
+    {"id": "category_cqdq_szsh", "name": "澄清致歉"},
+    {"id": "category_fxts_szsh", "name": "风险提示"},
+    {"id": "category_tbclts_szsh", "name": "特别处理和退市"},
+    {"id": "category_tszlq_szsh", "name": "退市整理期"}
+  ]
+}
