@@ -38,7 +38,7 @@ jobs:
           version_code=$?
           cnwatch --home ./ci-runtime selftest
           selftest_code=$?
-          cnwatch --home ./ci-runtime classify
+          cnwatch --home ./ci-runtime report
           not_ready_code=$?
           set -e
           test "$version_code" = "0"
@@ -57,6 +57,19 @@ jobs:
           cat replay.out
           grep -q "baseline established" replay.out
           grep -q "result: complete" replay.out
+
+      - name: Classify smoke (offline, frozen rule package)
+        shell: bash
+        run: |
+          set -e
+          cnwatch --home ./ci-runtime classify > classify.out
+          cat classify.out
+          grep -q "rules_version=v1" classify.out
+          grep -q "database: announcements 13, classifications 13" classify.out
+          # Second run must be a no-op: nothing pending, exit 0.
+          cnwatch --home ./ci-runtime classify > classify2.out
+          cat classify2.out
+          grep -q "pending 0" classify2.out
 
       - name: Module-entry smoke
         shell: bash

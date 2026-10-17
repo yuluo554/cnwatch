@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Optional, Sequence
 
 from . import __version__, db
-from .clock import Clock, SystemClock, resolve_clock
+from .clock import Clock, ClockError, SystemClock, parse_date, resolve_clock
 from .datadir import resolve_data_dir, stock_master_path
 from .encoding import ensure_utf8_stdio
 from .errors import UsageError
@@ -32,7 +32,6 @@ from .selftest import format_report, run_selftest
 
 # command -> (milestone, one-line reason)
 STAGE_NOT_READY = {
-    "classify": ("M3", "类别规则引擎"),
     "report": ("M4", "本地日报"),
     "archive": ("M5", "按需归档"),
     "notify": ("M5", "提醒渠道"),
@@ -85,9 +84,20 @@ def build_parser() -> argparse.ArgumentParser:
     _add_fetch_parser(subparsers)
 
     classify_parser = subparsers.add_parser(
-        "classify", help="tag stored announcements with the rule package (M3)"
+        "classify",
+        help="tag stored announcements with the frozen rule package (M3)",
+        description="Label stored announcements as {category, tags, risk}. Reads "
+        "the title only; announcementType never takes part in the decision.",
     )
-    classify_parser.add_argument("--since", metavar="YYYY-MM-DD", default=None)
+    classify_parser.add_argument(
+        "--since", metavar="YYYY-MM-DD", default=None, help="only announcements on or after this date"
+    )
+    classify_parser.add_argument(
+        "--resources",
+        metavar="PATH",
+        default=None,
+        help="override the bundled resources directory (used by tests)",
+    )
 
     report_parser = subparsers.add_parser(
         "report", help="generate the Markdown and single-file HTML daily report (M4)"
@@ -423,6 +433,66 @@ def cmd_fetch(paths: Paths, args: argparse.Namespace) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# classify
+# --------------------------------------------------------------------------- #
+
+
+def cmd_classify(paths: Paths, args: argparse.Namespace) -> int:
+    from .classify import ClassifyRepository, classify_pending, load_rule_package
+
+    # The package is validated before the database is opened: a broken package
+    # must exit 2 without creating or touching a runtime directory.
+    package = load_rule_package(args.resources)
+
+    since = args.since
+    if since is not None:
+        try:
+            parse_date(since)
+        except ClockError as exc:
+            raise UsageError(str(exc))
+
+    paths.ensure_runtime_dirs()
+    connection = db.initialize(paths.db_path)
+    try:
+        clock: Clock = resolve_clock(None, getattr(args, "clock", None))
+        summary = classify_pending(
+            ClassifyRepository(connection), package, clock, since=since
+        )
+        print(summary.render())
+        _write_classify_log(paths, summary, summary.classified_at)
+        return EXIT_OK
+    finally:
+        connection.close()
+
+
+def _write_classify_log(paths: Paths, summary, at: str) -> None:
+    """Per-row diagnostics (``also_matched``, dropped titles) go to out/logs.
+
+    The console summary stays short; this file is where a reviewer checks why a
+    specific announcement was labelled the way it was.
+
+    The log appends rather than overwrites: a no-op run right after a real one
+    would otherwise erase the diagnostics that explained the labels. Each run
+    writes one header line plus its own rows, so the file is a readable history
+    of which run produced which labels.
+    """
+
+    log_path = paths.logs_dir / ("classify-%s.log" % summary.rules_version)
+    lines = summary.log_lines()
+    header = "# %s  rules_version=%s  pending=%d  rows with diagnostics=%d\n" % (
+        at,
+        summary.rules_version,
+        summary.pending,
+        len(lines),
+    )
+    body = header + "".join(line + "\n" for line in lines)
+    # ``Path.write_text(newline=...)`` needs 3.10; open explicitly so 3.8 gets
+    # the same LF bytes as 3.12.
+    with open(str(log_path), "a", encoding="utf-8", newline="\n") as handle:
+        handle.write(body)
+
+
+# --------------------------------------------------------------------------- #
 
 COMMANDS = ("selftest", "watchlist", "fetch", "classify", "report", "archive", "notify", "run")
 
@@ -448,6 +518,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return cmd_watchlist(paths, args)
         if command == "fetch":
             return cmd_fetch(paths, args)
+        if command == "classify":
+            return cmd_classify(paths, args)
     except UsageError as exc:
         print("cnwatch: %s" % exc, file=sys.stderr)
         return EXIT_USAGE

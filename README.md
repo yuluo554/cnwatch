@@ -146,6 +146,38 @@ wheel. A source checkout or editable install finds it automatically; any other
 install needs `--data-dir <checkout>/data` or `CNWATCH_DATA`, and says so instead
 of guessing.
 
+### Classify
+
+```bash
+# label everything stored that has no label, or an older rule version
+cnwatch classify
+
+# only announcements on or after a date (older rows keep their labels)
+cnwatch classify --since 2026-10-16
+```
+
+Each row becomes `{category, tags[], risk_level}` from the frozen rule package in
+`src/cnwatch/resources/rules/rules-v1.json`, and the package version is written
+into `classifications.rules_version` — a package upgrade relabels the stored rows
+on the next run without any manual reset.
+
+The decision uses the **title only**. The official 26 categories are tried in
+`priority` order (ties broken by id) and the first hit wins; the four keyword
+patches (诉讼·仲裁 / 减持 / 回购 / 质押) are scanned independently and every hit
+lands in `tags`, in that fixed order. Risk is `high > mid > low` over the winning
+category and the tags. A row that matches nothing is still stored, as
+`unclassified`, with an explicit risk level — skipping it would make the report's
+"未分类" count permanently zero.
+
+`announcementType` is not an input: the numeric codes have no verified mapping to
+the 26 categories, and a static AST check fails the build if the field appears in
+the classify package at all. Categories that matched but lost are written to
+`out/logs/classify-<version>.log`, not to the database and not to the report.
+
+A missing, unreadable or incomplete rule package (not 26 categories, not the four
+patches in order) exits `2` **before the database is opened**, so a broken package
+cannot leave a half-labelled table behind.
+
 ## Data source and measured limits
 
 Data source: 巨潮资讯网 (CNINFO) public query endpoints. All measurements below

@@ -71,15 +71,16 @@ def test_stage_not_ready_registry_covers_planned_commands():
         action for action in parser._actions if action.dest == "command"
     ][0]
     registered = set(subparsers.choices)
-    implemented = {"selftest", "watchlist", "fetch"}
+    implemented = {"selftest", "watchlist", "fetch", "classify"}
     assert registered == implemented | set(STAGE_NOT_READY)
 
 
 def test_stage_not_ready_shrinks_as_milestones_land():
-    """M2 landed: watchlist and fetch must no longer be stage-gated."""
+    """M2 and M3 landed: those commands must no longer be stage-gated."""
 
     assert "watchlist" not in STAGE_NOT_READY
     assert "fetch" not in STAGE_NOT_READY
+    assert "classify" not in STAGE_NOT_READY
 
 
 def test_selftest_on_clean_home_passes(tmp_path, capsys):
