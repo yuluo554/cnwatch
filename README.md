@@ -1,5 +1,7 @@
 # cnwatch
 
+[![ci](https://github.com/yuluo554/cnwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/yuluo554/cnwatch/actions/workflows/ci.yml)
+
 **A-share announcement watchboard for a self-selected list — local, deterministic, no LLM.**
 
 Maintain 20–100 self-selected stocks, pull their announcements incrementally from
@@ -34,7 +36,13 @@ server, no Redis/Kafka, no model calls.
 | M3 | Rule engine | ✅ 26 categories + 4 patches + risk grading |
 | M4 | Daily report | ✅ dual view + baseline comparison |
 | M5 | Archive and notify | ✅ on-demand PDF + optional text + alerts off by default |
-| M6 | Release | ⬜ tag + GitHub Release + release ledger |
+| M6 | Release | ✅ `v0.1.0` — tag, GitHub Release, downloadable archive + checksum, CI on four platforms |
+
+`v0.1.0` is the first release, published from a commit whose CI run is green on
+all four legs (ubuntu/windows × Python 3.8/3.12). The release ships
+`cnwatch-0.1.0.zip` — a `git archive` of the tag — next to a sibling
+`cnwatch-0.1.0.zip.sha256`. What was verified for this release, and what is
+explicitly **not** done yet, is recorded in `plan/RELEASE-M6.md`.
 
 One command is still a placeholder: `run` (end-to-end orchestration) exits with
 code `3` and writes nothing. That is temporary and intentional — it chains
@@ -52,6 +60,22 @@ cnwatch selftest
 ```
 
 A healthy run prints one line per check and ends with `result: pass`.
+
+To start from the released archive instead of a checkout:
+
+```bash
+gh release download v0.1.0 --repo yuluo554/cnwatch --pattern 'cnwatch-0.1.0.zip*'
+sha256sum -c cnwatch-0.1.0.zip.sha256
+unzip cnwatch-0.1.0.zip
+cd cnwatch-0.1.0
+pip install -e .
+cnwatch selftest
+```
+
+`cnwatch-0.1.0.zip` is `git archive` of the `v0.1.0` tag, so it contains
+exactly the tracked tree — `src/`, `tests/`, `tools/`, `plan/` and `data/` —
+and the sibling `cnwatch-0.1.0.zip.sha256` holds the SHA-256 that the release
+notes also state.
 
 Without installing, run it from the repository root with the source tree on the
 path:
