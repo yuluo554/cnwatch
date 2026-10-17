@@ -1,9 +1,11 @@
 # RELEASE-M6：`v0.1.0` 发布留档
 
+> 本工具仅聚合公开信息，不构成投资建议。
+
 - 里程碑：M6（发布），DoD 见 `plan/06-里程碑.md` M6 与 `plan/07-交付对标.md` §五
 - 口径：本文件只写**已经发生**的事实；每一步都给出可复跑的命令或可点开的 run 链接。
-  仅能存在于 tag / 附件生成之后的事实（提交 sha、附件 sha256、附件真下载核对）
-  集中放在 §四，由发布后的一次补齐提交登记。
+- 版本说明：`cnwatch-0.1.0.zip` 内是本文件在 tag 时刻的修订（§四 尚未登记）；
+  tag 之后 tag push 与附件核对才成为事实，因此补齐提交发生在 tag 之后，仓库 HEAD 上的本文件是完整版。
 
 ---
 
@@ -12,12 +14,16 @@
 | 项 | 值 |
 |---|---|
 | 版本 | `0.1.0`（`pyproject.toml`） |
-| tag | `v0.1.0`（annotated），指向 CI 四矩阵全绿的那个提交 |
-| 附件 | `cnwatch-0.1.0.zip`、`cnwatch-0.1.0.zip.sha256` |
-| 附件内容 | `git archive` 的 tag 快照，前缀 `cnwatch-0.1.0/`；含 `src/ tests/ tools/ plan/ data/`、`README.md`、`LICENSE`、`pyproject.toml`、`.github/`、`.gitattributes`、`.gitignore`。不含 `.git/`、不含运行期产物（`out/`、`data/pdf/`、`*.db`） |
+| tag | `v0.1.0`（annotated；tag 对象 `8437ac559b2586cc234aa2486e5ca5049707481e`） |
+| tag 指向的提交 | `70e96f69b9bfc157a919a353ec6c2b055ec0bc69`（`M6: release v0.1.0 …`，CI 四矩阵全绿） |
+| Release | <https://github.com/yuluo554/cnwatch/releases/tag/v0.1.0>，2026-10-17T11:20:12Z 发布，非草稿、非预发布、标记 Latest |
+| 附件 | `cnwatch-0.1.0.zip`（793,117 B）、`cnwatch-0.1.0.zip.sha256`（84 B） |
+| `cnwatch-0.1.0.zip` sha256 | `562b70e831a79f50b968e136d996c16ee5828d23b9a188930a69e836b2e543f1` |
+| 附件内容 | `git archive` 的 tag 快照，前缀 `cnwatch-0.1.0/`：114 个文件 = tag 的 114 个 blob，逐 blob sha1 相等；含 `src/ tests/ tools/ plan/ data/`、`README.md`、`LICENSE`、`pyproject.toml`、`.github/`、`.gitattributes`、`.gitignore`。不含 `.git/`、不含运行期产物（`out/`、`data/pdf/`、`*.db`） |
 | 许可 | MIT（`LICENSE`，与 README「License」节一致） |
 
 附件名三处一致：README「Quick start」的下载命令、本文件、Release 资产列表。
+发布产物不入库（仓库只留 tag 与留档）：本地副本与 §四 的下载核对目录都在仓库之外。
 
 ## 二、发布前本地实测
 
@@ -52,39 +58,54 @@
 
 | # | 事件 | 对象 | run id | 结果 |
 |---|---|---|---|---|
-| 1 | push | `main` (`347d2fa`) | [39027648189](https://github.com/yuluo554/cnwatch/actions/runs/39027648189) | ✅ 四腿全绿 |
+| 1 | push | `main` `347d2fa`（CI 接线修复） | [39027648189](https://github.com/yuluo554/cnwatch/actions/runs/39027648189) | ✅ 四腿全绿 |
+| 2 | push | `main` `70e96f6`（README + 本文件） | [39027987628](https://github.com/yuluo554/cnwatch/actions/runs/39027987628) | ✅ 四腿全绿 |
+| 3 | push | tag `v0.1.0`（独立计一条） | [39028170301](https://github.com/yuluo554/cnwatch/actions/runs/39028170301) | ✅ 四腿全绿 |
 
-同一 run 内的四条腿（run 39027648189）：
+- 三条 push → 三条 run，每条 run 都是同一个四腿矩阵，无并发取消、无重跑。
+- tag push 由 GitHub 作为独立 run 触发（该 run 的 `headBranch` 是 `v0.1.0`，不是 `main`），
+  所以"push 数 = run 数"按事件计成立，没有把 tag 与分支挤进同一条 run。
+- 发布后的文档提交（含本条补齐）同样一条 push 对应一条 run，可用 `gh run list --limit 10`
+  逐条核对；不变量是"每条 push 恰好一条 run"。
 
-| 腿 | 结果 | 耗时 |
+同一两条分支推送的耗时（run 内四腿）：
+
+| 腿 | run 2 | run 3 |
 |---|---|---|
-| ubuntu-latest / py3.12 | ✅ | 21s |
-| ubuntu-latest / py3.8 | ✅ | 29s |
-| windows-latest / py3.12 | ✅ | 63s |
-| windows-latest / py3.8 | ✅ | 136s |
+| ubuntu-latest / py3.12 | ✅ 18s | ✅ 20s |
+| ubuntu-latest / py3.8 | ✅ 34s | ✅ 33s |
+| windows-latest / py3.12 | ✅ 136s | ✅ 67s |
+| windows-latest / py3.8 | ✅ 110s | ✅ 98s |
 
-每条 push 只产生一条 run；tag push 独立计一条。§四 登记 tag push 与补齐提交的 run。
+## 四、附件真下载核对
 
-## 四、tag 与附件（生成后登记）
+全部在仓库外的中立目录（`_m6scratch/recheck/`）完成，命令按顺序如下。
 
-| 项 | 值 |
-|---|---|
-| tag 指向的提交 | 待登记 |
-| `cnwatch-0.1.0.zip` sha256 | 待登记 |
-| tag push 的 run | 待登记 |
-| 附件真下载核对 | 待登记 |
+| 步骤 | 命令 | 结果 |
+|---|---|---|
+| 真下载 | `gh release download v0.1.0 --repo yuluo554/cnwatch --dir .` | 取回两个附件（793,117 B / 84 B） |
+| sha256 对账 | `sha256sum cnwatch-0.1.0.zip` 与 §一 记录值比较 | `562b70e8…43f1`，**MATCH** |
+| 校验文件自校验 | `sha256sum -c cnwatch-0.1.0.zip.sha256` | `cnwatch-0.1.0.zip: OK` |
+| 逐 blob 完整性 | `git ls-tree -r -z v0.1.0` 的 114 个 blob 与 zip 内解压内容比 `blob sha1` | 114 个文件、**extra 0 / missing 0 / 内容不一致 0** |
+| README 流程冒烟 | 解压 → `py -3.12 -m venv .venv` → `pip install -e .` → `cnwatch selftest` | `result: pass`，退出 0 |
+| 中立目标安装 | `py -3.12 -m pip install --no-deps --no-build-isolation --target <仓库外目录> .` | `cnwatch/` 下 53 个 `.py`；`resources/` 两个 json 均在（含 `rules/rules-v1.json`） |
+| 中立安装冒烟 | `PYTHONPATH=<target> py -3.12 -m cnwatch --home <仓库外 home> …` 逐条运行 | `selftest` → `result: pass`；`watchlist import` → `added 20`；`fetch --snapshots-dir … --today 2026-10-16` → `baseline established` / `result: complete`；`classify` → `announcements 13, classifications 13`；`report --date 2026-10-16` → 两个文件落盘；`notify` → `channel=none` + `no external call was made`；`archive --show-config` → `suffix: .PDF` / `default_extract: off` |
+
+注意：上表的"逐 blob 完整性"只比 zip 与 tag；解压目录里若出现 `build/`、`src/cnwatch.egg-info/`、
+`cnwatch.db`，那是本次 `pip install -e .` 与 `selftest` 的产物，不在 zip 内（zip 只有 114 个文件）。
 
 ## 五、未做项（不得写成已完成）
 
 - **`run`（端到端编排）未实现**，仍返回退出码 `3`，产出一律为空。已交付的六条命令
   （`watchlist`/`fetch`/`classify`/`report`/`archive`/`notify`）可各自独立运行；
-  `plan/06` M5 偏差与 `plan/07` §六第 5 条同一登记。
+  stage gate 的文案不再指向已完成的里程碑；`plan/06` M5 偏差与 `plan/07` §六第 5 条同一登记。
 - **真实桌面通知 / 真实邮件 / 真实 webhook 投递次数为 0**：没有可用接收端，
   默认渠道 `none` 也不投递。已有的是离线断言（注入失败、注入成功、零外部调用两种对照）。
 - **`archive --all-high` 未在真实全库上批跑**：离线测试覆盖了筛选与批量计数，
   真实数据上只跑过 `--code` 与 `--announcement-id`。
 - **无 PyPI 发布**：`v0.1.0` 只以源码附件 + tag 形式发布，`pip install cnwatch` 不可用。
 - **`announcementType` 数值码映射仍未核对**，因此不进判定路径（README「Known limitations」同一条）。
+- **未做真实整轮 50 只抓取**：NFR-04 的 50 只 ≈55s 是由 20 只实测值线性外推，不是 50 只实测。
 
 ## 六、真实基准（发布说明引用同一数值）
 

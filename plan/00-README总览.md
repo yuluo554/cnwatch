@@ -21,16 +21,28 @@
 | 06 里程碑 | `plan/06-里程碑.md` | M0–M6 逐棒 DoD 与依赖关系 | ✅ M0 定稿 |
 | 07 交付对标 | `plan/07-交付对标.md` | 评分四维 + 提交五条 + 锚点 + 需求追踪矩阵 | ✅ M0 定稿 |
 | 数据依据 | `data/README.md` | 数据源三态、六条硬约束、合成数据纪律、数值口径单一定义 | ✅ 本次定稿 |
-| 发布留档 | `plan/RELEASE-M6.md` | tag 时点事实 / tag 后追加事实分栏 | ⬜ M6 |
+| 发布留档 | `plan/RELEASE-M6.md` | tag 时点事实 / tag 后追加事实分栏 | ✅ M6 收尾 |
 | 交接 | `plan/HANDOFF-M1.md` | M0 → M1 的进度、待办、K 口径、环境坑、命令速查 | ✅ M0 收尾 |
 | 交接 | `plan/HANDOFF-M2.md` | M1 → M2 的启动包 | ✅ M1 收尾 |
 | 交接 | `plan/HANDOFF-M3.md` | M2 → M3 的启动包（含 M2 实测证据与新增 K13–K15） | ✅ M2 收尾 |
+| 交接 | `plan/HANDOFF-M4.md` | M3 → M4 的启动包（含 K16–K19） | ✅ M3 收尾 |
+| 交接 | `plan/HANDOFF-M5.md` | M4 → M5 的启动包（含 K20–K22） | ✅ M4 收尾 |
+| 交接 | `plan/HANDOFF-M6.md` | M5 → M6 的启动包（含 K23–K30） | ✅ M5 收尾 |
+
+> 交接链到 M6 为止：M6 是最后一棒（发布），没有 `plan/HANDOFF-M7.md`；
+> 发布的事实留档由 `plan/RELEASE-M6.md` 承担。
 
 **M0 状态（2026-10-17）**：`plan/02`–`07` 已定稿；可安装 CLI 骨架已落地（`src/cnwatch/`：CLI 契约、退出码、SQLite schema、路径解析、编码守卫、可证伪自检、随包 26 类枚举表）。
 
-**M2 状态（2026-10-17）**：`watchlist` + `fetch` 全链路可跑；离线回放（冻结快照、零网络）
+**M2 收尾时（2026-10-17）**：`watchlist` + `fetch` 全链路可跑；离线回放（冻结快照、零网络）
 完成 20 只 / 20 请求 / 13 条基线，二次运行 new=0；schema 升 v2 并支持 v1 就地升级；
-双解释器各 194 项测试通过（本地等价校验，未接远端，CI 待首推验证）。真实联网抓取尚未进行。
+双解释器各 **194** 项测试通过（M2 时点数字；本地等价校验，未接远端）。该棒**真实联网抓取尚未进行**，
+随后由 M5 补齐（20 只真实抓取 22.07s，见 `data/README.md`）。
+
+**M6 收尾（2026-10-17）**：六条命令（`watchlist`/`fetch`/`classify`/`report`/`archive`/`notify`）全部可用，
+`run` 仍留退出码 3；双解释器各 **376** 项测试通过；三道数据门禁全绿；
+GitHub 公开仓库 <https://github.com/yuluo554/cnwatch> 已建立，tag `v0.1.0` 打在 CI 四腿全绿的提交上，
+Release 附 `cnwatch-0.1.0.zip` + `.sha256`（已真下载对账）；事实留档见 `plan/RELEASE-M6.md`。
 
 ## 决策记录（含弃选项）
 
