@@ -59,10 +59,13 @@
 | # | 事件 | 对象 | run id | 结果 |
 |---|---|---|---|---|
 | 1 | push | `main` `347d2fa`（CI 接线修复） | [39027648189](https://github.com/yuluo554/cnwatch/actions/runs/39027648189) | ✅ 四腿全绿 |
-| 2 | push | `main` `70e96f6`（README + 本文件） | [39027987628](https://github.com/yuluo554/cnwatch/actions/runs/39027987628) | ✅ 四腿全绿 |
+| 2 | push | `main` `70e96f6`（README + 本文件，= tag 提交） | [39027987628](https://github.com/yuluo554/cnwatch/actions/runs/39027987628) | ✅ 四腿全绿 |
 | 3 | push | tag `v0.1.0`（独立计一条） | [39028170301](https://github.com/yuluo554/cnwatch/actions/runs/39028170301) | ✅ 四腿全绿 |
+| 4 | push | `main` `bf665c1`（发布后留档补齐） | [39028669714](https://github.com/yuluo554/cnwatch/actions/runs/39028669714) | ✅ 四腿全绿 |
 
-- 三条 push → 三条 run，每条 run 都是同一个四腿矩阵，无并发取消、无重跑。
+- 上表截至 `main` = `bf665c1`：**4 条 push → 4 条 run**。`70e96f6` 与 `bf665c1` 的差异只在 `plan/` 文档，
+  `v0.1.0` 指向的始终是 `70e96f6`。
+- 之后每次文档 push 各产生一条 run（不变量：一条 push 恰好一条 run），可用 `gh run list` 逐条核对。
 - tag push 由 GitHub 作为独立 run 触发（该 run 的 `headBranch` 是 `v0.1.0`，不是 `main`），
   所以"push 数 = run 数"按事件计成立，没有把 tag 与分支挤进同一条 run。
 - 发布后的文档提交（含本条补齐）同样一条 push 对应一条 run，可用 `gh run list --limit 10`
