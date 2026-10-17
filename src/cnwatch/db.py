@@ -14,7 +14,7 @@ import sqlite3
 from pathlib import Path
 from typing import Optional
 
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
 
 SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS schema_info (
@@ -81,11 +81,17 @@ CREATE TABLE IF NOT EXISTS fetch_runs (
     finished_at   TEXT,
     window_start  TEXT NOT NULL,
     window_end    TEXT NOT NULL,
+    source_kind   TEXT NOT NULL DEFAULT 'watchlist'
+                  CHECK (source_kind IN ('watchlist', 'market')),
     stocks_total  INTEGER NOT NULL DEFAULT 0,
     stocks_ok     INTEGER NOT NULL DEFAULT 0,
     stocks_failed INTEGER NOT NULL DEFAULT 0,
     requests      INTEGER NOT NULL DEFAULT 0,
+    pages         INTEGER NOT NULL DEFAULT 0,
     inserted      INTEGER NOT NULL DEFAULT 0,
+    dropped       INTEGER NOT NULL DEFAULT 0,
+    baseline_created INTEGER NOT NULL DEFAULT 0
+                     CHECK (baseline_created IN (0, 1)),
     status        TEXT NOT NULL CHECK (status IN ('running', 'complete', 'degraded', 'failed'))
 );
 
@@ -149,11 +155,63 @@ def connect(db_path: Path) -> sqlite3.Connection:
     return connection
 
 
+# Columns added after schema v1. ``initialize`` adds them to a v1 database so a
+# user who ran an M0/M1 checkout keeps their data instead of being told to start
+# over; a fresh database gets them from ``SCHEMA_SQL`` directly.
+_MIGRATIONS = {
+    "1": (
+        (
+            "fetch_runs",
+            "source_kind",
+            "TEXT NOT NULL DEFAULT 'watchlist' "
+            "CHECK (source_kind IN ('watchlist', 'market'))",
+        ),
+        ("fetch_runs", "pages", "INTEGER NOT NULL DEFAULT 0"),
+        ("fetch_runs", "dropped", "INTEGER NOT NULL DEFAULT 0"),
+        (
+            "fetch_runs",
+            "baseline_created",
+            "INTEGER NOT NULL DEFAULT 0 CHECK (baseline_created IN (0, 1))",
+        ),
+    ),
+}
+
+
+def _columns(connection: sqlite3.Connection, table: str) -> set:
+    rows = connection.execute("PRAGMA table_info(%s)" % table).fetchall()
+    return {str(row["name"]) for row in rows}
+
+
+def migrate(connection: sqlite3.Connection) -> Optional[str]:
+    """Bring an older database up to ``SCHEMA_VERSION``. Returns the from-version."""
+
+    found = schema_version(connection)
+    if found is None or found == SCHEMA_VERSION:
+        return found
+
+    steps = _MIGRATIONS.get(found)
+    if steps is None:
+        raise RuntimeError(
+            "database schema version %r cannot be upgraded to %r; "
+            "start from a new --home directory" % (found, SCHEMA_VERSION)
+        )
+    for table, column, ddl in steps:
+        if column not in _columns(connection, table):
+            connection.execute("ALTER TABLE %s ADD COLUMN %s %s" % (table, column, ddl))
+    connection.execute(
+        "INSERT OR REPLACE INTO schema_info(key, value) VALUES('schema_version', ?)",
+        (SCHEMA_VERSION,),
+    )
+    connection.commit()
+    return found
+
+
 def initialize(db_path: Path) -> sqlite3.Connection:
-    """Create the schema and stamp the version. Idempotent."""
+    """Create the schema, upgrade an older one, and stamp the version. Idempotent."""
 
     connection = connect(db_path)
     connection.executescript(SCHEMA_SQL)
+    migrate(connection)
     connection.execute(
         "INSERT OR REPLACE INTO schema_info(key, value) VALUES('schema_version', ?)",
         (SCHEMA_VERSION,),

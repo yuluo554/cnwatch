@@ -29,8 +29,8 @@ server, no Redis/Kafka, no model calls.
 | Milestone | Theme | State |
 |---|---|---|
 | M0 | Plan and skeleton | ✅ CLI contract, SQLite schema, encoding guard, falsifiable self-test, tests, CI |
-| M1 | Data first | ⬜ frozen snapshots, stock master, rule package v1, truth ledger |
-| M2 | Fetch and dedupe | ⬜ watchlist + incremental fetch |
+| M1 | Data first | ✅ frozen snapshots, stock master, rule package v1, truth ledger |
+| M2 | Fetch and dedupe | ✅ watchlist + incremental fetch, offline replay |
 | M3 | Rule engine | ⬜ 26 categories + 4 patches + risk grading |
 | M4 | Daily report | ⬜ dual view + baseline comparison |
 | M5 | Archive and notify | ⬜ on-demand PDF + alerts |
@@ -92,6 +92,59 @@ Exit codes are part of the contract:
 | 1 | completed with a reported degradation (partial results, e.g. some stocks failed) |
 | 2 | bad usage or unusable input; nothing was produced |
 | 3 | the command belongs to a milestone that is not implemented yet |
+
+### Watchlist
+
+```bash
+# import a CSV (required columns: code, group; optional: name, note, org_id)
+cnwatch watchlist import --file data/fixtures/watchlist-sample.csv
+
+cnwatch watchlist add    --code 300750 --group 观察 --note "关注中"
+cnwatch watchlist edit   --code 300750 --group 风险
+cnwatch watchlist remove --code 300750
+cnwatch watchlist list               # also: --group 持仓
+cnwatch watchlist search --query gzmt # code prefix > name contains > pinyin prefix
+cnwatch watchlist list --audit        # append-only change trail
+cnwatch watchlist sync-master         # refresh names/orgIds, keep your groups and notes
+```
+
+Groups are restricted to `持仓 / 观察 / 风险`; any other value exits `2`. The
+`orgId` always comes from the frozen stock master — `300750` is `GD165627`, not
+a guessable prefix — and a code that is not in the master is refused rather than
+stored with a derived identifier. A CSV row that is rejected does not block the
+other rows (exit `1`, with the rejected lines named); a file-level problem
+(missing column, non-UTF-8, empty) imports nothing (exit `2`).
+
+### Fetch
+
+```bash
+# real fetch: one request per stock, paged, throttled, retried
+cnwatch fetch
+
+# replay the frozen snapshots offline (no network) — this is what the tests run
+cnwatch fetch --snapshots-dir data/snapshots --today 2026-10-16
+
+# print the policy parsed from data/README.md section 4
+cnwatch fetch --show-config
+
+# explicit market-wide sweep for one day (never becomes the watchlist cursor)
+cnwatch fetch --all --date 2026-10-16
+```
+
+The window starts one day before the last successful run (`window_end`) and ends
+"today"; `--today` pins that date so a run is reproducible. The first run has no
+cursor: it looks back a documented number of days and is reported as a **baseline**
+(stored rows, but `new 0`), so the first report never looks like a wall of news.
+
+The summary always states requests, pages, new/already-known/dropped counts, and
+names every failed stock with its reason and attempt count. A stock whose declared
+`totalAnnouncement` disagrees with what was actually collected is a failure of that
+stock — half a stock is never stored as if it were complete.
+
+`data/` (the frozen stock master, snapshots and truth ledgers) is not part of the
+wheel. A source checkout or editable install finds it automatically; any other
+install needs `--data-dir <checkout>/data` or `CNWATCH_DATA`, and says so instead
+of guessing.
 
 ## Data source and measured limits
 

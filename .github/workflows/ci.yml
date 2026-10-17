@@ -38,12 +38,25 @@ jobs:
           version_code=$?
           cnwatch --home ./ci-runtime selftest
           selftest_code=$?
-          cnwatch --home ./ci-runtime fetch
+          cnwatch --home ./ci-runtime classify
           not_ready_code=$?
           set -e
           test "$version_code" = "0"
           test "$selftest_code" = "0"
           test "$not_ready_code" = "3"
+
+      - name: Offline replay smoke (frozen snapshots, no network)
+        shell: bash
+        run: |
+          set -e
+          cnwatch --home ./ci-runtime watchlist import \
+            --file data/fixtures/watchlist-sample.csv --data-dir data
+          cnwatch --home ./ci-runtime fetch \
+            --data-dir data --snapshots-dir data/snapshots --today 2026-10-16 \
+            > replay.out
+          cat replay.out
+          grep -q "baseline established" replay.out
+          grep -q "result: complete" replay.out
 
       - name: Module-entry smoke
         shell: bash

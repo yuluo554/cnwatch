@@ -1,0 +1,117 @@
+{
+  "format": "cnwatch.negative_announce_cases",
+  "format_version": 1,
+  "note": "Artificial inputs for the reverse-case whitelist in data/README.md section 3. Every case is constructed, never presented as a real announcement. Used by tests/test_fetch.py.",
+  "cases": [
+    {
+      "id": "em_highlight",
+      "what": "searchkey inserts <em> around the matched term",
+      "rows": [
+        {
+          "secCode": "600519",
+          "secName": "贵州茅台",
+          "announcementId": "9000000001",
+          "announcementTitle": "关于<em>减持</em>计划的公告",
+          "announcementTime": 1792153331000,
+          "adjunctUrl": "finalpage/2026-10-16/9000000001.PDF",
+          "adjunctType": "PDF",
+          "announcementType": "01010503"
+        }
+      ],
+      "expect": {
+        "title": "关于减持计划的公告",
+        "stored": 1
+      }
+    },
+    {
+      "id": "em_with_entities",
+      "what": "escaped markup and an HTML entity in the same title",
+      "rows": [
+        {
+          "secCode": "600519",
+          "secName": "贵州茅台",
+          "announcementId": "9000000002",
+          "announcementTitle": "<em>回购</em>&amp;  注销 股份",
+          "announcementTime": 1792153331000,
+          "adjunctUrl": "finalpage/2026-10-16/9000000002.PDF",
+          "adjunctType": "PDF",
+          "announcementType": "01010503"
+        }
+      ],
+      "expect": {
+        "title": "回购& 注销 股份",
+        "stored": 1
+      }
+    },
+    {
+      "id": "missing_announcement_id",
+      "what": "a row without announcementId cannot be keyed and must not be stored",
+      "rows": [
+        {
+          "secCode": "600519",
+          "secName": "贵州茅台",
+          "announcementId": "",
+          "announcementTitle": "没有编号的公告",
+          "announcementTime": 1792153331000,
+          "adjunctUrl": "",
+          "adjunctType": "PDF",
+          "announcementType": ""
+        }
+      ],
+      "expect": {
+        "stored": 0,
+        "dropped_reason": "missing_id"
+      }
+    },
+    {
+      "id": "empty_title",
+      "what": "a title that is markup only cleans to an empty string",
+      "rows": [
+        {
+          "secCode": "600519",
+          "secName": "贵州茅台",
+          "announcementId": "9000000004",
+          "announcementTitle": "<em></em>   ",
+          "announcementTime": 1792153331000,
+          "adjunctUrl": "",
+          "adjunctType": "PDF",
+          "announcementType": ""
+        }
+      ],
+      "expect": {
+        "stored": 0,
+        "dropped_reason": "empty_title"
+      }
+    },
+    {
+      "id": "declared_total_mismatch",
+      "what": "the server declares more rows than it returns",
+      "declared_total": 40,
+      "rows": [
+        {
+          "secCode": "600519",
+          "secName": "贵州茅台",
+          "announcementId": "9000000005",
+          "announcementTitle": "关于股东大会的公告",
+          "announcementTime": 1792153331000,
+          "adjunctUrl": "finalpage/2026-10-16/9000000005.PDF",
+          "adjunctType": "PDF",
+          "announcementType": "01010503"
+        }
+      ],
+      "expect": {
+        "stock_failed": "total_mismatch",
+        "stored": 0
+      }
+    },
+    {
+      "id": "empty_page",
+      "what": "a stock with no filings that day",
+      "rows": [],
+      "expect": {
+        "stored": 0,
+        "stock_ok": true
+      }
+    }
+  ]
+}
