@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Unit test / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local runtime data (never commit user data or downloaded originals)
+# Patterns are anchored to the repo root so frozen fixtures under data/ are
+# never swallowed by a bare "snapshots/" rule.
+/cnwatch.db
+/cnwatch.sqlite
+*.db
+*.sqlite
+*.sqlite3
+
+# Downloaded announcement PDFs (user-triggered, local only)
+/data/pdf/
+
+# Runtime output
+/out/
+/reports/*.html
+/reports/*.md
+!/reports/.gitkeep
+
+# Snapshot cache produced at runtime (frozen samples live in data/snapshots/)
+/snapshots/
+*.snapshot.local.json
+
+# Private / scratch
+/_private/
+*.log
