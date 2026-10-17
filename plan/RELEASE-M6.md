@@ -37,13 +37,17 @@
 | 规则包门禁 | `PYTHONPATH=tools py -3.12 tools/gen_rules.py --check` | `rules OK: 26 categories, 4 patches, byte-identical` |
 | 真值门禁 | `PYTHONPATH=tools py -3.12 tools/gen_truth.py --check` | `truth OK: 2 ledgers byte-identical` |
 | 干净克隆 + 新 venv | `git clone --no-local <repo> clone1` → `py -3.12 -m venv .venv` → `pip install -e ".[dev]"` → `pytest -q` | **376 passed**；安装的是 `cnwatch-0.1.0` |
-| 脱敏扫描（本机路径） | `git grep -nIE '[A-Za-z]:[\\/]\|/Users/[A-Za-z]\|/home/[A-Za-z]'` | 命中全部是 `http://`/`https://` 与 `plan/HANDOFF-M1.md` 的 `D:/...` 写样式示例；**无本机绝对路径** |
-| 脱敏扫描（本机用户名） | `git grep -niE 'ASUS\|C:\\\\Users\|ProgramData\|zcode'` | **0 命中** |
-| 脱敏扫描（邮箱） | `git grep -nIE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+' \| grep -vE 'example\.(invalid\|com)'` | 仅 `actions/checkout@v4`、`actions/setup-python@v5`（Actions 的 `@ref`，非邮箱）；其余为 `*@example.invalid` 等 RFC 2606 保留域名 |
-| 脱敏扫描（Cookie/凭据） | `git grep -nIE 'Cookie\|Set-Cookie\|Bearer \|password='` | 命中全部是「不使用 Cookie」的策略表述与 `password=args.email_password`（SMTP 口令来自命令行参数，非硬编码）；**无凭据** |
-| 入库边界 | `git ls-files \| grep -iE '\.(pdf\|db\|sqlite\|log\|env\|pem\|key)$'` | **0 命中**；`git ls-files data/pdf` 为空 |
+| 脱敏扫描（本机路径） | 盘符绝对路径与 POSIX 家目录路径形状 | 全部命中都是**非本机路径**：`http://`/`https://`、`plan/HANDOFF-M1.md` 的写样式示例、`plan/HANDOFF-M6.md` 里带 `xxx` 占位的扫描式样本身；**无本机绝对路径** |
+| 脱敏扫描（本机用户名） | 本机用户名与工作目录关键词逐个 grep（模式本身不落盘） | **0 命中** |
+| 脱敏扫描（邮箱） | 邮箱形状，排除 RFC 2606 保留域名与 Actions 的 `uses:` 行 | 仅 `actions/checkout@v4`、`actions/setup-python@v5`（Actions 的 `@ref`，非邮箱）；其余为 `*@example.invalid` 等保留域名 |
+| 脱敏扫描（凭据） | 登录态与凭据类关键词 | 命中全部是「不使用 Cookie」的策略表述与 SMTP 口令取自命令行参数（非硬编码）；**无凭据** |
+| 入库边界 | 被跟踪文件的后缀白名单检查 | **0 命中**；`git ls-files data/pdf` 为空 |
 | 忽略规则 | `git check-ignore -v --no-index -- data/pdf/600519/2026-10-16/1.PDF` | 命中 `/data/pdf/` 规则 |
 | 免责三处 | `README.md`、`cnwatch report --help`、`out/reports/<date>/daily.html` 页脚 | 均为 `cnwatch/disclaimer.py` 的单点常量 `本工具仅聚合公开信息，不构成投资建议。`；由 `test_readme_states_the_disclaimer_and_the_data_source`、`test_report_help_states_the_disclaimer`、`test_the_disclaimer_is_present_verbatim_in_both_formats` 三条测试钉住 |
+
+> 上表的扫描模式**故意只写形状、不写字面量**：把本机用户名或路径关键词抄进留档，
+> 等于把要扫掉的东西写进仓库，下一次审计会命中留档自身。可复跑的完整命令留在
+> `plan/HANDOFF-M6.md` §二（那份文件的定位是交接说明，不是发布物）。
 
 出网前修掉的一个缺陷（否则首推即四腿同红）：
 
