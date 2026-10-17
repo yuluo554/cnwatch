@@ -1,0 +1,513 @@
+{
+  "format": "cnwatch.rules",
+  "format_version": 1,
+  "keyword_patches": [
+    {
+      "calibration_example": "关于合并报表范围内的控股子公司诉讼进展的公告",
+      "calibration_hits": 5,
+      "id": "lawsuit",
+      "name": "诉讼·仲裁",
+      "negations": [
+        "无诉讼",
+        "不存在诉讼",
+        "未涉及诉讼",
+        "不涉及诉讼"
+      ],
+      "neutralizers": [],
+      "order": 0,
+      "patterns": [
+        "诉讼",
+        "仲裁"
+      ],
+      "risk": "high"
+    },
+    {
+      "calibration_example": "深圳市博硕科技股份有限公司关于控股股东、持股5%以上股东减持计划实施完毕的公告",
+      "calibration_hits": 12,
+      "id": "reduction",
+      "name": "减持",
+      "negations": [
+        "不减持",
+        "未减持",
+        "不存在减持"
+      ],
+      "neutralizers": [],
+      "order": 1,
+      "patterns": [
+        "减持"
+      ],
+      "risk": "high"
+    },
+    {
+      "calibration_example": "关于2026年度中期分红派息实施后调整回购股份价格上限的公告",
+      "calibration_hits": 112,
+      "id": "buyback",
+      "name": "回购",
+      "negations": [
+        "不回购",
+        "未回购"
+      ],
+      "neutralizers": [],
+      "order": 2,
+      "patterns": [
+        "回购"
+      ],
+      "risk": "mid"
+    },
+    {
+      "calibration_example": "关于控股股东部分股份质押的公告",
+      "calibration_hits": 1,
+      "id": "pledge",
+      "name": "质押",
+      "negations": [
+        "不质押",
+        "未质押"
+      ],
+      "neutralizers": [
+        "解除质押",
+        "解除股份质押",
+        "解除部分股份质押"
+      ],
+      "order": 3,
+      "patterns": [
+        "质押"
+      ],
+      "risk": "high"
+    }
+  ],
+  "match": {
+    "announcement_type_used": false,
+    "normalization": "full-width to half-width, strip <em>, collapse whitespace",
+    "precedence": "priority ascending, ties by id",
+    "title_only": true
+  },
+  "official_categories": [
+    {
+      "calibration_title": "2024年年度报告（更正后）",
+      "id": "category_ndbg_szsh",
+      "name": "年报",
+      "neutralizers": [],
+      "patterns": [
+        "年度报告",
+        "年报"
+      ],
+      "priority": 20
+    },
+    {
+      "calibration_title": "2026年半年度报告（更正后）",
+      "id": "category_bndbg_szsh",
+      "name": "半年报",
+      "neutralizers": [],
+      "patterns": [
+        "半年度报告",
+        "半年报"
+      ],
+      "priority": 10
+    },
+    {
+      "calibration_title": "奕东电子科技股份有限公司2025年第一季度报告（更正后）",
+      "id": "category_yjdbg_szsh",
+      "name": "一季报",
+      "neutralizers": [],
+      "patterns": [
+        "第一季度报告",
+        "一季度报告",
+        "一季报"
+      ],
+      "priority": 12
+    },
+    {
+      "calibration_title": "2026年三季度报告",
+      "id": "category_sjdbg_szsh",
+      "name": "三季报",
+      "neutralizers": [],
+      "patterns": [
+        "三季度报告",
+        "第三季度报告",
+        "三季报"
+      ],
+      "priority": 13
+    },
+    {
+      "calibration_title": "2026年前三季度业绩预告的自愿性披露公告",
+      "id": "category_yjygjxz_szsh",
+      "name": "业绩预告",
+      "neutralizers": [],
+      "patterns": [
+        "业绩预告",
+        "业绩预亏",
+        "业绩预增",
+        "业绩快报"
+      ],
+      "priority": 25
+    },
+    {
+      "calibration_title": "2026年半年度权益分派实施公告",
+      "id": "category_qyfpxzcs_szsh",
+      "name": "权益分派",
+      "neutralizers": [],
+      "patterns": [
+        "权益分派",
+        "利润分配",
+        "分红派息",
+        "差异化分红"
+      ],
+      "priority": 30
+    },
+    {
+      "calibration_title": "第二届董事会第十九次会议决议公告",
+      "id": "category_dshgg_szsh",
+      "name": "董事会",
+      "neutralizers": [],
+      "patterns": [
+        "董事会"
+      ],
+      "priority": 78
+    },
+    {
+      "calibration_title": "浙商银行股份有限公司第七届监事会第十八次会议决议公告",
+      "id": "category_jshgg_szsh",
+      "name": "监事会",
+      "neutralizers": [],
+      "patterns": [
+        "监事会"
+      ],
+      "priority": 5
+    },
+    {
+      "calibration_title": "关于召开2026年第二次临时股东会的通知",
+      "id": "category_gddh_szsh",
+      "name": "股东会",
+      "neutralizers": [],
+      "patterns": [
+        "股东会",
+        "股东大会"
+      ],
+      "priority": 79
+    },
+    {
+      "calibration_title": "关于公司及相关人员收到河北监管局行政处罚决定书的公告",
+      "id": "category_rcjy_szsh",
+      "name": "日常经营",
+      "neutralizers": [],
+      "patterns": [
+        "日常经营",
+        "日常关联交易",
+        "重大合同",
+        "中标",
+        "生产经营",
+        "药品注册证书",
+        "临床试验批准",
+        "授信额度",
+        "委托理财",
+        "现金管理",
+        "对外担保",
+        "提供担保",
+        "套期保值",
+        "框架协议",
+        "重大资产购买",
+        "重大资产出售",
+        "重大资产重组",
+        "行政处罚",
+        "行政监管措施",
+        "警示函",
+        "监管函",
+        "辞职",
+        "离任",
+        "换届",
+        "工商变更",
+        "营业执照",
+        "募集资金",
+        "募集资金专户",
+        "募集资金置换",
+        "财务资助",
+        "关联交易",
+        "购买资产",
+        "投资建设",
+        "对外投资",
+        "担保",
+        "药品",
+        "临床试验",
+        "项目进展",
+        "获得批准"
+      ],
+      "priority": 80
+    },
+    {
+      "calibration_title": "信息披露管理制度（草案）（H股发行上市后适用）",
+      "id": "category_gszl_szsh",
+      "name": "公司治理",
+      "neutralizers": [],
+      "patterns": [
+        "公司章程",
+        "议事规则",
+        "管理制度",
+        "工作细则",
+        "独立董事",
+        "审计制度",
+        "投资者关系",
+        "信息披露",
+        "内幕信息",
+        "管理办法"
+      ],
+      "priority": 70
+    },
+    {
+      "calibration_title": "兴业证券股份有限公司关于方大特钢科技股份有限公司本次交易符合《关于加强证券公司在投资银行类业务中聘请第三方等廉洁从业风险防控的意见》相关规定的核查意见",
+      "id": "category_zj_szsh",
+      "name": "中介报告",
+      "neutralizers": [],
+      "patterns": [
+        "法律意见书",
+        "审计报告",
+        "核查意见",
+        "保荐书",
+        "专项说明",
+        "评估报告",
+        "财务顾问",
+        "鉴证报告",
+        "审阅报告"
+      ],
+      "priority": 72
+    },
+    {
+      "calibration_title": "向不特定合格投资者公开发行股票并在北京证券交易所上市投资风险特别公告",
+      "id": "category_sf_szsh",
+      "name": "首发",
+      "neutralizers": [],
+      "patterns": [
+        "首次公开发行",
+        "招股说明书",
+        "招股意向书",
+        "向不特定合格投资者公开发行",
+        "上市公告书"
+      ],
+      "priority": 56
+    },
+    {
+      "calibration_title": "2026年度向特定对象发行A股股票方案论证分析报告（二次修订稿）",
+      "id": "category_zf_szsh",
+      "name": "增发",
+      "neutralizers": [],
+      "patterns": [
+        "向特定对象发行",
+        "向不特定对象发行",
+        "非公开发行",
+        "增发",
+        "募集说明书",
+        "发行股份购买资产",
+        "发行股份及支付现金"
+      ],
+      "priority": 54
+    },
+    {
+      "calibration_title": "关于2026年限制性股票与股票期权激励计划激励对象及内幕知情人买卖公司股票情况的自查报告",
+      "id": "category_gqjl_szsh",
+      "name": "股权激励",
+      "neutralizers": [],
+      "patterns": [
+        "股权激励",
+        "限制性股票",
+        "股票期权",
+        "员工持股计划"
+      ],
+      "priority": 62
+    },
+    {
+      "calibration_title": "广东鸿特科技股份有限公司配股新增股份变动报告及上市公告书",
+      "id": "category_pg_szsh",
+      "name": "配股",
+      "neutralizers": [
+        "超额配股权"
+      ],
+      "patterns": [
+        "配股"
+      ],
+      "priority": 52
+    },
+    {
+      "calibration_title": "关于部分限售股份上市流通的提示性公告",
+      "id": "category_jj_szsh",
+      "name": "解禁",
+      "neutralizers": [],
+      "patterns": [
+        "解除限售",
+        "限售股上市流通",
+        "限售股份上市流通",
+        "上市流通"
+      ],
+      "priority": 64
+    },
+    {
+      "calibration_title": "长城证券股份有限公司2024年面向专业投资者公开发行公司债券更名公告",
+      "id": "category_gszq_szsh",
+      "name": "公司债",
+      "neutralizers": [],
+      "patterns": [
+        "公司债",
+        "公司债券"
+      ],
+      "priority": 58
+    },
+    {
+      "calibration_title": "关于”中贝转债“预计满足转股价格修正条件的提示性公告",
+      "id": "category_kzzq_szsh",
+      "name": "可转债",
+      "neutralizers": [],
+      "patterns": [
+        "可转债",
+        "可转换公司债券",
+        "转债",
+        "转股价格"
+      ],
+      "priority": 50
+    },
+    {
+      "calibration_title": "广汽集团关于申请发行债务融资工具获注册的公告",
+      "id": "category_qtrz_szsh",
+      "name": "其他融资",
+      "neutralizers": [],
+      "patterns": [
+        "中期票据",
+        "短期融资券",
+        "超短期融资券",
+        "债务融资工具"
+      ],
+      "priority": 59
+    },
+    {
+      "calibration_title": "关于收到公司董事长提议回购公司股份的提示性公告",
+      "id": "category_gqbd_szsh",
+      "name": "股权变动",
+      "neutralizers": [],
+      "patterns": [
+        "权益变动",
+        "增持",
+        "减持",
+        "回购",
+        "司法拍卖",
+        "协议转让",
+        "控制权变更",
+        "询价转让",
+        "股权转让",
+        "要约收购",
+        "股权收购",
+        "收购报告书",
+        "质押"
+      ],
+      "priority": 66
+    },
+    {
+      "calibration_title": "关于公司前期会计差错更正及追溯调整的公告",
+      "id": "category_bcgz_szsh",
+      "name": "补充更正",
+      "neutralizers": [],
+      "patterns": [
+        "更正公告",
+        "补充公告",
+        "更正后",
+        "更正版",
+        "补充更正",
+        "更正及",
+        "修订稿"
+      ],
+      "priority": 68
+    },
+    {
+      "calibration_title": "2026-062号 关于市场传闻的澄清公告",
+      "id": "category_cqdq_szsh",
+      "name": "澄清致歉",
+      "neutralizers": [],
+      "patterns": [
+        "澄清",
+        "致歉"
+      ],
+      "priority": 40
+    },
+    {
+      "calibration_title": "方大特钢关于披露重组报告书暨一般风险提示公告",
+      "id": "category_fxts_szsh",
+      "name": "风险提示",
+      "neutralizers": [],
+      "patterns": [
+        "风险提示",
+        "异常波动"
+      ],
+      "priority": 45
+    },
+    {
+      "calibration_title": "关于收到终止上市事先告知书的公告",
+      "id": "category_tbclts_szsh",
+      "name": "特别处理和退市",
+      "neutralizers": [],
+      "patterns": [
+        "终止上市",
+        "终止挂牌",
+        "退市风险警示"
+      ],
+      "priority": 35
+    },
+    {
+      "calibration_title": "关于公司股票进入退市整理期交易的公告",
+      "id": "category_tszlq_szsh",
+      "name": "退市整理期",
+      "neutralizers": [],
+      "patterns": [
+        "退市整理期"
+      ],
+      "priority": 34
+    }
+  ],
+  "risk": {
+    "default": "low",
+    "high": [
+      "category_tbclts_szsh",
+      "category_tszlq_szsh",
+      "category_fxts_szsh",
+      "category_cqdq_szsh",
+      "lawsuit",
+      "reduction",
+      "pledge"
+    ],
+    "mid": [
+      "category_yjygjxz_szsh",
+      "category_zf_szsh",
+      "category_pg_szsh",
+      "category_kzzq_szsh",
+      "category_gqbd_szsh",
+      "category_jj_szsh",
+      "category_bcgz_szsh",
+      "buyback"
+    ],
+    "precedence": "high > mid > low"
+  },
+  "rules_version": "v1",
+  "seasonality": [
+    {
+      "calibration_title": "2024年年度报告（更正后）",
+      "category_id": "category_ndbg_szsh",
+      "note": "0 in the 30-day window; calibrated from the wide window only",
+      "reason": "seasonal",
+      "volume_30d": 0
+    },
+    {
+      "calibration_title": "奕东电子科技股份有限公司2025年第一季度报告（更正后）",
+      "category_id": "category_yjdbg_szsh",
+      "note": "0 in the 30-day window; calibrated from the wide window only",
+      "reason": "seasonal",
+      "volume_30d": 0
+    },
+    {
+      "calibration_title": "浙商银行股份有限公司第七届监事会第十八次会议决议公告",
+      "category_id": "category_jshgg_szsh",
+      "note": "0 in the 30-day window; calibrated from the wide window only",
+      "reason": "seasonal",
+      "volume_30d": 0
+    }
+  ],
+  "source": {
+    "calibration": "data/snapshots/category-samples-2026-01-01_2026-10-17.json",
+    "enum": "data/snapshots/new-notice.js",
+    "volumes": "data/snapshots/volume-ledger-2026-09-17_2026-10-17.json"
+  }
+}

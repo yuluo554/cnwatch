@@ -1,0 +1,4244 @@
+{
+  "accounting": {
+    "categories": {
+      "A股": 604
+    },
+    "records": 604
+  },
+  "format": "cnwatch.stock_list",
+  "format_version": 1,
+  "source": {
+    "captured_on": "2026-10-17",
+    "url": "http://www.cninfo.com.cn/new/data/bj_stock.json"
+  },
+  "stocks": [
+    {
+      "category": "A股",
+      "code": "430017",
+      "orgId": "9900003482",
+      "pinyin": "xhyy",
+      "zwjc": "星昊医药"
+    },
+    {
+      "category": "A股",
+      "code": "430047",
+      "orgId": "9900006121",
+      "pinyin": "nsld",
+      "zwjc": "诺思兰德"
+    },
+    {
+      "category": "A股",
+      "code": "430090",
+      "orgId": "9900020567",
+      "pinyin": "thxx",
+      "zwjc": "同辉信息"
+    },
+    {
+      "category": "A股",
+      "code": "430139",
+      "orgId": "9900024205",
+      "pinyin": "hlgf",
+      "zwjc": "华岭股份"
+    },
+    {
+      "category": "A股",
+      "code": "430198",
+      "orgId": "9900024889",
+      "pinyin": "wcgd",
+      "zwjc": "微创光电"
+    },
+    {
+      "category": "A股",
+      "code": "430300",
+      "orgId": "9900023934",
+      "pinyin": "cgyl",
+      "zwjc": "辰光医疗"
+    },
+    {
+      "category": "A股",
+      "code": "430418",
+      "orgId": "gfbj0430418",
+      "pinyin": "szgf",
+      "zwjc": "苏轴股份"
+    },
+    {
+      "category": "A股",
+      "code": "430425",
+      "orgId": "gfbj0430425",
+      "pinyin": "lcjs",
+      "zwjc": "乐创技术"
+    },
+    {
+      "category": "A股",
+      "code": "430476",
+      "orgId": "gfbj0430476",
+      "pinyin": "hnjs",
+      "zwjc": "海能技术"
+    },
+    {
+      "category": "A股",
+      "code": "430478",
+      "orgId": "gfbj0430478",
+      "pinyin": "hyyy",
+      "zwjc": "峆一药业"
+    },
+    {
+      "category": "A股",
+      "code": "430489",
+      "orgId": "9900028040",
+      "pinyin": "jxgf",
+      "zwjc": "佳先股份"
+    },
+    {
+      "category": "A股",
+      "code": "430510",
+      "orgId": "gfbj0430510",
+      "pinyin": "fgjm",
+      "zwjc": "丰光精密"
+    },
+    {
+      "category": "A股",
+      "code": "430556",
+      "orgId": "9900023057",
+      "pinyin": "ydgf",
+      "zwjc": "雅达股份"
+    },
+    {
+      "category": "A股",
+      "code": "430564",
+      "orgId": "gfbj0430564",
+      "pinyin": "trkj",
+      "zwjc": "天润科技"
+    },
+    {
+      "category": "A股",
+      "code": "430685",
+      "orgId": "gfbj0430685",
+      "pinyin": "xzsw",
+      "zwjc": "新芝生物"
+    },
+    {
+      "category": "A股",
+      "code": "430718",
+      "orgId": "gfbj0430718",
+      "pinyin": "hfgk",
+      "zwjc": "合肥高科"
+    },
+    {
+      "category": "A股",
+      "code": "830779",
+      "orgId": "gfbj0830779",
+      "pinyin": "whld",
+      "zwjc": "武汉蓝电"
+    },
+    {
+      "category": "A股",
+      "code": "830799",
+      "orgId": "gfbj0830799",
+      "pinyin": "arrj",
+      "zwjc": "艾融软件"
+    },
+    {
+      "category": "A股",
+      "code": "830809",
+      "orgId": "gfbj0830809",
+      "pinyin": "adkj",
+      "zwjc": "安达科技"
+    },
+    {
+      "category": "A股",
+      "code": "830832",
+      "orgId": "gqtg0100030",
+      "pinyin": "qlhx",
+      "zwjc": "齐鲁华信"
+    },
+    {
+      "category": "A股",
+      "code": "830839",
+      "orgId": "gfbj0830839",
+      "pinyin": "wtyy",
+      "zwjc": "万通液压"
+    },
+    {
+      "category": "A股",
+      "code": "830879",
+      "orgId": "gfbj0830879",
+      "pinyin": "jkjs",
+      "zwjc": "基康技术"
+    },
+    {
+      "category": "A股",
+      "code": "830896",
+      "orgId": "gqtg0900028",
+      "pinyin": "wckj",
+      "zwjc": "旺成科技"
+    },
+    {
+      "category": "A股",
+      "code": "830946",
+      "orgId": "gfbj0830946",
+      "pinyin": "sxyy",
+      "zwjc": "森萱医药"
+    },
+    {
+      "category": "A股",
+      "code": "830964",
+      "orgId": "gfbj0830964",
+      "pinyin": "rnjs",
+      "zwjc": "润农节水"
+    },
+    {
+      "category": "A股",
+      "code": "830974",
+      "orgId": "gfbj0830974",
+      "pinyin": "kdch",
+      "zwjc": "凯大催化"
+    },
+    {
+      "category": "A股",
+      "code": "831010",
+      "orgId": "gfbj0831010",
+      "pinyin": "ktrq",
+      "zwjc": "凯添燃气"
+    },
+    {
+      "category": "A股",
+      "code": "831039",
+      "orgId": "gfbj0831039",
+      "pinyin": "gyzb",
+      "zwjc": "国义招标"
+    },
+    {
+      "category": "A股",
+      "code": "831087",
+      "orgId": "gfbj0831087",
+      "pinyin": "qlzy",
+      "zwjc": "秋乐种业"
+    },
+    {
+      "category": "A股",
+      "code": "831152",
+      "orgId": "gfbj0831152",
+      "pinyin": "kgkj",
+      "zwjc": "昆工科技"
+    },
+    {
+      "category": "A股",
+      "code": "831167",
+      "orgId": "gfbj0831167",
+      "pinyin": "xhk",
+      "zwjc": "鑫汇科"
+    },
+    {
+      "category": "A股",
+      "code": "831175",
+      "orgId": "gfbj0831175",
+      "pinyin": "pnkj",
+      "zwjc": "派诺科技"
+    },
+    {
+      "category": "A股",
+      "code": "831195",
+      "orgId": "gfbj0831195",
+      "pinyin": "sxkj",
+      "zwjc": "三祥科技"
+    },
+    {
+      "category": "A股",
+      "code": "831278",
+      "orgId": "gfbj0831278",
+      "pinyin": "tdgf",
+      "zwjc": "泰德股份"
+    },
+    {
+      "category": "A股",
+      "code": "831304",
+      "orgId": "gfbj0831304",
+      "pinyin": "dehg",
+      "zwjc": "迪尔化工"
+    },
+    {
+      "category": "A股",
+      "code": "831305",
+      "orgId": "gfbj0831305",
+      "pinyin": "hxtx",
+      "zwjc": "海希通讯"
+    },
+    {
+      "category": "A股",
+      "code": "831370",
+      "orgId": "gfbj0831370",
+      "pinyin": "xaj",
+      "zwjc": "新安洁"
+    },
+    {
+      "category": "A股",
+      "code": "831396",
+      "orgId": "gfbj0831396",
+      "pinyin": "xczn",
+      "zwjc": "许昌智能"
+    },
+    {
+      "category": "A股",
+      "code": "831445",
+      "orgId": "gfbj0831445",
+      "pinyin": "lzkj",
+      "zwjc": "龙竹科技"
+    },
+    {
+      "category": "A股",
+      "code": "831526",
+      "orgId": "gfbj0831526",
+      "pinyin": "khcl",
+      "zwjc": "凯华材料"
+    },
+    {
+      "category": "A股",
+      "code": "831627",
+      "orgId": "gfbj0831627",
+      "pinyin": "lwgf",
+      "zwjc": "力王股份"
+    },
+    {
+      "category": "A股",
+      "code": "831641",
+      "orgId": "gfbj0831641",
+      "pinyin": "gle",
+      "zwjc": "格利尔"
+    },
+    {
+      "category": "A股",
+      "code": "831689",
+      "orgId": "gfbj0831689",
+      "pinyin": "klt",
+      "zwjc": "克莱特"
+    },
+    {
+      "category": "A股",
+      "code": "831726",
+      "orgId": "gfbj0831726",
+      "pinyin": "zll",
+      "zwjc": "朱老六"
+    },
+    {
+      "category": "A股",
+      "code": "831768",
+      "orgId": "gfbj0831768",
+      "pinyin": "sbb",
+      "zwjc": "拾比佰"
+    },
+    {
+      "category": "A股",
+      "code": "831832",
+      "orgId": "gfbj0831832",
+      "pinyin": "kdzk",
+      "zwjc": "科达自控"
+    },
+    {
+      "category": "A股",
+      "code": "831834",
+      "orgId": "gfbj0831834",
+      "pinyin": "swzb",
+      "zwjc": "三维装备"
+    },
+    {
+      "category": "A股",
+      "code": "831855",
+      "orgId": "gfbj0831855",
+      "pinyin": "zjdn",
+      "zwjc": "浙江大农"
+    },
+    {
+      "category": "A股",
+      "code": "831856",
+      "orgId": "gfbj0831856",
+      "pinyin": "hmkj",
+      "zwjc": "浩淼科技"
+    },
+    {
+      "category": "A股",
+      "code": "831906",
+      "orgId": "gfbj0831906",
+      "pinyin": "syjg",
+      "zwjc": "舜宇精工"
+    },
+    {
+      "category": "A股",
+      "code": "831961",
+      "orgId": "gfbj0831961",
+      "pinyin": "cyxk",
+      "zwjc": "创远信科"
+    },
+    {
+      "category": "A股",
+      "code": "832000",
+      "orgId": "gfbj0832000",
+      "pinyin": "ahfh",
+      "zwjc": "安徽凤凰"
+    },
+    {
+      "category": "A股",
+      "code": "832023",
+      "orgId": "gfbj0832023",
+      "pinyin": "tygf",
+      "zwjc": "田野股份"
+    },
+    {
+      "category": "A股",
+      "code": "832089",
+      "orgId": "gfbj0832089",
+      "pinyin": "hcjh",
+      "zwjc": "禾昌聚合"
+    },
+    {
+      "category": "A股",
+      "code": "832110",
+      "orgId": "gfbj0832110",
+      "pinyin": "ltkj",
+      "zwjc": "雷特科技"
+    },
+    {
+      "category": "A股",
+      "code": "832145",
+      "orgId": "gfbj0832145",
+      "pinyin": "hhgf",
+      "zwjc": "恒合股份"
+    },
+    {
+      "category": "A股",
+      "code": "832149",
+      "orgId": "gfbj0832149",
+      "pinyin": "led",
+      "zwjc": "利尔达"
+    },
+    {
+      "category": "A股",
+      "code": "832171",
+      "orgId": "9900030337",
+      "pinyin": "zsxx",
+      "zwjc": "志晟信息"
+    },
+    {
+      "category": "A股",
+      "code": "832175",
+      "orgId": "gfbj0832175",
+      "pinyin": "dfts",
+      "zwjc": "东方碳素"
+    },
+    {
+      "category": "A股",
+      "code": "832225",
+      "orgId": "gfbj0832225",
+      "pinyin": "ltkj",
+      "zwjc": "利通科技"
+    },
+    {
+      "category": "A股",
+      "code": "832278",
+      "orgId": "gfbj0832278",
+      "pinyin": "ldyl",
+      "zwjc": "鹿得医疗"
+    },
+    {
+      "category": "A股",
+      "code": "832419",
+      "orgId": "gfbj0832419",
+      "pinyin": "lsgf",
+      "zwjc": "路斯股份"
+    },
+    {
+      "category": "A股",
+      "code": "832469",
+      "orgId": "gfbj0832469",
+      "pinyin": "fhxc",
+      "zwjc": "富恒新材"
+    },
+    {
+      "category": "A股",
+      "code": "832471",
+      "orgId": "gfbj0832471",
+      "pinyin": "mbkj",
+      "zwjc": "美邦科技"
+    },
+    {
+      "category": "A股",
+      "code": "832491",
+      "orgId": "gfbj0832491",
+      "pinyin": "adw",
+      "zwjc": "奥迪威"
+    },
+    {
+      "category": "A股",
+      "code": "832522",
+      "orgId": "gfbj0832522",
+      "pinyin": "nkne",
+      "zwjc": "纳科诺尔"
+    },
+    {
+      "category": "A股",
+      "code": "832566",
+      "orgId": "gfbj0832566",
+      "pinyin": "ztg",
+      "zwjc": "梓橦宫"
+    },
+    {
+      "category": "A股",
+      "code": "832651",
+      "orgId": "gfbj0832651",
+      "pinyin": "tggf",
+      "zwjc": "天罡股份"
+    },
+    {
+      "category": "A股",
+      "code": "832662",
+      "orgId": "gfbj0832662",
+      "pinyin": "fsgf",
+      "zwjc": "方盛股份"
+    },
+    {
+      "category": "A股",
+      "code": "832735",
+      "orgId": "gfbj0832735",
+      "pinyin": "dyyy",
+      "zwjc": "德源药业"
+    },
+    {
+      "category": "A股",
+      "code": "832786",
+      "orgId": "gfbj0832786",
+      "pinyin": "qsry",
+      "zwjc": "骑士乳业"
+    },
+    {
+      "category": "A股",
+      "code": "832802",
+      "orgId": "gfbj0832802",
+      "pinyin": "blj",
+      "zwjc": "保丽洁"
+    },
+    {
+      "category": "A股",
+      "code": "832876",
+      "orgId": "gfbj0832876",
+      "pinyin": "hwzn",
+      "zwjc": "慧为智能"
+    },
+    {
+      "category": "A股",
+      "code": "832885",
+      "orgId": "gfbj0832885",
+      "pinyin": "xckj",
+      "zwjc": "星辰科技"
+    },
+    {
+      "category": "A股",
+      "code": "832978",
+      "orgId": "gfbj0832978",
+      "pinyin": "ktgf",
+      "zwjc": "开特股份"
+    },
+    {
+      "category": "A股",
+      "code": "832982",
+      "orgId": "gfbj0832982",
+      "pinyin": "jbsw",
+      "zwjc": "锦波生物"
+    },
+    {
+      "category": "A股",
+      "code": "833030",
+      "orgId": "gfbj0833030",
+      "pinyin": "lfkg",
+      "zwjc": "立方控股"
+    },
+    {
+      "category": "A股",
+      "code": "833075",
+      "orgId": "gfbj0833075",
+      "pinyin": "bxl",
+      "zwjc": "柏星龙"
+    },
+    {
+      "category": "A股",
+      "code": "833171",
+      "orgId": "9900022904",
+      "pinyin": "ghyy",
+      "zwjc": "国航远洋"
+    },
+    {
+      "category": "A股",
+      "code": "833230",
+      "orgId": "gfbj0833230",
+      "pinyin": "okyy",
+      "zwjc": "欧康医药"
+    },
+    {
+      "category": "A股",
+      "code": "833266",
+      "orgId": "gfbj0833266",
+      "pinyin": "swg",
+      "zwjc": "生物谷"
+    },
+    {
+      "category": "A股",
+      "code": "833284",
+      "orgId": "gfbj0833284",
+      "pinyin": "lgkj",
+      "zwjc": "灵鸽科技"
+    },
+    {
+      "category": "A股",
+      "code": "833346",
+      "orgId": "gfbj0833346",
+      "pinyin": "wmdz",
+      "zwjc": "威贸电子"
+    },
+    {
+      "category": "A股",
+      "code": "833394",
+      "orgId": "gfbj0833394",
+      "pinyin": "msd",
+      "zwjc": "民士达"
+    },
+    {
+      "category": "A股",
+      "code": "833427",
+      "orgId": "gfbj0833427",
+      "pinyin": "hwsj",
+      "zwjc": "华维设计"
+    },
+    {
+      "category": "A股",
+      "code": "833429",
+      "orgId": "gfbj0833429",
+      "pinyin": "kbt",
+      "zwjc": "康比特"
+    },
+    {
+      "category": "A股",
+      "code": "833454",
+      "orgId": "gfbj0833454",
+      "pinyin": "txcd",
+      "zwjc": "同心传动"
+    },
+    {
+      "category": "A股",
+      "code": "833455",
+      "orgId": "gfbj0833455",
+      "pinyin": "hlhs",
+      "zwjc": "汇隆活塞"
+    },
+    {
+      "category": "A股",
+      "code": "833509",
+      "orgId": "gfbj0833509",
+      "pinyin": "thdz",
+      "zwjc": "同惠电子"
+    },
+    {
+      "category": "A股",
+      "code": "833523",
+      "orgId": "gfbj0833523",
+      "pinyin": "drld",
+      "zwjc": "德瑞锂电"
+    },
+    {
+      "category": "A股",
+      "code": "833533",
+      "orgId": "gfbj0833533",
+      "pinyin": "jckj",
+      "zwjc": "骏创科技"
+    },
+    {
+      "category": "A股",
+      "code": "833575",
+      "orgId": "gfbj0833575",
+      "pinyin": "klws",
+      "zwjc": "康乐卫士"
+    },
+    {
+      "category": "A股",
+      "code": "833580",
+      "orgId": "gfbj0833580",
+      "pinyin": "kcxc",
+      "zwjc": "科创新材"
+    },
+    {
+      "category": "A股",
+      "code": "833751",
+      "orgId": "gfbj0833751",
+      "pinyin": "htxc",
+      "zwjc": "惠同新材"
+    },
+    {
+      "category": "A股",
+      "code": "833781",
+      "orgId": "gfbj0833781",
+      "pinyin": "rqzz",
+      "zwjc": "瑞奇智造"
+    },
+    {
+      "category": "A股",
+      "code": "833819",
+      "orgId": "gfbj0833819",
+      "pinyin": "ytsw",
+      "zwjc": "颖泰生物"
+    },
+    {
+      "category": "A股",
+      "code": "833873",
+      "orgId": "gqtg0900033",
+      "pinyin": "zszx",
+      "zwjc": "中设咨询"
+    },
+    {
+      "category": "A股",
+      "code": "833914",
+      "orgId": "gfbj0833914",
+      "pinyin": "yhjm",
+      "zwjc": "远航精密"
+    },
+    {
+      "category": "A股",
+      "code": "833943",
+      "orgId": "9900013373",
+      "pinyin": "yjgf",
+      "zwjc": "优机股份"
+    },
+    {
+      "category": "A股",
+      "code": "834014",
+      "orgId": "gfbj0834014",
+      "pinyin": "trs",
+      "zwjc": "特瑞斯"
+    },
+    {
+      "category": "A股",
+      "code": "834021",
+      "orgId": "gfbj0834021",
+      "pinyin": "ljkj",
+      "zwjc": "流金科技"
+    },
+    {
+      "category": "A股",
+      "code": "834033",
+      "orgId": "gfbj0834033",
+      "pinyin": "kphx",
+      "zwjc": "康普化学"
+    },
+    {
+      "category": "A股",
+      "code": "834058",
+      "orgId": "gfbj0834058",
+      "pinyin": "hysc",
+      "zwjc": "华洋赛车"
+    },
+    {
+      "category": "A股",
+      "code": "834062",
+      "orgId": "gfbj0834062",
+      "pinyin": "krzk",
+      "zwjc": "科润智控"
+    },
+    {
+      "category": "A股",
+      "code": "834261",
+      "orgId": "gfbj0834261",
+      "pinyin": "ynw",
+      "zwjc": "一诺威"
+    },
+    {
+      "category": "A股",
+      "code": "834407",
+      "orgId": "gfbj0834407",
+      "pinyin": "ccgf",
+      "zwjc": "驰诚股份"
+    },
+    {
+      "category": "A股",
+      "code": "834415",
+      "orgId": "gfbj0834415",
+      "pinyin": "htky",
+      "zwjc": "恒拓开源"
+    },
+    {
+      "category": "A股",
+      "code": "834475",
+      "orgId": "gfbj0834475",
+      "pinyin": "sykj",
+      "zwjc": "三友科技"
+    },
+    {
+      "category": "A股",
+      "code": "834599",
+      "orgId": "9900021933",
+      "pinyin": "tlgf",
+      "zwjc": "同力股份"
+    },
+    {
+      "category": "A股",
+      "code": "834639",
+      "orgId": "gfbj0834639",
+      "pinyin": "cgdl",
+      "zwjc": "晨光电缆"
+    },
+    {
+      "category": "A股",
+      "code": "834682",
+      "orgId": "gfbj0834682",
+      "pinyin": "qgdl",
+      "zwjc": "球冠电缆"
+    },
+    {
+      "category": "A股",
+      "code": "834765",
+      "orgId": "gfbj0834765",
+      "pinyin": "mzg",
+      "zwjc": "美之高"
+    },
+    {
+      "category": "A股",
+      "code": "834770",
+      "orgId": "gfbj0834770",
+      "pinyin": "anj",
+      "zwjc": "艾能聚"
+    },
+    {
+      "category": "A股",
+      "code": "834950",
+      "orgId": "gfbj0834950",
+      "pinyin": "xakj",
+      "zwjc": "迅安科技"
+    },
+    {
+      "category": "A股",
+      "code": "835174",
+      "orgId": "gfbj0835174",
+      "pinyin": "wxsz",
+      "zwjc": "五新隧装"
+    },
+    {
+      "category": "A股",
+      "code": "835179",
+      "orgId": "gfbj0835179",
+      "pinyin": "kdsy",
+      "zwjc": "凯德石英"
+    },
+    {
+      "category": "A股",
+      "code": "835184",
+      "orgId": "gfbj0835184",
+      "pinyin": "gykj",
+      "zwjc": "国源科技"
+    },
+    {
+      "category": "A股",
+      "code": "835185",
+      "orgId": "gfbj0835185",
+      "pinyin": "btr",
+      "zwjc": "贝特瑞"
+    },
+    {
+      "category": "A股",
+      "code": "835207",
+      "orgId": "gfbj0835207",
+      "pinyin": "zckj",
+      "zwjc": "众诚科技"
+    },
+    {
+      "category": "A股",
+      "code": "835237",
+      "orgId": "gfbj0835237",
+      "pinyin": "ljkj",
+      "zwjc": "力佳科技"
+    },
+    {
+      "category": "A股",
+      "code": "835305",
+      "orgId": "gfbj0835305",
+      "pinyin": "styc",
+      "zwjc": "*ST云创"
+    },
+    {
+      "category": "A股",
+      "code": "835368",
+      "orgId": "9900023723",
+      "pinyin": "lcsk",
+      "zwjc": "连城数控"
+    },
+    {
+      "category": "A股",
+      "code": "835438",
+      "orgId": "gfbj0835438",
+      "pinyin": "gbj",
+      "zwjc": "戈碧迦"
+    },
+    {
+      "category": "A股",
+      "code": "835508",
+      "orgId": "gfbj0835508",
+      "pinyin": "ytwl",
+      "zwjc": "殷图网联"
+    },
+    {
+      "category": "A股",
+      "code": "835579",
+      "orgId": "gfbj0835579",
+      "pinyin": "jkgf",
+      "zwjc": "机科股份"
+    },
+    {
+      "category": "A股",
+      "code": "835640",
+      "orgId": "gfbj0835640",
+      "pinyin": "fsd",
+      "zwjc": "富士达"
+    },
+    {
+      "category": "A股",
+      "code": "835670",
+      "orgId": "gfbj0835670",
+      "pinyin": "szr",
+      "zwjc": "数字人"
+    },
+    {
+      "category": "A股",
+      "code": "835857",
+      "orgId": "gfbj0835857",
+      "pinyin": "bjkj",
+      "zwjc": "百甲科技"
+    },
+    {
+      "category": "A股",
+      "code": "835892",
+      "orgId": "gfbj0835892",
+      "pinyin": "zkml",
+      "zwjc": "中科美菱"
+    },
+    {
+      "category": "A股",
+      "code": "835985",
+      "orgId": "gfbj0835985",
+      "pinyin": "htxn",
+      "zwjc": "海泰新能"
+    },
+    {
+      "category": "A股",
+      "code": "836077",
+      "orgId": "gfbj0836077",
+      "pinyin": "jltg",
+      "zwjc": "吉林碳谷"
+    },
+    {
+      "category": "A股",
+      "code": "836149",
+      "orgId": "gfbj0836149",
+      "pinyin": "xjkj",
+      "zwjc": "旭杰科技"
+    },
+    {
+      "category": "A股",
+      "code": "836208",
+      "orgId": "gfbj0836208",
+      "pinyin": "qjjs",
+      "zwjc": "青矩技术"
+    },
+    {
+      "category": "A股",
+      "code": "836221",
+      "orgId": "gfbj0836221",
+      "pinyin": "ysjm",
+      "zwjc": "易实精密"
+    },
+    {
+      "category": "A股",
+      "code": "836239",
+      "orgId": "gfbj0836239",
+      "pinyin": "chny",
+      "zwjc": "长虹能源"
+    },
+    {
+      "category": "A股",
+      "code": "836247",
+      "orgId": "gfbj0836247",
+      "pinyin": "hmxc",
+      "zwjc": "华密新材"
+    },
+    {
+      "category": "A股",
+      "code": "836260",
+      "orgId": "gfbj0836260",
+      "pinyin": "zhgf",
+      "zwjc": "中寰股份"
+    },
+    {
+      "category": "A股",
+      "code": "836263",
+      "orgId": "gfbj0836263",
+      "pinyin": "zhtd",
+      "zwjc": "中航泰达"
+    },
+    {
+      "category": "A股",
+      "code": "836270",
+      "orgId": "gfbj0836270",
+      "pinyin": "tmkj",
+      "zwjc": "天铭科技"
+    },
+    {
+      "category": "A股",
+      "code": "836395",
+      "orgId": "gfbj0836395",
+      "pinyin": "lhkj",
+      "zwjc": "朗鸿科技"
+    },
+    {
+      "category": "A股",
+      "code": "836414",
+      "orgId": "gfbj0836414",
+      "pinyin": "opt",
+      "zwjc": "欧普泰"
+    },
+    {
+      "category": "A股",
+      "code": "836419",
+      "orgId": "gfbj0836419",
+      "pinyin": "wdgf",
+      "zwjc": "万德股份"
+    },
+    {
+      "category": "A股",
+      "code": "836422",
+      "orgId": "gfbj0836422",
+      "pinyin": "rpsp",
+      "zwjc": "润普食品"
+    },
+    {
+      "category": "A股",
+      "code": "836433",
+      "orgId": "gfbj0836433",
+      "pinyin": "dtyy",
+      "zwjc": "大唐药业"
+    },
+    {
+      "category": "A股",
+      "code": "836504",
+      "orgId": "gfbj0836504",
+      "pinyin": "bxsw",
+      "zwjc": "博迅生物"
+    },
+    {
+      "category": "A股",
+      "code": "836547",
+      "orgId": "gfbj0836547",
+      "pinyin": "wxjh",
+      "zwjc": "无锡晶海"
+    },
+    {
+      "category": "A股",
+      "code": "836675",
+      "orgId": "gfbj0836675",
+      "pinyin": "bykj",
+      "zwjc": "秉扬科技"
+    },
+    {
+      "category": "A股",
+      "code": "836699",
+      "orgId": "gfbj0836699",
+      "pinyin": "hde",
+      "zwjc": "海达尔"
+    },
+    {
+      "category": "A股",
+      "code": "836717",
+      "orgId": "gfbj0836717",
+      "pinyin": "rxgf",
+      "zwjc": "瑞星股份"
+    },
+    {
+      "category": "A股",
+      "code": "836720",
+      "orgId": "gfbj0836720",
+      "pinyin": "jgjm",
+      "zwjc": "吉冈精密"
+    },
+    {
+      "category": "A股",
+      "code": "836807",
+      "orgId": "gfbj0836807",
+      "pinyin": "blxc",
+      "zwjc": "奔朗新材"
+    },
+    {
+      "category": "A股",
+      "code": "836826",
+      "orgId": "gfbj0836826",
+      "pinyin": "gssp",
+      "zwjc": "盖世食品"
+    },
+    {
+      "category": "A股",
+      "code": "836871",
+      "orgId": "gfbj0836871",
+      "pinyin": "pte",
+      "zwjc": "派特尔"
+    },
+    {
+      "category": "A股",
+      "code": "836892",
+      "orgId": "gfbj0836892",
+      "pinyin": "gzgj",
+      "zwjc": "广咨国际"
+    },
+    {
+      "category": "A股",
+      "code": "836942",
+      "orgId": "gfbj0836942",
+      "pinyin": "hlzj",
+      "zwjc": "恒立钻具"
+    },
+    {
+      "category": "A股",
+      "code": "836957",
+      "orgId": "gfbj0836957",
+      "pinyin": "hwkj",
+      "zwjc": "汉维科技"
+    },
+    {
+      "category": "A股",
+      "code": "836961",
+      "orgId": "gfbj0836961",
+      "pinyin": "xckj",
+      "zwjc": "西磁科技"
+    },
+    {
+      "category": "A股",
+      "code": "837006",
+      "orgId": "gfbj0837006",
+      "pinyin": "snkj",
+      "zwjc": "晟楠科技"
+    },
+    {
+      "category": "A股",
+      "code": "837023",
+      "orgId": "gfbj0837023",
+      "pinyin": "bwgf",
+      "zwjc": "芭薇股份"
+    },
+    {
+      "category": "A股",
+      "code": "837046",
+      "orgId": "gfbj0837046",
+      "pinyin": "yndl",
+      "zwjc": "亿能电力"
+    },
+    {
+      "category": "A股",
+      "code": "837092",
+      "orgId": "gfbj0837092",
+      "pinyin": "hxkj",
+      "zwjc": "汉鑫科技"
+    },
+    {
+      "category": "A股",
+      "code": "837174",
+      "orgId": "gfbj0837174",
+      "pinyin": "hybc",
+      "zwjc": "宏裕包材"
+    },
+    {
+      "category": "A股",
+      "code": "837212",
+      "orgId": "gfbj0837212",
+      "pinyin": "zxdz",
+      "zwjc": "智新电子"
+    },
+    {
+      "category": "A股",
+      "code": "837242",
+      "orgId": "gfbj0837242",
+      "pinyin": "jbkj",
+      "zwjc": "建邦科技"
+    },
+    {
+      "category": "A股",
+      "code": "837344",
+      "orgId": "gfbj0837344",
+      "pinyin": "syjy",
+      "zwjc": "三元基因"
+    },
+    {
+      "category": "A股",
+      "code": "837403",
+      "orgId": "gfbj0837403",
+      "pinyin": "knzy",
+      "zwjc": "康农种业"
+    },
+    {
+      "category": "A股",
+      "code": "837592",
+      "orgId": "gfbj0837592",
+      "pinyin": "hxyd",
+      "zwjc": "华信永道"
+    },
+    {
+      "category": "A股",
+      "code": "837663",
+      "orgId": "gfbj0837663",
+      "pinyin": "mykj",
+      "zwjc": "明阳科技"
+    },
+    {
+      "category": "A股",
+      "code": "837748",
+      "orgId": "gfbj0837748",
+      "pinyin": "lqxx",
+      "zwjc": "路桥信息"
+    },
+    {
+      "category": "A股",
+      "code": "837821",
+      "orgId": "gfbj0837821",
+      "pinyin": "zcdz",
+      "zwjc": "则成电子"
+    },
+    {
+      "category": "A股",
+      "code": "838030",
+      "orgId": "gfbj0838030",
+      "pinyin": "dzqc",
+      "zwjc": "德众汽车"
+    },
+    {
+      "category": "A股",
+      "code": "838163",
+      "orgId": "gfbj0838163",
+      "pinyin": "fdxc",
+      "zwjc": "方大新材"
+    },
+    {
+      "category": "A股",
+      "code": "838171",
+      "orgId": "gfbj0838171",
+      "pinyin": "bdgf",
+      "zwjc": "邦德股份"
+    },
+    {
+      "category": "A股",
+      "code": "838227",
+      "orgId": "gfbj0838227",
+      "pinyin": "mdkj",
+      "zwjc": "美登科技"
+    },
+    {
+      "category": "A股",
+      "code": "838262",
+      "orgId": "gfbj0838262",
+      "pinyin": "thx",
+      "zwjc": "太湖雪"
+    },
+    {
+      "category": "A股",
+      "code": "838275",
+      "orgId": "9900033375",
+      "pinyin": "qdl",
+      "zwjc": "驱动力"
+    },
+    {
+      "category": "A股",
+      "code": "838402",
+      "orgId": "gfbj0838402",
+      "pinyin": "gwkj",
+      "zwjc": "硅烷科技"
+    },
+    {
+      "category": "A股",
+      "code": "838670",
+      "orgId": "gfbj0838670",
+      "pinyin": "hjgy",
+      "zwjc": "恒进感应"
+    },
+    {
+      "category": "A股",
+      "code": "838701",
+      "orgId": "gfbj0838701",
+      "pinyin": "hsdz",
+      "zwjc": "豪声电子"
+    },
+    {
+      "category": "A股",
+      "code": "838810",
+      "orgId": "gfbj0838810",
+      "pinyin": "cgzn",
+      "zwjc": "春光智能"
+    },
+    {
+      "category": "A股",
+      "code": "838837",
+      "orgId": "gfbj0838837",
+      "pinyin": "hygf",
+      "zwjc": "华原股份"
+    },
+    {
+      "category": "A股",
+      "code": "838924",
+      "orgId": "gfbj0838924",
+      "pinyin": "gmkj",
+      "zwjc": "广脉科技"
+    },
+    {
+      "category": "A股",
+      "code": "838971",
+      "orgId": "gfbj0838971",
+      "pinyin": "tmxc",
+      "zwjc": "天马新材"
+    },
+    {
+      "category": "A股",
+      "code": "839167",
+      "orgId": "gfbj0839167",
+      "pinyin": "txkj",
+      "zwjc": "同享科技"
+    },
+    {
+      "category": "A股",
+      "code": "839273",
+      "orgId": "gfbj0839273",
+      "pinyin": "yzmy",
+      "zwjc": "一致魔芋"
+    },
+    {
+      "category": "A股",
+      "code": "839371",
+      "orgId": "gfbj0839371",
+      "pinyin": "ofdy",
+      "zwjc": "欧福蛋业"
+    },
+    {
+      "category": "A股",
+      "code": "839493",
+      "orgId": "gfbj0839493",
+      "pinyin": "bxkj",
+      "zwjc": "并行科技"
+    },
+    {
+      "category": "A股",
+      "code": "839680",
+      "orgId": "gfbj0839680",
+      "pinyin": "stgd",
+      "zwjc": "*ST广道"
+    },
+    {
+      "category": "A股",
+      "code": "839719",
+      "orgId": "gfbj0839719",
+      "pinyin": "nxxc",
+      "zwjc": "宁新新材"
+    },
+    {
+      "category": "A股",
+      "code": "839725",
+      "orgId": "gfbj0839725",
+      "pinyin": "hfzs",
+      "zwjc": "惠丰钻石"
+    },
+    {
+      "category": "A股",
+      "code": "839729",
+      "orgId": "gfbj0839729",
+      "pinyin": "yssw",
+      "zwjc": "永顺生物"
+    },
+    {
+      "category": "A股",
+      "code": "839790",
+      "orgId": "gfbj0839790",
+      "pinyin": "ldxx",
+      "zwjc": "联迪信息"
+    },
+    {
+      "category": "A股",
+      "code": "839792",
+      "orgId": "gfbj0839792",
+      "pinyin": "dhxc",
+      "zwjc": "东和新材"
+    },
+    {
+      "category": "A股",
+      "code": "839946",
+      "orgId": "gfbj0839946",
+      "pinyin": "hybs",
+      "zwjc": "华阳变速"
+    },
+    {
+      "category": "A股",
+      "code": "870199",
+      "orgId": "gfbj0870199",
+      "pinyin": "byk",
+      "zwjc": "倍益康"
+    },
+    {
+      "category": "A股",
+      "code": "870204",
+      "orgId": "gfbj0870204",
+      "pinyin": "hjcl",
+      "zwjc": "沪江材料"
+    },
+    {
+      "category": "A股",
+      "code": "870299",
+      "orgId": "gfbj0870299",
+      "pinyin": "cndl",
+      "zwjc": "灿能电力"
+    },
+    {
+      "category": "A股",
+      "code": "870357",
+      "orgId": "gfbj0870357",
+      "pinyin": "ybx",
+      "zwjc": "雅葆轩"
+    },
+    {
+      "category": "A股",
+      "code": "870436",
+      "orgId": "gfbj0870436",
+      "pinyin": "dddq",
+      "zwjc": "大地电气"
+    },
+    {
+      "category": "A股",
+      "code": "870508",
+      "orgId": "9900034486",
+      "pinyin": "fagf",
+      "zwjc": "丰安股份"
+    },
+    {
+      "category": "A股",
+      "code": "870656",
+      "orgId": "gfbj0870656",
+      "pinyin": "hsyy",
+      "zwjc": "海昇药业"
+    },
+    {
+      "category": "A股",
+      "code": "870726",
+      "orgId": "gfbj0870726",
+      "pinyin": "hzkj",
+      "zwjc": "鸿智科技"
+    },
+    {
+      "category": "A股",
+      "code": "870866",
+      "orgId": "gfbj0870866",
+      "pinyin": "lhkj",
+      "zwjc": "绿亨科技"
+    },
+    {
+      "category": "A股",
+      "code": "870976",
+      "orgId": "gfbj0870976",
+      "pinyin": "sszn",
+      "zwjc": "视声智能"
+    },
+    {
+      "category": "A股",
+      "code": "871245",
+      "orgId": "gfbj0871245",
+      "pinyin": "wbyy",
+      "zwjc": "威博液压"
+    },
+    {
+      "category": "A股",
+      "code": "871263",
+      "orgId": "gfbj0871263",
+      "pinyin": "lsjg",
+      "zwjc": "莱赛激光"
+    },
+    {
+      "category": "A股",
+      "code": "871396",
+      "orgId": "9900034929",
+      "pinyin": "cfgf",
+      "zwjc": "常辅股份"
+    },
+    {
+      "category": "A股",
+      "code": "871478",
+      "orgId": "gfbj0871478",
+      "pinyin": "jngf",
+      "zwjc": "巨能股份"
+    },
+    {
+      "category": "A股",
+      "code": "871553",
+      "orgId": "gfbj0871553",
+      "pinyin": "ktjg",
+      "zwjc": "凯腾精工"
+    },
+    {
+      "category": "A股",
+      "code": "871634",
+      "orgId": "gfbj0871634",
+      "pinyin": "xwl",
+      "zwjc": "新威凌"
+    },
+    {
+      "category": "A股",
+      "code": "871642",
+      "orgId": "gfbj0871642",
+      "pinyin": "tyht",
+      "zwjc": "通易航天"
+    },
+    {
+      "category": "A股",
+      "code": "871694",
+      "orgId": "9900035499",
+      "pinyin": "zykj",
+      "zwjc": "中裕科技"
+    },
+    {
+      "category": "A股",
+      "code": "871753",
+      "orgId": "gfbj0871753",
+      "pinyin": "tfb",
+      "zwjc": "天纺标"
+    },
+    {
+      "category": "A股",
+      "code": "871857",
+      "orgId": "gfbj0871857",
+      "pinyin": "hxkj",
+      "zwjc": "泓禧科技"
+    },
+    {
+      "category": "A股",
+      "code": "871970",
+      "orgId": "gfbj0871970",
+      "pinyin": "dysw",
+      "zwjc": "大禹生物"
+    },
+    {
+      "category": "A股",
+      "code": "871981",
+      "orgId": "gfbj0871981",
+      "pinyin": "jskj",
+      "zwjc": "晶赛科技"
+    },
+    {
+      "category": "A股",
+      "code": "872190",
+      "orgId": "9900035891",
+      "pinyin": "lskj",
+      "zwjc": "雷神科技"
+    },
+    {
+      "category": "A股",
+      "code": "872351",
+      "orgId": "gfbj0872351",
+      "pinyin": "hgyh",
+      "zwjc": "华光源海"
+    },
+    {
+      "category": "A股",
+      "code": "872374",
+      "orgId": "gfbj0872374",
+      "pinyin": "ylwl",
+      "zwjc": "云里物里"
+    },
+    {
+      "category": "A股",
+      "code": "872392",
+      "orgId": "gfbj0872392",
+      "pinyin": "jhkj",
+      "zwjc": "佳合科技"
+    },
+    {
+      "category": "A股",
+      "code": "872541",
+      "orgId": "gfbj0872541",
+      "pinyin": "tdkj",
+      "zwjc": "铁大科技"
+    },
+    {
+      "category": "A股",
+      "code": "872808",
+      "orgId": "gfbj0872808",
+      "pinyin": "sgsc",
+      "zwjc": "曙光数创"
+    },
+    {
+      "category": "A股",
+      "code": "872895",
+      "orgId": "gfbj0872895",
+      "pinyin": "hxkj",
+      "zwjc": "花溪科技"
+    },
+    {
+      "category": "A股",
+      "code": "872925",
+      "orgId": "gfbj0872925",
+      "pinyin": "jhyl",
+      "zwjc": "锦好医疗"
+    },
+    {
+      "category": "A股",
+      "code": "872931",
+      "orgId": "gfbj0872931",
+      "pinyin": "wxdb",
+      "zwjc": "无锡鼎邦"
+    },
+    {
+      "category": "A股",
+      "code": "872953",
+      "orgId": "gfbj0872953",
+      "pinyin": "gzrj",
+      "zwjc": "国子软件"
+    },
+    {
+      "category": "A股",
+      "code": "873001",
+      "orgId": "9900037542",
+      "pinyin": "wdgd",
+      "zwjc": "纬达光电"
+    },
+    {
+      "category": "A股",
+      "code": "873122",
+      "orgId": "gfbj0873122",
+      "pinyin": "zfb",
+      "zwjc": "中纺标"
+    },
+    {
+      "category": "A股",
+      "code": "873132",
+      "orgId": "gfbj0873132",
+      "pinyin": "tpzn",
+      "zwjc": "泰鹏智能"
+    },
+    {
+      "category": "A股",
+      "code": "873152",
+      "orgId": "gfbj0873152",
+      "pinyin": "thld",
+      "zwjc": "天宏锂电"
+    },
+    {
+      "category": "A股",
+      "code": "873167",
+      "orgId": "gfbj0873167",
+      "pinyin": "xgj",
+      "zwjc": "新赣江"
+    },
+    {
+      "category": "A股",
+      "code": "873169",
+      "orgId": "gfbj0873169",
+      "pinyin": "qfjg",
+      "zwjc": "七丰精工"
+    },
+    {
+      "category": "A股",
+      "code": "873223",
+      "orgId": "gfbj0873223",
+      "pinyin": "ryjm",
+      "zwjc": "荣亿精密"
+    },
+    {
+      "category": "A股",
+      "code": "873305",
+      "orgId": "gfbj0873305",
+      "pinyin": "jlkj",
+      "zwjc": "九菱科技"
+    },
+    {
+      "category": "A股",
+      "code": "873339",
+      "orgId": "gfbj0873339",
+      "pinyin": "htzm",
+      "zwjc": "恒太照明"
+    },
+    {
+      "category": "A股",
+      "code": "873527",
+      "orgId": "gfbj0833841",
+      "pinyin": "ygm",
+      "zwjc": "夜光明"
+    },
+    {
+      "category": "A股",
+      "code": "873570",
+      "orgId": "gfbj0873570",
+      "pinyin": "kbjg",
+      "zwjc": "坤博精工"
+    },
+    {
+      "category": "A股",
+      "code": "873576",
+      "orgId": "gfbj0873576",
+      "pinyin": "tlfh",
+      "zwjc": "天力复合"
+    },
+    {
+      "category": "A股",
+      "code": "873593",
+      "orgId": "gfbj0873593",
+      "pinyin": "dzkj",
+      "zwjc": "鼎智科技"
+    },
+    {
+      "category": "A股",
+      "code": "873665",
+      "orgId": "gfbj0872059",
+      "pinyin": "kqgf",
+      "zwjc": "科强股份"
+    },
+    {
+      "category": "A股",
+      "code": "873679",
+      "orgId": "nssc1000287",
+      "pinyin": "qjkj",
+      "zwjc": "前进科技"
+    },
+    {
+      "category": "A股",
+      "code": "873690",
+      "orgId": "9900035089",
+      "pinyin": "jzkj",
+      "zwjc": "捷众科技"
+    },
+    {
+      "category": "A股",
+      "code": "873693",
+      "orgId": "nssc1000029",
+      "pinyin": "awt",
+      "zwjc": "阿为特"
+    },
+    {
+      "category": "A股",
+      "code": "873703",
+      "orgId": "gfbj0833747",
+      "pinyin": "gshn",
+      "zwjc": "广厦环能"
+    },
+    {
+      "category": "A股",
+      "code": "873706",
+      "orgId": "nssc1000632",
+      "pinyin": "ttjx",
+      "zwjc": "铁拓机械"
+    },
+    {
+      "category": "A股",
+      "code": "873726",
+      "orgId": "gfbj0873726",
+      "pinyin": "zzdj",
+      "zwjc": "卓兆点胶"
+    },
+    {
+      "category": "A股",
+      "code": "873806",
+      "orgId": "9900030903",
+      "pinyin": "yxy",
+      "zwjc": "云星宇"
+    },
+    {
+      "category": "A股",
+      "code": "873833",
+      "orgId": "gfbj0833959",
+      "pinyin": "mxys",
+      "zwjc": "美心翼申"
+    },
+    {
+      "category": "A股",
+      "code": "920000",
+      "orgId": "gfbj0832000",
+      "pinyin": "ahfh",
+      "zwjc": "安徽凤凰"
+    },
+    {
+      "category": "A股",
+      "code": "920001",
+      "orgId": "9900037542",
+      "pinyin": "wdgd",
+      "zwjc": "纬达光电"
+    },
+    {
+      "category": "A股",
+      "code": "920002",
+      "orgId": "gfbj0873843",
+      "pinyin": "wdzc",
+      "zwjc": "万达轴承"
+    },
+    {
+      "category": "A股",
+      "code": "920003",
+      "orgId": "gfbj0839962",
+      "pinyin": "zczx",
+      "zwjc": "中诚咨询"
+    },
+    {
+      "category": "A股",
+      "code": "920005",
+      "orgId": "9900057482",
+      "pinyin": "djjm",
+      "zwjc": "鼎佳精密"
+    },
+    {
+      "category": "A股",
+      "code": "920006",
+      "orgId": "gfbj0837006",
+      "pinyin": "snkj",
+      "zwjc": "晟楠科技"
+    },
+    {
+      "category": "A股",
+      "code": "920007",
+      "orgId": "gfbj0874325",
+      "pinyin": "ylzn",
+      "zwjc": "酉立智能"
+    },
+    {
+      "category": "A股",
+      "code": "920008",
+      "orgId": "gfbj0831490",
+      "pinyin": "cdgx",
+      "zwjc": "成电光信"
+    },
+    {
+      "category": "A股",
+      "code": "920009",
+      "orgId": "nssc1000841",
+      "pinyin": "dnsw",
+      "zwjc": "丹娜生物"
+    },
+    {
+      "category": "A股",
+      "code": "920010",
+      "orgId": "gfbj0831010",
+      "pinyin": "ktrq",
+      "zwjc": "凯添燃气"
+    },
+    {
+      "category": "A股",
+      "code": "920011",
+      "orgId": "gfbj0874468",
+      "pinyin": "cgdj",
+      "zwjc": "晨光电机"
+    },
+    {
+      "category": "A股",
+      "code": "920012",
+      "orgId": "gfbj0832990",
+      "pinyin": "cdxc",
+      "zwjc": "创达新材"
+    },
+    {
+      "category": "A股",
+      "code": "920014",
+      "orgId": "gfbj0834014",
+      "pinyin": "trs",
+      "zwjc": "特瑞斯"
+    },
+    {
+      "category": "A股",
+      "code": "920015",
+      "orgId": "gfbj0874085",
+      "pinyin": "jhxc",
+      "zwjc": "锦华新材"
+    },
+    {
+      "category": "A股",
+      "code": "920016",
+      "orgId": "gfbj0870800",
+      "pinyin": "zcxl",
+      "zwjc": "中草香料"
+    },
+    {
+      "category": "A股",
+      "code": "920017",
+      "orgId": "9900003482",
+      "pinyin": "xhyy",
+      "zwjc": "星昊医药"
+    },
+    {
+      "category": "A股",
+      "code": "920018",
+      "orgId": "9900048068",
+      "pinyin": "hygf",
+      "zwjc": "宏远股份"
+    },
+    {
+      "category": "A股",
+      "code": "920019",
+      "orgId": "nssc1000257",
+      "pinyin": "tgkj",
+      "zwjc": "铜冠矿建"
+    },
+    {
+      "category": "A股",
+      "code": "920020",
+      "orgId": "gfbj0874194",
+      "pinyin": "tky",
+      "zwjc": "泰凯英"
+    },
+    {
+      "category": "A股",
+      "code": "920021",
+      "orgId": "gfbj0834021",
+      "pinyin": "ljkj",
+      "zwjc": "流金科技"
+    },
+    {
+      "category": "A股",
+      "code": "920022",
+      "orgId": "gfbj0873702",
+      "pinyin": "scgf",
+      "zwjc": "世昌股份"
+    },
+    {
+      "category": "A股",
+      "code": "920023",
+      "orgId": "gfbj0832023",
+      "pinyin": "stty",
+      "zwjc": "*ST田野"
+    },
+    {
+      "category": "A股",
+      "code": "920025",
+      "orgId": "DR0000218",
+      "pinyin": "kdzg",
+      "zwjc": "凯达重工"
+    },
+    {
+      "category": "A股",
+      "code": "920026",
+      "orgId": "gfbj0873726",
+      "pinyin": "zzdj",
+      "zwjc": "卓兆点胶"
+    },
+    {
+      "category": "A股",
+      "code": "920027",
+      "orgId": "9900034037",
+      "pinyin": "jdtf",
+      "zwjc": "交大铁发"
+    },
+    {
+      "category": "A股",
+      "code": "920028",
+      "orgId": "gfbj0874502",
+      "pinyin": "xht",
+      "zwjc": "新恒泰"
+    },
+    {
+      "category": "A股",
+      "code": "920029",
+      "orgId": "gfbj0873879",
+      "pinyin": "kfkj",
+      "zwjc": "开发科技"
+    },
+    {
+      "category": "A股",
+      "code": "920030",
+      "orgId": "gfbj0838030",
+      "pinyin": "dzqc",
+      "zwjc": "德众汽车"
+    },
+    {
+      "category": "A股",
+      "code": "920033",
+      "orgId": "gfbj0834033",
+      "pinyin": "kphx",
+      "zwjc": "康普化学"
+    },
+    {
+      "category": "A股",
+      "code": "920035",
+      "orgId": "gfbj0874096",
+      "pinyin": "jcdq",
+      "zwjc": "精创电气"
+    },
+    {
+      "category": "A股",
+      "code": "920036",
+      "orgId": "gfbj0873697",
+      "pinyin": "mrkj",
+      "zwjc": "觅睿科技"
+    },
+    {
+      "category": "A股",
+      "code": "920037",
+      "orgId": "gfbj0430447",
+      "pinyin": "gxkj",
+      "zwjc": "广信科技"
+    },
+    {
+      "category": "A股",
+      "code": "920038",
+      "orgId": "gfbj0833291",
+      "pinyin": "shgk",
+      "zwjc": "森合高科"
+    },
+    {
+      "category": "A股",
+      "code": "920039",
+      "orgId": "gfbj0831039",
+      "pinyin": "gyzb",
+      "zwjc": "国义招标"
+    },
+    {
+      "category": "A股",
+      "code": "920045",
+      "orgId": "gfbj0874084",
+      "pinyin": "hdg",
+      "zwjc": "蘅东光"
+    },
+    {
+      "category": "A股",
+      "code": "920046",
+      "orgId": "gfbj0837046",
+      "pinyin": "yndl",
+      "zwjc": "亿能电力"
+    },
+    {
+      "category": "A股",
+      "code": "920047",
+      "orgId": "9900006121",
+      "pinyin": "nsld",
+      "zwjc": "诺思兰德"
+    },
+    {
+      "category": "A股",
+      "code": "920050",
+      "orgId": "gfbj0874105",
+      "pinyin": "alyl",
+      "zwjc": "爱伦医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920055",
+      "orgId": "gfbj0874546",
+      "pinyin": "lygf",
+      "zwjc": "隆源股份"
+    },
+    {
+      "category": "A股",
+      "code": "920056",
+      "orgId": "gfbj0871532",
+      "pinyin": "nzg",
+      "zwjc": "能之光"
+    },
+    {
+      "category": "A股",
+      "code": "920057",
+      "orgId": "gfbj0835857",
+      "pinyin": "bjkj",
+      "zwjc": "百甲科技"
+    },
+    {
+      "category": "A股",
+      "code": "920058",
+      "orgId": "gfbj0834058",
+      "pinyin": "hysc",
+      "zwjc": "华洋赛车"
+    },
+    {
+      "category": "A股",
+      "code": "920059",
+      "orgId": "gfbj0837677",
+      "pinyin": "syjt",
+      "zwjc": "双英集团"
+    },
+    {
+      "category": "A股",
+      "code": "920060",
+      "orgId": "9900048400",
+      "pinyin": "wyt",
+      "zwjc": "万源通"
+    },
+    {
+      "category": "A股",
+      "code": "920061",
+      "orgId": "gfbj0836961",
+      "pinyin": "xckj",
+      "zwjc": "西磁科技"
+    },
+    {
+      "category": "A股",
+      "code": "920062",
+      "orgId": "gfbj0834062",
+      "pinyin": "krzk",
+      "zwjc": "科润智控"
+    },
+    {
+      "category": "A股",
+      "code": "920065",
+      "orgId": "9900048770",
+      "pinyin": "qakj",
+      "zwjc": "千岸科技"
+    },
+    {
+      "category": "A股",
+      "code": "920066",
+      "orgId": "gfbj0873664",
+      "pinyin": "kbe",
+      "zwjc": "科拜尔"
+    },
+    {
+      "category": "A股",
+      "code": "920068",
+      "orgId": "gfbj0834549",
+      "pinyin": "tggf",
+      "zwjc": "天工股份"
+    },
+    {
+      "category": "A股",
+      "code": "920069",
+      "orgId": "gfbj0874572",
+      "pinyin": "payl",
+      "zwjc": "普昂医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920071",
+      "orgId": "9900041632",
+      "pinyin": "jtgf",
+      "zwjc": "金钛股份"
+    },
+    {
+      "category": "A股",
+      "code": "920072",
+      "orgId": "gfbj0839744",
+      "pinyin": "klrd",
+      "zwjc": "科莱瑞迪"
+    },
+    {
+      "category": "A股",
+      "code": "920075",
+      "orgId": "gfbj0833075",
+      "pinyin": "bxl",
+      "zwjc": "柏星龙"
+    },
+    {
+      "category": "A股",
+      "code": "920076",
+      "orgId": "9900040466",
+      "pinyin": "glxc",
+      "zwjc": "国亮新材"
+    },
+    {
+      "category": "A股",
+      "code": "920077",
+      "orgId": "gfbj0836077",
+      "pinyin": "jltg",
+      "zwjc": "吉林碳谷"
+    },
+    {
+      "category": "A股",
+      "code": "920078",
+      "orgId": "gfbj0830854",
+      "pinyin": "zxxc",
+      "zwjc": "族兴新材"
+    },
+    {
+      "category": "A股",
+      "code": "920079",
+      "orgId": "gfbj0874075",
+      "pinyin": "qlm",
+      "zwjc": "乔路铭"
+    },
+    {
+      "category": "A股",
+      "code": "920080",
+      "orgId": "gfbj0833340",
+      "pinyin": "ams",
+      "zwjc": "奥美森"
+    },
+    {
+      "category": "A股",
+      "code": "920081",
+      "orgId": "gfbj0874628",
+      "pinyin": "oldq",
+      "zwjc": "欧伦电气"
+    },
+    {
+      "category": "A股",
+      "code": "920082",
+      "orgId": "9900046486",
+      "pinyin": "fzfm",
+      "zwjc": "方正阀门"
+    },
+    {
+      "category": "A股",
+      "code": "920083",
+      "orgId": "gfbj0873524",
+      "pinyin": "jgxc",
+      "zwjc": "金戈新材"
+    },
+    {
+      "category": "A股",
+      "code": "920086",
+      "orgId": "gfbj0831178",
+      "pinyin": "kmcl",
+      "zwjc": "科马材料"
+    },
+    {
+      "category": "A股",
+      "code": "920087",
+      "orgId": "gfbj0831087",
+      "pinyin": "qlzy",
+      "zwjc": "秋乐种业"
+    },
+    {
+      "category": "A股",
+      "code": "920088",
+      "orgId": "9900041869",
+      "pinyin": "klgf",
+      "zwjc": "科力股份"
+    },
+    {
+      "category": "A股",
+      "code": "920089",
+      "orgId": "gfbj0832089",
+      "pinyin": "hcjh",
+      "zwjc": "禾昌聚合"
+    },
+    {
+      "category": "A股",
+      "code": "920090",
+      "orgId": "9900020567",
+      "pinyin": "stth",
+      "zwjc": "*ST同辉"
+    },
+    {
+      "category": "A股",
+      "code": "920091",
+      "orgId": "9900041536",
+      "pinyin": "dpgy",
+      "zwjc": "大鹏工业"
+    },
+    {
+      "category": "A股",
+      "code": "920092",
+      "orgId": "gfbj0837092",
+      "pinyin": "hxkj",
+      "zwjc": "汉鑫科技"
+    },
+    {
+      "category": "A股",
+      "code": "920093",
+      "orgId": "gfbj0874573",
+      "pinyin": "xskj",
+      "zwjc": "信胜科技"
+    },
+    {
+      "category": "A股",
+      "code": "920096",
+      "orgId": "9900056215",
+      "pinyin": "jczn",
+      "zwjc": "嘉晨智能"
+    },
+    {
+      "category": "A股",
+      "code": "920098",
+      "orgId": "gfbj0834351",
+      "pinyin": "klxc",
+      "zwjc": "科隆新材"
+    },
+    {
+      "category": "A股",
+      "code": "920099",
+      "orgId": "gfbj0872869",
+      "pinyin": "rhjs",
+      "zwjc": "瑞华技术"
+    },
+    {
+      "category": "A股",
+      "code": "920100",
+      "orgId": "gfbj0873669",
+      "pinyin": "sxdj",
+      "zwjc": "三协电机"
+    },
+    {
+      "category": "A股",
+      "code": "920101",
+      "orgId": "gfbj0836517",
+      "pinyin": "zgjx",
+      "zwjc": "志高机械"
+    },
+    {
+      "category": "A股",
+      "code": "920106",
+      "orgId": "gfbj0873682",
+      "pinyin": "ltxc",
+      "zwjc": "林泰新材"
+    },
+    {
+      "category": "A股",
+      "code": "920107",
+      "orgId": "gfbj0874627",
+      "pinyin": "hxgf",
+      "zwjc": "恒兴股份"
+    },
+    {
+      "category": "A股",
+      "code": "920108",
+      "orgId": "gfbj0831075",
+      "pinyin": "hhkj",
+      "zwjc": "宏海科技"
+    },
+    {
+      "category": "A股",
+      "code": "920110",
+      "orgId": "gfbj0832110",
+      "pinyin": "ltkj",
+      "zwjc": "雷特科技"
+    },
+    {
+      "category": "A股",
+      "code": "920111",
+      "orgId": "nssc1000327",
+      "pinyin": "jxkj",
+      "zwjc": "聚星科技"
+    },
+    {
+      "category": "A股",
+      "code": "920112",
+      "orgId": "gfbj0430674",
+      "pinyin": "bls",
+      "zwjc": "巴兰仕"
+    },
+    {
+      "category": "A股",
+      "code": "920116",
+      "orgId": "gfbj0874016",
+      "pinyin": "xtck",
+      "zwjc": "星图测控"
+    },
+    {
+      "category": "A股",
+      "code": "920117",
+      "orgId": "gfbj0874520",
+      "pinyin": "lxzn",
+      "zwjc": "龙鑫智能"
+    },
+    {
+      "category": "A股",
+      "code": "920118",
+      "orgId": "9900041895",
+      "pinyin": "thyd",
+      "zwjc": "太湖远大"
+    },
+    {
+      "category": "A股",
+      "code": "920119",
+      "orgId": "gfbj0874489",
+      "pinyin": "mdl",
+      "zwjc": "美德乐"
+    },
+    {
+      "category": "A股",
+      "code": "920121",
+      "orgId": "gfbj0874560",
+      "pinyin": "jtkj",
+      "zwjc": "江天科技"
+    },
+    {
+      "category": "A股",
+      "code": "920122",
+      "orgId": "gfbj0873122",
+      "pinyin": "zfb",
+      "zwjc": "中纺标"
+    },
+    {
+      "category": "A股",
+      "code": "920123",
+      "orgId": "gfbj0837023",
+      "pinyin": "bwgf",
+      "zwjc": "芭薇股份"
+    },
+    {
+      "category": "A股",
+      "code": "920124",
+      "orgId": "gfbj0838401",
+      "pinyin": "ntkj",
+      "zwjc": "南特科技"
+    },
+    {
+      "category": "A股",
+      "code": "920125",
+      "orgId": "gfbj0874538",
+      "pinyin": "hsd",
+      "zwjc": "鸿仕达"
+    },
+    {
+      "category": "A股",
+      "code": "920126",
+      "orgId": "gfbj0874495",
+      "pinyin": "ydgf",
+      "zwjc": "永大股份"
+    },
+    {
+      "category": "A股",
+      "code": "920128",
+      "orgId": "gfbj0873783",
+      "pinyin": "sydq",
+      "zwjc": "胜业电气"
+    },
+    {
+      "category": "A股",
+      "code": "920130",
+      "orgId": "gfbj0833030",
+      "pinyin": "lfkg",
+      "zwjc": "立方控股"
+    },
+    {
+      "category": "A股",
+      "code": "920132",
+      "orgId": "gfbj0873132",
+      "pinyin": "tpzn",
+      "zwjc": "泰鹏智能"
+    },
+    {
+      "category": "A股",
+      "code": "920136",
+      "orgId": "gfbj0874457",
+      "pinyin": "yljm",
+      "zwjc": "永励精密"
+    },
+    {
+      "category": "A股",
+      "code": "920138",
+      "orgId": "9900034944",
+      "pinyin": "jlkj",
+      "zwjc": "杰理科技"
+    },
+    {
+      "category": "A股",
+      "code": "920139",
+      "orgId": "9900024205",
+      "pinyin": "hlgf",
+      "zwjc": "华岭股份"
+    },
+    {
+      "category": "A股",
+      "code": "920145",
+      "orgId": "gfbj0832145",
+      "pinyin": "hhgf",
+      "zwjc": "恒合股份"
+    },
+    {
+      "category": "A股",
+      "code": "920146",
+      "orgId": "gfbj0839946",
+      "pinyin": "hybs",
+      "zwjc": "华阳变速"
+    },
+    {
+      "category": "A股",
+      "code": "920149",
+      "orgId": "gfbj0836149",
+      "pinyin": "xjkj",
+      "zwjc": "旭杰科技"
+    },
+    {
+      "category": "A股",
+      "code": "920152",
+      "orgId": "gfbj0831152",
+      "pinyin": "kgkj",
+      "zwjc": "昆工科技"
+    },
+    {
+      "category": "A股",
+      "code": "920156",
+      "orgId": "gfbj0874519",
+      "pinyin": "hczn",
+      "zwjc": "海昌智能"
+    },
+    {
+      "category": "A股",
+      "code": "920157",
+      "orgId": "gfbj0874571",
+      "pinyin": "ytgd",
+      "zwjc": "宇特光电"
+    },
+    {
+      "category": "A股",
+      "code": "920158",
+      "orgId": "fzqy1030036",
+      "pinyin": "cjnk",
+      "zwjc": "长江能科"
+    },
+    {
+      "category": "A股",
+      "code": "920159",
+      "orgId": "gfbj0874513",
+      "pinyin": "ndkj",
+      "zwjc": "农大科技"
+    },
+    {
+      "category": "A股",
+      "code": "920160",
+      "orgId": "gfbj0873694",
+      "pinyin": "bkjc",
+      "zwjc": "北矿检测"
+    },
+    {
+      "category": "A股",
+      "code": "920161",
+      "orgId": "9900023061",
+      "pinyin": "lckj",
+      "zwjc": "龙辰科技"
+    },
+    {
+      "category": "A股",
+      "code": "920162",
+      "orgId": "gfbj0837904",
+      "pinyin": "mstk",
+      "zwjc": "莫森泰克"
+    },
+    {
+      "category": "A股",
+      "code": "920163",
+      "orgId": "gfbj0838163",
+      "pinyin": "fdxc",
+      "zwjc": "方大新材"
+    },
+    {
+      "category": "A股",
+      "code": "920165",
+      "orgId": "gfbj0874687",
+      "pinyin": "jksw",
+      "zwjc": "珈凯生物"
+    },
+    {
+      "category": "A股",
+      "code": "920166",
+      "orgId": "gfbj0873794",
+      "pinyin": "hsyl",
+      "zwjc": "海圣医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920167",
+      "orgId": "gfbj0839167",
+      "pinyin": "txkj",
+      "zwjc": "同享科技"
+    },
+    {
+      "category": "A股",
+      "code": "920168",
+      "orgId": "gfbj0833137",
+      "pinyin": "tbgd",
+      "zwjc": "通宝光电"
+    },
+    {
+      "category": "A股",
+      "code": "920169",
+      "orgId": "gfbj0873169",
+      "pinyin": "qfjg",
+      "zwjc": "七丰精工"
+    },
+    {
+      "category": "A股",
+      "code": "920171",
+      "orgId": "9900030337",
+      "pinyin": "zsxx",
+      "zwjc": "志晟信息"
+    },
+    {
+      "category": "A股",
+      "code": "920174",
+      "orgId": "gfbj0835174",
+      "pinyin": "wxzn",
+      "zwjc": "五新智能"
+    },
+    {
+      "category": "A股",
+      "code": "920175",
+      "orgId": "gfbj0832175",
+      "pinyin": "dfts",
+      "zwjc": "东方碳素"
+    },
+    {
+      "category": "A股",
+      "code": "920176",
+      "orgId": "gfbj0874747",
+      "pinyin": "wqkj",
+      "zwjc": "维琪科技"
+    },
+    {
+      "category": "A股",
+      "code": "920177",
+      "orgId": "gfbj0874202",
+      "pinyin": "hdkj",
+      "zwjc": "恒道科技"
+    },
+    {
+      "category": "A股",
+      "code": "920178",
+      "orgId": "gfbj0874580",
+      "pinyin": "rxzn",
+      "zwjc": "锐翔智能"
+    },
+    {
+      "category": "A股",
+      "code": "920179",
+      "orgId": "gfbj0835179",
+      "pinyin": "kdsy",
+      "zwjc": "凯德石英"
+    },
+    {
+      "category": "A股",
+      "code": "920180",
+      "orgId": "gfbj0834286",
+      "pinyin": "adkj",
+      "zwjc": "爱得科技"
+    },
+    {
+      "category": "A股",
+      "code": "920181",
+      "orgId": "gfbj0837559",
+      "pinyin": "sydz",
+      "zwjc": "赛英电子"
+    },
+    {
+      "category": "A股",
+      "code": "920183",
+      "orgId": "gfbj0874481",
+      "pinyin": "hfm",
+      "zwjc": "海菲曼"
+    },
+    {
+      "category": "A股",
+      "code": "920184",
+      "orgId": "gfbj0835184",
+      "pinyin": "gykj",
+      "zwjc": "国源科技"
+    },
+    {
+      "category": "A股",
+      "code": "920185",
+      "orgId": "gfbj0835185",
+      "pinyin": "btr",
+      "zwjc": "贝特瑞"
+    },
+    {
+      "category": "A股",
+      "code": "920186",
+      "orgId": "gfbj0830852",
+      "pinyin": "zky",
+      "zwjc": "中科仪"
+    },
+    {
+      "category": "A股",
+      "code": "920187",
+      "orgId": "gfbj0834081",
+      "pinyin": "tlkj",
+      "zwjc": "通领科技"
+    },
+    {
+      "category": "A股",
+      "code": "920188",
+      "orgId": "gfbj0874157",
+      "pinyin": "ylkj",
+      "zwjc": "悦龙科技"
+    },
+    {
+      "category": "A股",
+      "code": "920189",
+      "orgId": "9900034066",
+      "pinyin": "kmt",
+      "zwjc": "康美特"
+    },
+    {
+      "category": "A股",
+      "code": "920190",
+      "orgId": "9900035891",
+      "pinyin": "lskj",
+      "zwjc": "雷神科技"
+    },
+    {
+      "category": "A股",
+      "code": "920191",
+      "orgId": "gfbj0874327",
+      "pinyin": "rejd",
+      "zwjc": "瑞尔竞达"
+    },
+    {
+      "category": "A股",
+      "code": "920193",
+      "orgId": "gfbj0832073",
+      "pinyin": "jhc",
+      "zwjc": "吉和昌"
+    },
+    {
+      "category": "A股",
+      "code": "920195",
+      "orgId": "gfbj0831195",
+      "pinyin": "sxkj",
+      "zwjc": "三祥科技"
+    },
+    {
+      "category": "A股",
+      "code": "920196",
+      "orgId": "gfbj0874142",
+      "pinyin": "nfry",
+      "zwjc": "南方乳业"
+    },
+    {
+      "category": "A股",
+      "code": "920198",
+      "orgId": "9900024889",
+      "pinyin": "wcgd",
+      "zwjc": "微创光电"
+    },
+    {
+      "category": "A股",
+      "code": "920199",
+      "orgId": "gfbj0870199",
+      "pinyin": "byk",
+      "zwjc": "倍益康"
+    },
+    {
+      "category": "A股",
+      "code": "920200",
+      "orgId": "gfbj0874492",
+      "pinyin": "zhgf",
+      "zwjc": "振宏股份"
+    },
+    {
+      "category": "A股",
+      "code": "920201",
+      "orgId": "gfbj0874637",
+      "pinyin": "brj",
+      "zwjc": "百瑞吉"
+    },
+    {
+      "category": "A股",
+      "code": "920202",
+      "orgId": "gfbj0874433",
+      "pinyin": "adgf",
+      "zwjc": "安达股份"
+    },
+    {
+      "category": "A股",
+      "code": "920204",
+      "orgId": "gfbj0870204",
+      "pinyin": "hjcl",
+      "zwjc": "沪江材料"
+    },
+    {
+      "category": "A股",
+      "code": "920206",
+      "orgId": "gfbj0873772",
+      "pinyin": "ckkj",
+      "zwjc": "彩客科技"
+    },
+    {
+      "category": "A股",
+      "code": "920207",
+      "orgId": "gfbj0835207",
+      "pinyin": "zckj",
+      "zwjc": "众诚科技"
+    },
+    {
+      "category": "A股",
+      "code": "920208",
+      "orgId": "gfbj0836208",
+      "pinyin": "qjjs",
+      "zwjc": "青矩技术"
+    },
+    {
+      "category": "A股",
+      "code": "920211",
+      "orgId": "gfbj0874510",
+      "pinyin": "xrdz",
+      "zwjc": "新睿电子"
+    },
+    {
+      "category": "A股",
+      "code": "920212",
+      "orgId": "gfbj0837212",
+      "pinyin": "zxdz",
+      "zwjc": "智新电子"
+    },
+    {
+      "category": "A股",
+      "code": "920218",
+      "orgId": "gfbj0874555",
+      "pinyin": "xtl",
+      "zwjc": "新天力"
+    },
+    {
+      "category": "A股",
+      "code": "920220",
+      "orgId": "gfbj0874326",
+      "pinyin": "lxdq",
+      "zwjc": "朗信电气"
+    },
+    {
+      "category": "A股",
+      "code": "920221",
+      "orgId": "gfbj0836221",
+      "pinyin": "ysjm",
+      "zwjc": "易实精密"
+    },
+    {
+      "category": "A股",
+      "code": "920222",
+      "orgId": "nssc1000269",
+      "pinyin": "ykdq",
+      "zwjc": "益坤电气"
+    },
+    {
+      "category": "A股",
+      "code": "920223",
+      "orgId": "gfbj0873223",
+      "pinyin": "ryjm",
+      "zwjc": "荣亿精密"
+    },
+    {
+      "category": "A股",
+      "code": "920225",
+      "orgId": "gfbj0832225",
+      "pinyin": "ltkj",
+      "zwjc": "利通科技"
+    },
+    {
+      "category": "A股",
+      "code": "920227",
+      "orgId": "gfbj0838227",
+      "pinyin": "mdkj",
+      "zwjc": "美登科技"
+    },
+    {
+      "category": "A股",
+      "code": "920229",
+      "orgId": "gfbj0839375",
+      "pinyin": "sjsm",
+      "zwjc": "世纪数码"
+    },
+    {
+      "category": "A股",
+      "code": "920230",
+      "orgId": "gfbj0833230",
+      "pinyin": "okyy",
+      "zwjc": "欧康医药"
+    },
+    {
+      "category": "A股",
+      "code": "920237",
+      "orgId": "gfbj0835237",
+      "pinyin": "ljkj",
+      "zwjc": "力佳科技"
+    },
+    {
+      "category": "A股",
+      "code": "920238",
+      "orgId": "9900048406",
+      "pinyin": "cyyk",
+      "zwjc": "长鹰硬科"
+    },
+    {
+      "category": "A股",
+      "code": "920239",
+      "orgId": "gfbj0836239",
+      "pinyin": "chny",
+      "zwjc": "长虹能源"
+    },
+    {
+      "category": "A股",
+      "code": "920242",
+      "orgId": "gfbj0837242",
+      "pinyin": "jbkj",
+      "zwjc": "建邦科技"
+    },
+    {
+      "category": "A股",
+      "code": "920245",
+      "orgId": "gfbj0871245",
+      "pinyin": "wbyy",
+      "zwjc": "威博液压"
+    },
+    {
+      "category": "A股",
+      "code": "920247",
+      "orgId": "gfbj0836247",
+      "pinyin": "hmxc",
+      "zwjc": "华密新材"
+    },
+    {
+      "category": "A股",
+      "code": "920249",
+      "orgId": "gfbj0832149",
+      "pinyin": "led",
+      "zwjc": "利尔达"
+    },
+    {
+      "category": "A股",
+      "code": "920252",
+      "orgId": "gfbj0873152",
+      "pinyin": "thld",
+      "zwjc": "天宏锂电"
+    },
+    {
+      "category": "A股",
+      "code": "920258",
+      "orgId": "gfbj0873124",
+      "pinyin": "jrxc",
+      "zwjc": "聚仁新材"
+    },
+    {
+      "category": "A股",
+      "code": "920260",
+      "orgId": "gfbj0836260",
+      "pinyin": "zhgf",
+      "zwjc": "中寰股份"
+    },
+    {
+      "category": "A股",
+      "code": "920261",
+      "orgId": "gfbj0834261",
+      "pinyin": "ynw",
+      "zwjc": "一诺威"
+    },
+    {
+      "category": "A股",
+      "code": "920262",
+      "orgId": "gfbj0838262",
+      "pinyin": "thx",
+      "zwjc": "太湖雪"
+    },
+    {
+      "category": "A股",
+      "code": "920263",
+      "orgId": "gfbj0836263",
+      "pinyin": "zhtd",
+      "zwjc": "中航泰达"
+    },
+    {
+      "category": "A股",
+      "code": "920266",
+      "orgId": "gfbj0833266",
+      "pinyin": "swg",
+      "zwjc": "生物谷"
+    },
+    {
+      "category": "A股",
+      "code": "920267",
+      "orgId": "gfbj0831167",
+      "pinyin": "xhk",
+      "zwjc": "鑫汇科"
+    },
+    {
+      "category": "A股",
+      "code": "920268",
+      "orgId": "gfbj0874640",
+      "pinyin": "bmk",
+      "zwjc": "百迈科"
+    },
+    {
+      "category": "A股",
+      "code": "920269",
+      "orgId": "gfbj0874386",
+      "pinyin": "jfdl",
+      "zwjc": "杰锋动力"
+    },
+    {
+      "category": "A股",
+      "code": "920270",
+      "orgId": "gfbj0836270",
+      "pinyin": "tmkj",
+      "zwjc": "天铭科技"
+    },
+    {
+      "category": "A股",
+      "code": "920271",
+      "orgId": "gfbj0838171",
+      "pinyin": "bdgf",
+      "zwjc": "邦德股份"
+    },
+    {
+      "category": "A股",
+      "code": "920273",
+      "orgId": "gfbj0839273",
+      "pinyin": "yzmy",
+      "zwjc": "一致魔芋"
+    },
+    {
+      "category": "A股",
+      "code": "920274",
+      "orgId": "gfbj0837174",
+      "pinyin": "hybc",
+      "zwjc": "宏裕包材"
+    },
+    {
+      "category": "A股",
+      "code": "920275",
+      "orgId": "9900033375",
+      "pinyin": "qdl",
+      "zwjc": "驱动力"
+    },
+    {
+      "category": "A股",
+      "code": "920278",
+      "orgId": "gfbj0832278",
+      "pinyin": "ldyl",
+      "zwjc": "鹿得医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920284",
+      "orgId": "gfbj0833284",
+      "pinyin": "lgkj",
+      "zwjc": "灵鸽科技"
+    },
+    {
+      "category": "A股",
+      "code": "920285",
+      "orgId": "gfbj0874235",
+      "pinyin": "ydjk",
+      "zwjc": "远大健科"
+    },
+    {
+      "category": "A股",
+      "code": "920288",
+      "orgId": "gfbj0874709",
+      "pinyin": "hdht",
+      "zwjc": "华大海天"
+    },
+    {
+      "category": "A股",
+      "code": "920289",
+      "orgId": "gfbj0874378",
+      "pinyin": "hhzn",
+      "zwjc": "华汇智能"
+    },
+    {
+      "category": "A股",
+      "code": "920296",
+      "orgId": "gfbj0874332",
+      "pinyin": "wfgd",
+      "zwjc": "文峰光电"
+    },
+    {
+      "category": "A股",
+      "code": "920298",
+      "orgId": "gfbj0874772",
+      "pinyin": "txjm",
+      "zwjc": "腾信精密"
+    },
+    {
+      "category": "A股",
+      "code": "920299",
+      "orgId": "gfbj0870299",
+      "pinyin": "cndl",
+      "zwjc": "灿能电力"
+    },
+    {
+      "category": "A股",
+      "code": "920300",
+      "orgId": "9900023934",
+      "pinyin": "cgyl",
+      "zwjc": "辰光医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920304",
+      "orgId": "gfbj0831304",
+      "pinyin": "dehg",
+      "zwjc": "迪尔化工"
+    },
+    {
+      "category": "A股",
+      "code": "920305",
+      "orgId": "gfbj0835305",
+      "pinyin": "yct",
+      "zwjc": "云创退"
+    },
+    {
+      "category": "A股",
+      "code": "920306",
+      "orgId": "gfbj0833288",
+      "pinyin": "tyzg",
+      "zwjc": "天元重工"
+    },
+    {
+      "category": "A股",
+      "code": "920339",
+      "orgId": "gfbj0873339",
+      "pinyin": "htzm",
+      "zwjc": "恒太照明"
+    },
+    {
+      "category": "A股",
+      "code": "920344",
+      "orgId": "gfbj0837344",
+      "pinyin": "syjy",
+      "zwjc": "三元基因"
+    },
+    {
+      "category": "A股",
+      "code": "920346",
+      "orgId": "gfbj0833346",
+      "pinyin": "wmdz",
+      "zwjc": "威贸电子"
+    },
+    {
+      "category": "A股",
+      "code": "920351",
+      "orgId": "gfbj0872351",
+      "pinyin": "hgyh",
+      "zwjc": "华光源海"
+    },
+    {
+      "category": "A股",
+      "code": "920357",
+      "orgId": "gfbj0870357",
+      "pinyin": "ybx",
+      "zwjc": "雅葆轩"
+    },
+    {
+      "category": "A股",
+      "code": "920363",
+      "orgId": "gfbj0871263",
+      "pinyin": "lsjg",
+      "zwjc": "莱赛激光"
+    },
+    {
+      "category": "A股",
+      "code": "920367",
+      "orgId": "gfbj0873167",
+      "pinyin": "xgj",
+      "zwjc": "新赣江"
+    },
+    {
+      "category": "A股",
+      "code": "920368",
+      "orgId": "9900023723",
+      "pinyin": "lcsk",
+      "zwjc": "连城数控"
+    },
+    {
+      "category": "A股",
+      "code": "920370",
+      "orgId": "gfbj0831370",
+      "pinyin": "xaj",
+      "zwjc": "新安洁"
+    },
+    {
+      "category": "A股",
+      "code": "920371",
+      "orgId": "gfbj0839371",
+      "pinyin": "ofdy",
+      "zwjc": "欧福蛋业"
+    },
+    {
+      "category": "A股",
+      "code": "920374",
+      "orgId": "gfbj0872374",
+      "pinyin": "ylwl",
+      "zwjc": "云里物里"
+    },
+    {
+      "category": "A股",
+      "code": "920375",
+      "orgId": "gfbj0831175",
+      "pinyin": "pnkj",
+      "zwjc": "派诺科技"
+    },
+    {
+      "category": "A股",
+      "code": "920378",
+      "orgId": "gfbj0831278",
+      "pinyin": "tdgf",
+      "zwjc": "泰德股份"
+    },
+    {
+      "category": "A股",
+      "code": "920392",
+      "orgId": "gfbj0872392",
+      "pinyin": "jhkj",
+      "zwjc": "佳合科技"
+    },
+    {
+      "category": "A股",
+      "code": "920394",
+      "orgId": "gfbj0833394",
+      "pinyin": "msd",
+      "zwjc": "民士达"
+    },
+    {
+      "category": "A股",
+      "code": "920395",
+      "orgId": "gfbj0836395",
+      "pinyin": "lhkj",
+      "zwjc": "朗鸿科技"
+    },
+    {
+      "category": "A股",
+      "code": "920396",
+      "orgId": "9900034929",
+      "pinyin": "cfgf",
+      "zwjc": "常辅股份"
+    },
+    {
+      "category": "A股",
+      "code": "920402",
+      "orgId": "gfbj0838402",
+      "pinyin": "gwkj",
+      "zwjc": "硅烷科技"
+    },
+    {
+      "category": "A股",
+      "code": "920403",
+      "orgId": "gfbj0837403",
+      "pinyin": "knzy",
+      "zwjc": "康农种业"
+    },
+    {
+      "category": "A股",
+      "code": "920405",
+      "orgId": "gfbj0831305",
+      "pinyin": "hxtx",
+      "zwjc": "海希通讯"
+    },
+    {
+      "category": "A股",
+      "code": "920407",
+      "orgId": "gfbj0834407",
+      "pinyin": "ccgf",
+      "zwjc": "驰诚股份"
+    },
+    {
+      "category": "A股",
+      "code": "920414",
+      "orgId": "gfbj0836414",
+      "pinyin": "opt",
+      "zwjc": "欧普泰"
+    },
+    {
+      "category": "A股",
+      "code": "920415",
+      "orgId": "gfbj0834415",
+      "pinyin": "htky",
+      "zwjc": "恒拓开源"
+    },
+    {
+      "category": "A股",
+      "code": "920418",
+      "orgId": "gfbj0430418",
+      "pinyin": "szgf",
+      "zwjc": "苏轴股份"
+    },
+    {
+      "category": "A股",
+      "code": "920419",
+      "orgId": "gfbj0832419",
+      "pinyin": "lsgf",
+      "zwjc": "路斯股份"
+    },
+    {
+      "category": "A股",
+      "code": "920422",
+      "orgId": "gfbj0836422",
+      "pinyin": "rpsp",
+      "zwjc": "润普食品"
+    },
+    {
+      "category": "A股",
+      "code": "920425",
+      "orgId": "gfbj0430425",
+      "pinyin": "lcjs",
+      "zwjc": "乐创技术"
+    },
+    {
+      "category": "A股",
+      "code": "920427",
+      "orgId": "gfbj0833427",
+      "pinyin": "hwsj",
+      "zwjc": "华维设计"
+    },
+    {
+      "category": "A股",
+      "code": "920429",
+      "orgId": "gfbj0833429",
+      "pinyin": "kbt",
+      "zwjc": "康比特"
+    },
+    {
+      "category": "A股",
+      "code": "920433",
+      "orgId": "gfbj0836433",
+      "pinyin": "dtyy",
+      "zwjc": "大唐药业"
+    },
+    {
+      "category": "A股",
+      "code": "920436",
+      "orgId": "gfbj0870436",
+      "pinyin": "dddq",
+      "zwjc": "大地电气"
+    },
+    {
+      "category": "A股",
+      "code": "920438",
+      "orgId": "gfbj0835438",
+      "pinyin": "gbj",
+      "zwjc": "戈碧迦"
+    },
+    {
+      "category": "A股",
+      "code": "920445",
+      "orgId": "gfbj0831445",
+      "pinyin": "lzkj",
+      "zwjc": "龙竹科技"
+    },
+    {
+      "category": "A股",
+      "code": "920454",
+      "orgId": "gfbj0833454",
+      "pinyin": "txcd",
+      "zwjc": "同心传动"
+    },
+    {
+      "category": "A股",
+      "code": "920455",
+      "orgId": "gfbj0833455",
+      "pinyin": "hlhs",
+      "zwjc": "汇隆活塞"
+    },
+    {
+      "category": "A股",
+      "code": "920469",
+      "orgId": "gfbj0832469",
+      "pinyin": "fhxc",
+      "zwjc": "富恒新材"
+    },
+    {
+      "category": "A股",
+      "code": "920471",
+      "orgId": "gfbj0832471",
+      "pinyin": "mbkj",
+      "zwjc": "美邦科技"
+    },
+    {
+      "category": "A股",
+      "code": "920475",
+      "orgId": "gfbj0834475",
+      "pinyin": "sykj",
+      "zwjc": "三友科技"
+    },
+    {
+      "category": "A股",
+      "code": "920476",
+      "orgId": "gfbj0430476",
+      "pinyin": "hnjs",
+      "zwjc": "海能技术"
+    },
+    {
+      "category": "A股",
+      "code": "920478",
+      "orgId": "gfbj0430478",
+      "pinyin": "hyyy",
+      "zwjc": "峆一药业"
+    },
+    {
+      "category": "A股",
+      "code": "920489",
+      "orgId": "9900028040",
+      "pinyin": "jxgf",
+      "zwjc": "佳先股份"
+    },
+    {
+      "category": "A股",
+      "code": "920491",
+      "orgId": "gfbj0832491",
+      "pinyin": "adw",
+      "zwjc": "奥迪威"
+    },
+    {
+      "category": "A股",
+      "code": "920493",
+      "orgId": "gfbj0839493",
+      "pinyin": "bxkj",
+      "zwjc": "并行科技"
+    },
+    {
+      "category": "A股",
+      "code": "920496",
+      "orgId": "gfbj0831396",
+      "pinyin": "xczn",
+      "zwjc": "许昌智能"
+    },
+    {
+      "category": "A股",
+      "code": "920504",
+      "orgId": "gfbj0836504",
+      "pinyin": "bxsw",
+      "zwjc": "博迅生物"
+    },
+    {
+      "category": "A股",
+      "code": "920505",
+      "orgId": "gfbj0873305",
+      "pinyin": "jlkj",
+      "zwjc": "九菱科技"
+    },
+    {
+      "category": "A股",
+      "code": "920508",
+      "orgId": "gfbj0835508",
+      "pinyin": "ytwl",
+      "zwjc": "殷图网联"
+    },
+    {
+      "category": "A股",
+      "code": "920509",
+      "orgId": "gfbj0833509",
+      "pinyin": "thdz",
+      "zwjc": "同惠电子"
+    },
+    {
+      "category": "A股",
+      "code": "920510",
+      "orgId": "gfbj0430510",
+      "pinyin": "fgjm",
+      "zwjc": "丰光精密"
+    },
+    {
+      "category": "A股",
+      "code": "920519",
+      "orgId": "gfbj0836419",
+      "pinyin": "wdgf",
+      "zwjc": "万德股份"
+    },
+    {
+      "category": "A股",
+      "code": "920522",
+      "orgId": "gfbj0832522",
+      "pinyin": "nkne",
+      "zwjc": "纳科诺尔"
+    },
+    {
+      "category": "A股",
+      "code": "920523",
+      "orgId": "gfbj0833523",
+      "pinyin": "drld",
+      "zwjc": "德瑞锂电"
+    },
+    {
+      "category": "A股",
+      "code": "920526",
+      "orgId": "gfbj0831526",
+      "pinyin": "khcl",
+      "zwjc": "凯华材料"
+    },
+    {
+      "category": "A股",
+      "code": "920527",
+      "orgId": "gfbj0833841",
+      "pinyin": "ygm",
+      "zwjc": "夜光明"
+    },
+    {
+      "category": "A股",
+      "code": "920533",
+      "orgId": "gfbj0833533",
+      "pinyin": "jckj",
+      "zwjc": "骏创科技"
+    },
+    {
+      "category": "A股",
+      "code": "920541",
+      "orgId": "gfbj0872541",
+      "pinyin": "tdkj",
+      "zwjc": "铁大科技"
+    },
+    {
+      "category": "A股",
+      "code": "920547",
+      "orgId": "gfbj0836547",
+      "pinyin": "wxjh",
+      "zwjc": "无锡晶海"
+    },
+    {
+      "category": "A股",
+      "code": "920553",
+      "orgId": "gfbj0871553",
+      "pinyin": "ktjg",
+      "zwjc": "凯腾精工"
+    },
+    {
+      "category": "A股",
+      "code": "920556",
+      "orgId": "9900023057",
+      "pinyin": "ydgf",
+      "zwjc": "雅达股份"
+    },
+    {
+      "category": "A股",
+      "code": "920564",
+      "orgId": "gfbj0430564",
+      "pinyin": "trkj",
+      "zwjc": "天润科技"
+    },
+    {
+      "category": "A股",
+      "code": "920566",
+      "orgId": "gfbj0832566",
+      "pinyin": "ztg",
+      "zwjc": "梓橦宫"
+    },
+    {
+      "category": "A股",
+      "code": "920570",
+      "orgId": "gfbj0873570",
+      "pinyin": "kbjg",
+      "zwjc": "坤博精工"
+    },
+    {
+      "category": "A股",
+      "code": "920571",
+      "orgId": "9900022904",
+      "pinyin": "ghyy",
+      "zwjc": "国航远洋"
+    },
+    {
+      "category": "A股",
+      "code": "920575",
+      "orgId": "gfbj0833575",
+      "pinyin": "stkl",
+      "zwjc": "*ST康乐"
+    },
+    {
+      "category": "A股",
+      "code": "920576",
+      "orgId": "gfbj0873576",
+      "pinyin": "tlfh",
+      "zwjc": "天力复合"
+    },
+    {
+      "category": "A股",
+      "code": "920578",
+      "orgId": "gfbj0871478",
+      "pinyin": "jngf",
+      "zwjc": "巨能股份"
+    },
+    {
+      "category": "A股",
+      "code": "920579",
+      "orgId": "gfbj0835579",
+      "pinyin": "jkgf",
+      "zwjc": "机科股份"
+    },
+    {
+      "category": "A股",
+      "code": "920580",
+      "orgId": "gfbj0833580",
+      "pinyin": "kcxc",
+      "zwjc": "科创新材"
+    },
+    {
+      "category": "A股",
+      "code": "920592",
+      "orgId": "gfbj0837592",
+      "pinyin": "hxyd",
+      "zwjc": "华信永道"
+    },
+    {
+      "category": "A股",
+      "code": "920593",
+      "orgId": "gfbj0873593",
+      "pinyin": "dzkj",
+      "zwjc": "鼎智科技"
+    },
+    {
+      "category": "A股",
+      "code": "920599",
+      "orgId": "9900021933",
+      "pinyin": "tlgf",
+      "zwjc": "同力股份"
+    },
+    {
+      "category": "A股",
+      "code": "920608",
+      "orgId": "9900034486",
+      "pinyin": "fagf",
+      "zwjc": "丰安股份"
+    },
+    {
+      "category": "A股",
+      "code": "920627",
+      "orgId": "gfbj0831627",
+      "pinyin": "lwgf",
+      "zwjc": "力王股份"
+    },
+    {
+      "category": "A股",
+      "code": "920634",
+      "orgId": "gfbj0871634",
+      "pinyin": "xwl",
+      "zwjc": "新威凌"
+    },
+    {
+      "category": "A股",
+      "code": "920639",
+      "orgId": "gfbj0834639",
+      "pinyin": "cgdl",
+      "zwjc": "晨光电缆"
+    },
+    {
+      "category": "A股",
+      "code": "920640",
+      "orgId": "gfbj0835640",
+      "pinyin": "fsd",
+      "zwjc": "富士达"
+    },
+    {
+      "category": "A股",
+      "code": "920641",
+      "orgId": "gfbj0831641",
+      "pinyin": "gle",
+      "zwjc": "格利尔"
+    },
+    {
+      "category": "A股",
+      "code": "920642",
+      "orgId": "gfbj0871642",
+      "pinyin": "tyht",
+      "zwjc": "通易航天"
+    },
+    {
+      "category": "A股",
+      "code": "920651",
+      "orgId": "gfbj0832651",
+      "pinyin": "tggf",
+      "zwjc": "天罡股份"
+    },
+    {
+      "category": "A股",
+      "code": "920656",
+      "orgId": "gfbj0870656",
+      "pinyin": "hsyy",
+      "zwjc": "海昇药业"
+    },
+    {
+      "category": "A股",
+      "code": "920662",
+      "orgId": "gfbj0832662",
+      "pinyin": "fsgf",
+      "zwjc": "方盛股份"
+    },
+    {
+      "category": "A股",
+      "code": "920663",
+      "orgId": "gfbj0837663",
+      "pinyin": "mykj",
+      "zwjc": "明阳科技"
+    },
+    {
+      "category": "A股",
+      "code": "920665",
+      "orgId": "gfbj0872059",
+      "pinyin": "kqgf",
+      "zwjc": "科强股份"
+    },
+    {
+      "category": "A股",
+      "code": "920670",
+      "orgId": "gfbj0835670",
+      "pinyin": "szr",
+      "zwjc": "数字人"
+    },
+    {
+      "category": "A股",
+      "code": "920675",
+      "orgId": "gfbj0836675",
+      "pinyin": "bykj",
+      "zwjc": "秉扬科技"
+    },
+    {
+      "category": "A股",
+      "code": "920679",
+      "orgId": "nssc1000287",
+      "pinyin": "qjkj",
+      "zwjc": "前进科技"
+    },
+    {
+      "category": "A股",
+      "code": "920680",
+      "orgId": "gfbj0839680",
+      "pinyin": "gdt",
+      "zwjc": "广道退"
+    },
+    {
+      "category": "A股",
+      "code": "920682",
+      "orgId": "gfbj0834682",
+      "pinyin": "qgdl",
+      "zwjc": "球冠电缆"
+    },
+    {
+      "category": "A股",
+      "code": "920685",
+      "orgId": "gfbj0430685",
+      "pinyin": "xzsw",
+      "zwjc": "新芝生物"
+    },
+    {
+      "category": "A股",
+      "code": "920689",
+      "orgId": "gfbj0831689",
+      "pinyin": "klt",
+      "zwjc": "克莱特"
+    },
+    {
+      "category": "A股",
+      "code": "920690",
+      "orgId": "9900035089",
+      "pinyin": "jzkj",
+      "zwjc": "捷众科技"
+    },
+    {
+      "category": "A股",
+      "code": "920693",
+      "orgId": "nssc1000029",
+      "pinyin": "awt",
+      "zwjc": "阿为特"
+    },
+    {
+      "category": "A股",
+      "code": "920694",
+      "orgId": "9900035499",
+      "pinyin": "zykj",
+      "zwjc": "中裕科技"
+    },
+    {
+      "category": "A股",
+      "code": "920699",
+      "orgId": "gfbj0836699",
+      "pinyin": "hde",
+      "zwjc": "海达尔"
+    },
+    {
+      "category": "A股",
+      "code": "920701",
+      "orgId": "gfbj0838701",
+      "pinyin": "hsdz",
+      "zwjc": "豪声电子"
+    },
+    {
+      "category": "A股",
+      "code": "920703",
+      "orgId": "gfbj0833747",
+      "pinyin": "gshn",
+      "zwjc": "广厦环能"
+    },
+    {
+      "category": "A股",
+      "code": "920706",
+      "orgId": "nssc1000632",
+      "pinyin": "ttjx",
+      "zwjc": "铁拓机械"
+    },
+    {
+      "category": "A股",
+      "code": "920717",
+      "orgId": "gfbj0836717",
+      "pinyin": "rxgf",
+      "zwjc": "瑞星股份"
+    },
+    {
+      "category": "A股",
+      "code": "920718",
+      "orgId": "gfbj0430718",
+      "pinyin": "hfgk",
+      "zwjc": "合肥高科"
+    },
+    {
+      "category": "A股",
+      "code": "920719",
+      "orgId": "gfbj0839719",
+      "pinyin": "nxxc",
+      "zwjc": "宁新新材"
+    },
+    {
+      "category": "A股",
+      "code": "920720",
+      "orgId": "gfbj0836720",
+      "pinyin": "jgjm",
+      "zwjc": "吉冈精密"
+    },
+    {
+      "category": "A股",
+      "code": "920725",
+      "orgId": "gfbj0839725",
+      "pinyin": "hfzs",
+      "zwjc": "惠丰钻石"
+    },
+    {
+      "category": "A股",
+      "code": "920726",
+      "orgId": "gfbj0831726",
+      "pinyin": "zll",
+      "zwjc": "朱老六"
+    },
+    {
+      "category": "A股",
+      "code": "920729",
+      "orgId": "gfbj0839729",
+      "pinyin": "yssw",
+      "zwjc": "永顺生物"
+    },
+    {
+      "category": "A股",
+      "code": "920735",
+      "orgId": "gfbj0832735",
+      "pinyin": "dyyy",
+      "zwjc": "德源药业"
+    },
+    {
+      "category": "A股",
+      "code": "920748",
+      "orgId": "gfbj0837748",
+      "pinyin": "lqxx",
+      "zwjc": "路桥信息"
+    },
+    {
+      "category": "A股",
+      "code": "920751",
+      "orgId": "gfbj0833751",
+      "pinyin": "htxc",
+      "zwjc": "惠同新材"
+    },
+    {
+      "category": "A股",
+      "code": "920753",
+      "orgId": "gfbj0871753",
+      "pinyin": "tfb",
+      "zwjc": "天纺标"
+    },
+    {
+      "category": "A股",
+      "code": "920765",
+      "orgId": "gfbj0834765",
+      "pinyin": "mzg",
+      "zwjc": "美之高"
+    },
+    {
+      "category": "A股",
+      "code": "920768",
+      "orgId": "gfbj0831768",
+      "pinyin": "sbb",
+      "zwjc": "拾比佰"
+    },
+    {
+      "category": "A股",
+      "code": "920770",
+      "orgId": "gfbj0834770",
+      "pinyin": "anj",
+      "zwjc": "艾能聚"
+    },
+    {
+      "category": "A股",
+      "code": "920779",
+      "orgId": "gfbj0830779",
+      "pinyin": "whld",
+      "zwjc": "武汉蓝电"
+    },
+    {
+      "category": "A股",
+      "code": "920781",
+      "orgId": "gfbj0833781",
+      "pinyin": "rqzz",
+      "zwjc": "瑞奇智造"
+    },
+    {
+      "category": "A股",
+      "code": "920786",
+      "orgId": "gfbj0832786",
+      "pinyin": "qsry",
+      "zwjc": "骑士乳业"
+    },
+    {
+      "category": "A股",
+      "code": "920790",
+      "orgId": "gfbj0839790",
+      "pinyin": "ldxx",
+      "zwjc": "联迪信息"
+    },
+    {
+      "category": "A股",
+      "code": "920792",
+      "orgId": "gfbj0839792",
+      "pinyin": "dhxc",
+      "zwjc": "东和新材"
+    },
+    {
+      "category": "A股",
+      "code": "920799",
+      "orgId": "gfbj0830799",
+      "pinyin": "arrj",
+      "zwjc": "艾融软件"
+    },
+    {
+      "category": "A股",
+      "code": "920802",
+      "orgId": "gfbj0832802",
+      "pinyin": "blj",
+      "zwjc": "保丽洁"
+    },
+    {
+      "category": "A股",
+      "code": "920806",
+      "orgId": "9900030903",
+      "pinyin": "yxy",
+      "zwjc": "云星宇"
+    },
+    {
+      "category": "A股",
+      "code": "920807",
+      "orgId": "gfbj0836807",
+      "pinyin": "blxc",
+      "zwjc": "奔朗新材"
+    },
+    {
+      "category": "A股",
+      "code": "920808",
+      "orgId": "gfbj0872808",
+      "pinyin": "sgsc",
+      "zwjc": "曙光数创"
+    },
+    {
+      "category": "A股",
+      "code": "920809",
+      "orgId": "gfbj0830809",
+      "pinyin": "adkj",
+      "zwjc": "安达科技"
+    },
+    {
+      "category": "A股",
+      "code": "920810",
+      "orgId": "gfbj0838810",
+      "pinyin": "cgzn",
+      "zwjc": "春光智能"
+    },
+    {
+      "category": "A股",
+      "code": "920819",
+      "orgId": "gfbj0833819",
+      "pinyin": "ytsw",
+      "zwjc": "颖泰生物"
+    },
+    {
+      "category": "A股",
+      "code": "920821",
+      "orgId": "gfbj0837821",
+      "pinyin": "zcdz",
+      "zwjc": "则成电子"
+    },
+    {
+      "category": "A股",
+      "code": "920826",
+      "orgId": "gfbj0836826",
+      "pinyin": "gssp",
+      "zwjc": "盖世食品"
+    },
+    {
+      "category": "A股",
+      "code": "920832",
+      "orgId": "gqtg0100030",
+      "pinyin": "qlhx",
+      "zwjc": "齐鲁华信"
+    },
+    {
+      "category": "A股",
+      "code": "920833",
+      "orgId": "gfbj0833959",
+      "pinyin": "mxys",
+      "zwjc": "美心翼申"
+    },
+    {
+      "category": "A股",
+      "code": "920834",
+      "orgId": "gfbj0831834",
+      "pinyin": "swzb",
+      "zwjc": "三维装备"
+    },
+    {
+      "category": "A股",
+      "code": "920837",
+      "orgId": "gfbj0838837",
+      "pinyin": "hygf",
+      "zwjc": "华原股份"
+    },
+    {
+      "category": "A股",
+      "code": "920839",
+      "orgId": "gfbj0830839",
+      "pinyin": "wtyy",
+      "zwjc": "万通液压"
+    },
+    {
+      "category": "A股",
+      "code": "920855",
+      "orgId": "gfbj0831855",
+      "pinyin": "zjdn",
+      "zwjc": "浙江大农"
+    },
+    {
+      "category": "A股",
+      "code": "920856",
+      "orgId": "gfbj0831856",
+      "pinyin": "hmkj",
+      "zwjc": "浩淼科技"
+    },
+    {
+      "category": "A股",
+      "code": "920857",
+      "orgId": "gfbj0871857",
+      "pinyin": "hxkj",
+      "zwjc": "泓禧科技"
+    },
+    {
+      "category": "A股",
+      "code": "920866",
+      "orgId": "gfbj0870866",
+      "pinyin": "lhkj",
+      "zwjc": "绿亨科技"
+    },
+    {
+      "category": "A股",
+      "code": "920870",
+      "orgId": "gfbj0838670",
+      "pinyin": "hjgy",
+      "zwjc": "恒进感应"
+    },
+    {
+      "category": "A股",
+      "code": "920871",
+      "orgId": "gfbj0836871",
+      "pinyin": "pte",
+      "zwjc": "派特尔"
+    },
+    {
+      "category": "A股",
+      "code": "920873",
+      "orgId": "gqtg0900033",
+      "pinyin": "zszx",
+      "zwjc": "中设咨询"
+    },
+    {
+      "category": "A股",
+      "code": "920876",
+      "orgId": "gfbj0832876",
+      "pinyin": "hwzn",
+      "zwjc": "慧为智能"
+    },
+    {
+      "category": "A股",
+      "code": "920879",
+      "orgId": "gfbj0830879",
+      "pinyin": "jkjs",
+      "zwjc": "基康技术"
+    },
+    {
+      "category": "A股",
+      "code": "920885",
+      "orgId": "gfbj0832885",
+      "pinyin": "xckj",
+      "zwjc": "星辰科技"
+    },
+    {
+      "category": "A股",
+      "code": "920892",
+      "orgId": "gfbj0836892",
+      "pinyin": "gzgj",
+      "zwjc": "广咨国际"
+    },
+    {
+      "category": "A股",
+      "code": "920895",
+      "orgId": "gfbj0872895",
+      "pinyin": "hxkj",
+      "zwjc": "花溪科技"
+    },
+    {
+      "category": "A股",
+      "code": "920896",
+      "orgId": "gqtg0900028",
+      "pinyin": "wckj",
+      "zwjc": "旺成科技"
+    },
+    {
+      "category": "A股",
+      "code": "920906",
+      "orgId": "gfbj0831906",
+      "pinyin": "syjg",
+      "zwjc": "舜宇精工"
+    },
+    {
+      "category": "A股",
+      "code": "920914",
+      "orgId": "gfbj0833914",
+      "pinyin": "yhjm",
+      "zwjc": "远航精密"
+    },
+    {
+      "category": "A股",
+      "code": "920924",
+      "orgId": "gfbj0838924",
+      "pinyin": "gmkj",
+      "zwjc": "广脉科技"
+    },
+    {
+      "category": "A股",
+      "code": "920925",
+      "orgId": "gfbj0872925",
+      "pinyin": "jhyl",
+      "zwjc": "锦好医疗"
+    },
+    {
+      "category": "A股",
+      "code": "920926",
+      "orgId": "gfbj0870726",
+      "pinyin": "hzkj",
+      "zwjc": "鸿智科技"
+    },
+    {
+      "category": "A股",
+      "code": "920931",
+      "orgId": "gfbj0872931",
+      "pinyin": "wxdb",
+      "zwjc": "无锡鼎邦"
+    },
+    {
+      "category": "A股",
+      "code": "920932",
+      "orgId": "gfbj0831832",
+      "pinyin": "kdzk",
+      "zwjc": "科达自控"
+    },
+    {
+      "category": "A股",
+      "code": "920942",
+      "orgId": "gfbj0836942",
+      "pinyin": "hlzj",
+      "zwjc": "恒立钻具"
+    },
+    {
+      "category": "A股",
+      "code": "920943",
+      "orgId": "9900013373",
+      "pinyin": "yjgf",
+      "zwjc": "优机股份"
+    },
+    {
+      "category": "A股",
+      "code": "920946",
+      "orgId": "gfbj0830946",
+      "pinyin": "sxyy",
+      "zwjc": "森萱医药"
+    },
+    {
+      "category": "A股",
+      "code": "920950",
+      "orgId": "gfbj0834950",
+      "pinyin": "xakj",
+      "zwjc": "迅安科技"
+    },
+    {
+      "category": "A股",
+      "code": "920953",
+      "orgId": "gfbj0872953",
+      "pinyin": "gzrj",
+      "zwjc": "国子软件"
+    },
+    {
+      "category": "A股",
+      "code": "920957",
+      "orgId": "gfbj0836957",
+      "pinyin": "hwkj",
+      "zwjc": "汉维科技"
+    },
+    {
+      "category": "A股",
+      "code": "920961",
+      "orgId": "gfbj0831961",
+      "pinyin": "cyxk",
+      "zwjc": "创远信科"
+    },
+    {
+      "category": "A股",
+      "code": "920964",
+      "orgId": "gfbj0830964",
+      "pinyin": "rnjs",
+      "zwjc": "润农节水"
+    },
+    {
+      "category": "A股",
+      "code": "920970",
+      "orgId": "gfbj0871970",
+      "pinyin": "dysw",
+      "zwjc": "大禹生物"
+    },
+    {
+      "category": "A股",
+      "code": "920971",
+      "orgId": "gfbj0838971",
+      "pinyin": "tmxc",
+      "zwjc": "天马新材"
+    },
+    {
+      "category": "A股",
+      "code": "920974",
+      "orgId": "gfbj0830974",
+      "pinyin": "kdch",
+      "zwjc": "凯大催化"
+    },
+    {
+      "category": "A股",
+      "code": "920976",
+      "orgId": "gfbj0870976",
+      "pinyin": "sszn",
+      "zwjc": "视声智能"
+    },
+    {
+      "category": "A股",
+      "code": "920978",
+      "orgId": "gfbj0832978",
+      "pinyin": "ktgf",
+      "zwjc": "开特股份"
+    },
+    {
+      "category": "A股",
+      "code": "920981",
+      "orgId": "gfbj0871981",
+      "pinyin": "jskj",
+      "zwjc": "晶赛科技"
+    },
+    {
+      "category": "A股",
+      "code": "920982",
+      "orgId": "gfbj0832982",
+      "pinyin": "jbsw",
+      "zwjc": "锦波生物"
+    },
+    {
+      "category": "A股",
+      "code": "920985",
+      "orgId": "gfbj0835985",
+      "pinyin": "htxn",
+      "zwjc": "海泰新能"
+    },
+    {
+      "category": "A股",
+      "code": "920992",
+      "orgId": "gfbj0835892",
+      "pinyin": "zkml",
+      "zwjc": "中科美菱"
+    }
+  ]
+}

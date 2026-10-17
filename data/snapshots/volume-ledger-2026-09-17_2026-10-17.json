@@ -1,0 +1,138 @@
+{
+  "equity_change_and_reduction_30d": 399,
+  "format": "cnwatch.volume_ledger",
+  "format_version": 1,
+  "patch_keywords_30d": [
+    {
+      "keyword": "诉讼",
+      "total_announcement": 238
+    },
+    {
+      "keyword": "仲裁",
+      "total_announcement": 87
+    },
+    {
+      "keyword": "减持",
+      "total_announcement": 416
+    },
+    {
+      "keyword": "回购",
+      "total_announcement": 1095
+    },
+    {
+      "keyword": "质押",
+      "total_announcement": 420
+    }
+  ],
+  "per_class_30d": [
+    {
+      "category_id": "category_ndbg_szsh",
+      "total_announcement": 0
+    },
+    {
+      "category_id": "category_bndbg_szsh",
+      "total_announcement": 10
+    },
+    {
+      "category_id": "category_yjdbg_szsh",
+      "total_announcement": 0
+    },
+    {
+      "category_id": "category_sjdbg_szsh",
+      "total_announcement": 52
+    },
+    {
+      "category_id": "category_yjygjxz_szsh",
+      "total_announcement": 143
+    },
+    {
+      "category_id": "category_qyfpxzcs_szsh",
+      "total_announcement": 437
+    },
+    {
+      "category_id": "category_dshgg_szsh",
+      "total_announcement": 2361
+    },
+    {
+      "category_id": "category_jshgg_szsh",
+      "total_announcement": 0
+    },
+    {
+      "category_id": "category_gddh_szsh",
+      "total_announcement": 3341
+    },
+    {
+      "category_id": "category_rcjy_szsh",
+      "total_announcement": 10992
+    },
+    {
+      "category_id": "category_gszl_szsh",
+      "total_announcement": 916
+    },
+    {
+      "category_id": "category_zj_szsh",
+      "total_announcement": 3312
+    },
+    {
+      "category_id": "category_sf_szsh",
+      "total_announcement": 223
+    },
+    {
+      "category_id": "category_zf_szsh",
+      "total_announcement": 958
+    },
+    {
+      "category_id": "category_gqjl_szsh",
+      "total_announcement": 2100
+    },
+    {
+      "category_id": "category_pg_szsh",
+      "total_announcement": 2
+    },
+    {
+      "category_id": "category_jj_szsh",
+      "total_announcement": 264
+    },
+    {
+      "category_id": "category_gszq_szsh",
+      "total_announcement": 183
+    },
+    {
+      "category_id": "category_kzzq_szsh",
+      "total_announcement": 880
+    },
+    {
+      "category_id": "category_qtrz_szsh",
+      "total_announcement": 96
+    },
+    {
+      "category_id": "category_gqbd_szsh",
+      "total_announcement": 2299
+    },
+    {
+      "category_id": "category_bcgz_szsh",
+      "total_announcement": 36
+    },
+    {
+      "category_id": "category_cqdq_szsh",
+      "total_announcement": 4
+    },
+    {
+      "category_id": "category_fxts_szsh",
+      "total_announcement": 390
+    },
+    {
+      "category_id": "category_tbclts_szsh",
+      "total_announcement": 73
+    },
+    {
+      "category_id": "category_tszlq_szsh",
+      "total_announcement": 8
+    }
+  ],
+  "source": {
+    "captured_on": "2026-10-17",
+    "url": "http://www.cninfo.com.cn/new/hisAnnouncement/query",
+    "window": "2026-09-17~2026-10-17"
+  }
+}

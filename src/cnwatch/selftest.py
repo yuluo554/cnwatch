@@ -17,6 +17,7 @@ from . import __version__, db
 from .paths import Paths
 
 RESOURCE_CATEGORIES = "official-categories.json"
+RESOURCE_RULES = "rules/rules-v1.json"
 
 
 @dataclass(frozen=True)
@@ -78,6 +79,27 @@ def run_selftest(paths: Paths, resources_dir: Optional[Path] = None) -> SelfTest
             else "missing %s" % categories_file,
         )
     )
+
+    rules_file = root / RESOURCE_RULES
+    rules_detail = "missing %s" % rules_file
+    rules_ok = rules_file.is_file()
+    if rules_ok:
+        try:
+            import json
+
+            payload = json.loads(rules_file.read_text(encoding="utf-8"))
+            categories = payload.get("official_categories") or []
+            patches = payload.get("keyword_patches") or []
+            rules_ok = len(categories) == 26 and len(patches) == 4
+            rules_detail = "categories=%d patches=%d version=%s" % (
+                len(categories),
+                len(patches),
+                payload.get("rules_version", "?"),
+            )
+        except (ValueError, OSError) as exc:
+            rules_ok = False
+            rules_detail = "unreadable %s: %s" % (rules_file, exc)
+    checks.append(CheckResult("rule_package", rules_ok, rules_detail))
 
     try:
         paths.out_dir.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,942 @@
+{
+  "format": "cnwatch.keyword_samples",
+  "format_version": 1,
+  "samples": [
+    {
+      "keyword": "诉讼",
+      "titles": [
+        {
+          "announcement_id": "1225609519",
+          "sec_code": "003003",
+          "sec_name": "天元股份",
+          "title": "关于合并报表范围内的控股子公司诉讼进展的公告"
+        },
+        {
+          "announcement_id": "1225609325",
+          "sec_code": "603363",
+          "sec_name": "傲农生物",
+          "title": "福建傲农生物科技集团股份有限公司关于新增涉及诉讼、仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225608619",
+          "sec_code": "002723",
+          "sec_name": "小崧股份",
+          "title": "关于担保事项涉及诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225608225",
+          "sec_code": "002512",
+          "sec_name": "ST达华",
+          "title": "关于公司提起诉讼的进展暨调解结案公告"
+        },
+        {
+          "announcement_id": "1225608215",
+          "sec_code": "300076",
+          "sec_name": "*ST宁视",
+          "title": "关于全资子公司提起诉讼的公告"
+        },
+        {
+          "announcement_id": "1225608056",
+          "sec_code": "603208",
+          "sec_name": "江山欧派",
+          "title": "关于公司及子公司累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225608024",
+          "sec_code": "600248",
+          "sec_name": "陕建股份",
+          "title": "陕西建工集团股份有限公司关于公司及子公司涉及诉讼、仲裁的公告"
+        },
+        {
+          "announcement_id": "1225607850",
+          "sec_code": "002159",
+          "sec_name": "三特索道",
+          "title": "关于诉讼事项的进展公告"
+        },
+        {
+          "announcement_id": "1225609479",
+          "sec_code": "300071",
+          "sec_name": "福石控股",
+          "title": "关于累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225609124",
+          "sec_code": "300464",
+          "sec_name": "星徽股份",
+          "title": "关于诉讼事项公司收到一审民事判决书的公告"
+        },
+        {
+          "announcement_id": "1225608926",
+          "sec_code": "300818",
+          "sec_name": "耐普矿机",
+          "title": "关于子公司涉及诉讼的公告"
+        },
+        {
+          "announcement_id": "1225608102",
+          "sec_code": "300949",
+          "sec_name": "奥雅股份",
+          "title": "关于新增累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225607722",
+          "sec_code": "002717",
+          "sec_name": "*ST岭南",
+          "title": "关于重大诉讼的公告"
+        },
+        {
+          "announcement_id": "1225607417",
+          "sec_code": "300083",
+          "sec_name": "创世纪",
+          "title": "关于全资子公司涉及诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225607054",
+          "sec_code": "002570",
+          "sec_name": "贝因美",
+          "title": "关于公司重大诉讼事项的进展公告"
+        },
+        {
+          "announcement_id": "1225607000",
+          "sec_code": "000702",
+          "sec_name": "正虹科技",
+          "title": "关于全资子公司收到民事诉讼传票的公告"
+        },
+        {
+          "announcement_id": "1225606884",
+          "sec_code": "000632",
+          "sec_name": "ST三木",
+          "title": "关于重大诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225606603",
+          "sec_code": "603377",
+          "sec_name": "ST东时",
+          "title": "关于重大诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225606403",
+          "sec_code": "600792",
+          "sec_name": "云煤能源",
+          "title": "云南煤业能源股份有限公司关于公司及全资子公司诉讼进展的公告"
+        },
+        {
+          "announcement_id": "1225606295",
+          "sec_code": "688033",
+          "sec_name": "*ST天宜",
+          "title": "关于公司及全资子公司涉及诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225606165",
+          "sec_code": "002587",
+          "sec_name": "奥拓电子",
+          "title": "关于子公司涉及重大诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225606065",
+          "sec_code": "600370",
+          "sec_name": "*ST三房",
+          "title": "江苏三房巷聚材股份有限公司关于公司及下属公司累计诉讼、仲裁的进展公告"
+        },
+        {
+          "announcement_id": "1225606693",
+          "sec_code": "300368",
+          "sec_name": "汇金股份",
+          "title": "关于公司诉讼案件进展情况的公告"
+        },
+        {
+          "announcement_id": "1225605766",
+          "sec_code": "603843",
+          "sec_name": "*ST正平",
+          "title": "正平股份关于公司及子公司诉讼仲裁事项进展及新增诉讼仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225605490",
+          "sec_code": "688121",
+          "sec_name": "*ST卓然",
+          "title": "关于公司及全资子公司涉及诉讼的公告"
+        },
+        {
+          "announcement_id": "1225605335",
+          "sec_code": "002514",
+          "sec_name": "*ST宝馨",
+          "title": "关于重大诉讼的公告"
+        },
+        {
+          "announcement_id": "1225605328",
+          "sec_code": "600663",
+          "sec_name": "陆家嘴",
+          "title": "关于公司及控股子公司涉及诉讼的进展公告"
+        },
+        {
+          "announcement_id": "1225605108",
+          "sec_code": "000892",
+          "sec_name": "欢瑞世纪",
+          "title": "关于重大诉讼进展的公告"
+        },
+        {
+          "announcement_id": "1225605032",
+          "sec_code": "688020",
+          "sec_name": "方邦股份",
+          "title": "关于诉讼事项进展的公告"
+        },
+        {
+          "announcement_id": "1225604627",
+          "sec_code": "002181",
+          "sec_name": "粤 传 媒",
+          "title": "关于诉讼案件执行进展的公告"
+        }
+      ],
+      "total_announcement": 2308
+    },
+    {
+      "keyword": "仲裁",
+      "titles": [
+        {
+          "announcement_id": "1225609325",
+          "sec_code": "603363",
+          "sec_name": "傲农生物",
+          "title": "福建傲农生物科技集团股份有限公司关于新增涉及诉讼、仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225608056",
+          "sec_code": "603208",
+          "sec_name": "江山欧派",
+          "title": "关于公司及子公司累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225608024",
+          "sec_code": "600248",
+          "sec_name": "陕建股份",
+          "title": "陕西建工集团股份有限公司关于公司及子公司涉及诉讼、仲裁的公告"
+        },
+        {
+          "announcement_id": "1225609479",
+          "sec_code": "300071",
+          "sec_name": "福石控股",
+          "title": "关于累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225609125",
+          "sec_code": "300685",
+          "sec_name": "艾德生物",
+          "title": "关于仲裁进展的公告"
+        },
+        {
+          "announcement_id": "1225608102",
+          "sec_code": "300949",
+          "sec_name": "奥雅股份",
+          "title": "关于新增累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225606304",
+          "sec_code": "600686",
+          "sec_name": "金龙汽车",
+          "title": "金龙汽车关于全资子公司重大仲裁的公告"
+        },
+        {
+          "announcement_id": "1225606065",
+          "sec_code": "600370",
+          "sec_name": "*ST三房",
+          "title": "江苏三房巷聚材股份有限公司关于公司及下属公司累计诉讼、仲裁的进展公告"
+        },
+        {
+          "announcement_id": "1225605766",
+          "sec_code": "603843",
+          "sec_name": "*ST正平",
+          "title": "正平股份关于公司及子公司诉讼仲裁事项进展及新增诉讼仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225604892",
+          "sec_code": "601933",
+          "sec_name": "永辉超市",
+          "title": "永辉超市股份有限公司关于仲裁案件的进展公告"
+        },
+        {
+          "announcement_id": "1225604507",
+          "sec_code": "002163",
+          "sec_name": "海南发展",
+          "title": "关于累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225604123",
+          "sec_code": "603828",
+          "sec_name": "*ST利达",
+          "title": "柯利达关于公司及子公司累计诉讼、仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225602759",
+          "sec_code": "000683",
+          "sec_name": "博源化工",
+          "title": "关于和解协议履行完毕暨重大仲裁事项的进展公告"
+        },
+        {
+          "announcement_id": "1225602718",
+          "sec_code": "002542",
+          "sec_name": "*ST中岩",
+          "title": "关于累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225602613",
+          "sec_code": "300393",
+          "sec_name": "中来股份",
+          "title": "关于累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225601509",
+          "sec_code": "600831",
+          "sec_name": "广电网络",
+          "title": "关于累计诉讼、仲裁进展情况的公告"
+        },
+        {
+          "announcement_id": "1225601468",
+          "sec_code": "300621",
+          "sec_name": "维业股份",
+          "title": "关于累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225601455",
+          "sec_code": "000826",
+          "sec_name": "*ST启环",
+          "title": "关于涉及诉讼（仲裁）案件进展的公告"
+        },
+        {
+          "announcement_id": "1225601244",
+          "sec_code": "002726",
+          "sec_name": "ST龙大",
+          "title": "关于累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225600888",
+          "sec_code": "000669",
+          "sec_name": "ST金鸿",
+          "title": "关于公司累计诉讼、仲裁的进展公告"
+        },
+        {
+          "announcement_id": "1225600729",
+          "sec_code": "000980",
+          "sec_name": "众泰汽车",
+          "title": "关于累计诉讼、仲裁案件情况的公告"
+        },
+        {
+          "announcement_id": "1225600622",
+          "sec_code": "603778",
+          "sec_name": "国晟科技",
+          "title": "关于子公司涉及仲裁事项的公告"
+        },
+        {
+          "announcement_id": "1225601726",
+          "sec_code": "300103",
+          "sec_name": "达刚控股",
+          "title": "关于累计诉讼、仲裁案件的进展公告"
+        },
+        {
+          "announcement_id": "1225602127",
+          "sec_code": "920575",
+          "sec_name": "*ST康乐",
+          "title": "关于累计诉讼、仲裁的公告"
+        },
+        {
+          "announcement_id": "1225599695",
+          "sec_code": "600363",
+          "sec_name": "ST联光",
+          "title": "关于公司新增累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225599405",
+          "sec_code": "000632",
+          "sec_name": "ST三木",
+          "title": "关于累计诉讼及仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225599355",
+          "sec_code": "688173",
+          "sec_name": "希荻微",
+          "title": "希荻微关于公司及子公司涉及仲裁的公告"
+        },
+        {
+          "announcement_id": "1225599349",
+          "sec_code": "600080",
+          "sec_name": "ST金花",
+          "title": "金花企业（集团）股份有限公司关于原实际控制人以公司名义违规担保仲裁案件的进展公告"
+        },
+        {
+          "announcement_id": "1225599117",
+          "sec_code": "603028",
+          "sec_name": "赛福天",
+          "title": "关于公司及子公司累计诉讼、仲裁情况的公告"
+        },
+        {
+          "announcement_id": "1225598752",
+          "sec_code": "600136",
+          "sec_name": "ST明诚",
+          "title": "公司关于累计诉讼、仲裁事项的公告"
+        }
+      ],
+      "total_announcement": 803
+    },
+    {
+      "keyword": "减持",
+      "titles": [
+        {
+          "announcement_id": "1225609540",
+          "sec_code": "300951",
+          "sec_name": "博硕科技",
+          "title": "深圳市博硕科技股份有限公司关于控股股东、持股5%以上股东减持计划实施完毕的公告"
+        },
+        {
+          "announcement_id": "1225609116",
+          "sec_code": "301365",
+          "sec_name": "矩阵股份",
+          "title": "关于董事及高级管理人员股份减持计划实施完毕的公告"
+        },
+        {
+          "announcement_id": "1225609514",
+          "sec_code": "300389",
+          "sec_name": "艾比森",
+          "title": "关于控股股东、实际控制人权益变动触及1%整数倍暨减持计划期限届满的公告"
+        },
+        {
+          "announcement_id": "1225608496",
+          "sec_code": "300341",
+          "sec_name": "麦克奥迪",
+          "title": "关于公司股东减持股份计划期限届满的公告"
+        },
+        {
+          "announcement_id": "1225608497",
+          "sec_code": "300341",
+          "sec_name": "麦克奥迪",
+          "title": "关于公司股东减持股份计划期限届满暨表决权恢复的公告"
+        },
+        {
+          "announcement_id": "1225609144",
+          "sec_code": "300722",
+          "sec_name": "新余国科",
+          "title": "关于公司董事、高级管理人员减持计划期限届满未减持的公告"
+        },
+        {
+          "announcement_id": "1225608655",
+          "sec_code": "300115",
+          "sec_name": "长盈精密",
+          "title": "关于控股股东及实际控制人自愿承诺未来6个月不减持公司股份的公告"
+        },
+        {
+          "announcement_id": "1225607429",
+          "sec_code": "601360",
+          "sec_name": "三六零",
+          "title": "三六零安全科技股份有限公司关于控股股东减持计划时间届满暨减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225606779",
+          "sec_code": "002884",
+          "sec_name": "凌霄泵业",
+          "title": "关于公司高级管理人员减持股份计划实施完成的公告"
+        },
+        {
+          "announcement_id": "1225606699",
+          "sec_code": "002196",
+          "sec_name": "方正电机",
+          "title": "关于部分董事及高级管理人员减持计划时间届满暨减持计划完成的公告"
+        },
+        {
+          "announcement_id": "1225606407",
+          "sec_code": "002028",
+          "sec_name": "思源电气",
+          "title": "关于董事兼高级管理人员减持计划期限届满暨实施情况的公告"
+        },
+        {
+          "announcement_id": "1225607300",
+          "sec_code": "301332",
+          "sec_name": "德尔玛",
+          "title": "关于持股5%以上股东股份减持完成的公告"
+        },
+        {
+          "announcement_id": "1225607453",
+          "sec_code": "920751",
+          "sec_name": "惠同新材",
+          "title": "股东减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225607444",
+          "sec_code": "920395",
+          "sec_name": "朗鸿科技",
+          "title": "股东减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225607388",
+          "sec_code": "920592",
+          "sec_name": "华信永道",
+          "title": "持股5%以上股东减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225607097",
+          "sec_code": "920978",
+          "sec_name": "开特股份",
+          "title": "股东拟减持股份的预披露公告（再次披露）"
+        },
+        {
+          "announcement_id": "1225605698",
+          "sec_code": "002836",
+          "sec_name": "新宏泽",
+          "title": "关于控股股东减持计划期限届满的公告"
+        },
+        {
+          "announcement_id": "1225605670",
+          "sec_code": "002681",
+          "sec_name": "奋达科技",
+          "title": "关于控股股东及其一致行动人减持股份的预披露公告"
+        },
+        {
+          "announcement_id": "1225605652",
+          "sec_code": "600986",
+          "sec_name": "浙文互联",
+          "title": "浙文互联高级管理人员减持股份计划公告"
+        },
+        {
+          "announcement_id": "1225605531",
+          "sec_code": "301001",
+          "sec_name": "凯淳股份",
+          "title": "关于公司持股5%以上股东减持股份触及1%及5%整数倍暨披露简式权益变动报告书的提示性公告"
+        },
+        {
+          "announcement_id": "1225605484",
+          "sec_code": "688433",
+          "sec_name": "华曙高科",
+          "title": "持股5%以上股东减持股份计划完成暨减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225605478",
+          "sec_code": "600566",
+          "sec_name": "济川药业",
+          "title": "湖北济川药业股份有限公司部分高管减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225605285",
+          "sec_code": "688328",
+          "sec_name": "深科达",
+          "title": "关于持股5%以上股东权益变动触及1%刻度暨减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225605159",
+          "sec_code": "600568",
+          "sec_name": "ST中珠",
+          "title": "中珠医疗控股股份有限公司关于持股5%以上股东减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225605077",
+          "sec_code": "603297",
+          "sec_name": "永新光学",
+          "title": "宁波永新光学股份有限公司股东减持股份计划公告"
+        },
+        {
+          "announcement_id": "1225604990",
+          "sec_code": "600865",
+          "sec_name": "百大集团",
+          "title": "百大集团股份有限公司持股5%以上股东减持股份计划公告"
+        },
+        {
+          "announcement_id": "1225604970",
+          "sec_code": "600572",
+          "sec_name": "康恩贝",
+          "title": "关于公司股东集中竞价减持股份计划的公告"
+        },
+        {
+          "announcement_id": "1225604931",
+          "sec_code": "603609",
+          "sec_name": "禾丰股份",
+          "title": "禾丰股份董事兼高级管理人员减持股份计划公告"
+        },
+        {
+          "announcement_id": "1225604642",
+          "sec_code": "603023",
+          "sec_name": "威帝股份",
+          "title": "哈尔滨威帝电子股份有限公司股东及董事、高级管理人员减持股份结果公告"
+        },
+        {
+          "announcement_id": "1225604482",
+          "sec_code": "688758",
+          "sec_name": "赛分科技",
+          "title": "苏州赛分科技股份有限公司关于持股5%以上股东减持股份结果公告"
+        }
+      ],
+      "total_announcement": 5826
+    },
+    {
+      "keyword": "回购",
+      "titles": [
+        {
+          "announcement_id": "1225609861",
+          "sec_code": "688825",
+          "sec_name": "长鑫科技",
+          "title": "关于收到公司董事长提议回购公司股份的提示性公告"
+        },
+        {
+          "announcement_id": "1225609857",
+          "sec_code": "688620",
+          "sec_name": "安凯微",
+          "title": "广州安凯微电子股份有限公司关于增加以集中竞价交易方式回购公司股份资金总额的公告"
+        },
+        {
+          "announcement_id": "1225609855",
+          "sec_code": "688620",
+          "sec_name": "安凯微",
+          "title": "广州安凯微电子股份有限公司关于以集中竞价交易方式回购公司股份的回购报告书（修订稿）"
+        },
+        {
+          "announcement_id": "1225609414",
+          "sec_code": "603501",
+          "sec_name": "豪威集团",
+          "title": "关于以集中竞价交易方式回购A股股份方案的公告"
+        },
+        {
+          "announcement_id": "1225609400",
+          "sec_code": "600155",
+          "sec_name": "华创云信",
+          "title": "华创云信关于回购股份进展情况公告"
+        },
+        {
+          "announcement_id": "1225609286",
+          "sec_code": "688800",
+          "sec_name": "瑞可达",
+          "title": "关于公司董事长提议回购公司股份的提示性公告"
+        },
+        {
+          "announcement_id": "1225609233",
+          "sec_code": "600859",
+          "sec_name": "王府井",
+          "title": "王府井关于以集中竞价交易方式回购股份的进展公告"
+        },
+        {
+          "announcement_id": "1225609222",
+          "sec_code": "600114",
+          "sec_name": "东睦股份",
+          "title": "上海市锦天城律师事务所关于东睦新材料集团股份有限公司2025年限制性股票激励计划第一个解除限售期解除限售条件成就及回购注销部分限制性股票的法律意见书"
+        },
+        {
+          "announcement_id": "1225609220",
+          "sec_code": "600114",
+          "sec_name": "东睦股份",
+          "title": "东睦股份关于回购注销部分限制性股票的公告"
+        },
+        {
+          "announcement_id": "1225609218",
+          "sec_code": "688485",
+          "sec_name": "九州一轨",
+          "title": "北京九州一轨环境科技股份有限公司关于第三期以集中竞价交易方式回购公司股份方案的公告"
+        },
+        {
+          "announcement_id": "1225609202",
+          "sec_code": "600114",
+          "sec_name": "东睦股份",
+          "title": "东睦股份关于回购注销部分限制性股票通知债权人的公告"
+        },
+        {
+          "announcement_id": "1225609194",
+          "sec_code": "600114",
+          "sec_name": "东睦股份",
+          "title": "东睦新材料集团股份有限公司董事会薪酬与考核委员会关于2025年限制性股票激励计划第一个解除限售期解除限售条件成就及回购注销部分限制性股票的核查意见"
+        },
+        {
+          "announcement_id": "1225609138",
+          "sec_code": "603228",
+          "sec_name": "景旺电子",
+          "title": "景旺电子关于收到董事长提议回购公司股份的提示性公告"
+        },
+        {
+          "announcement_id": "1225609105",
+          "sec_code": "002875",
+          "sec_name": "安奈儿",
+          "title": "关于回购股份实施结果暨股份变动的公告"
+        },
+        {
+          "announcement_id": "1225609094",
+          "sec_code": "603228",
+          "sec_name": "景旺电子",
+          "title": "北京观韬（深圳）律师事务所关于深圳市景旺电子股份有限公司股票期权与限制性股票激励计划回购注销部分限制性股票实施相关事项的法律意见书"
+        },
+        {
+          "announcement_id": "1225609060",
+          "sec_code": "603228",
+          "sec_name": "景旺电子",
+          "title": "景旺电子关于股权激励限制性股票回购注销实施公告"
+        },
+        {
+          "announcement_id": "1225608941",
+          "sec_code": "301066",
+          "sec_name": "万事利",
+          "title": "关于首次回购公司股份的公告"
+        },
+        {
+          "announcement_id": "1225608930",
+          "sec_code": "688659",
+          "sec_name": "元琛科技",
+          "title": "关于股份回购实施结果暨股份变动的公告"
+        },
+        {
+          "announcement_id": "1225608903",
+          "sec_code": "000333",
+          "sec_name": "美的集团",
+          "title": "关于以集中竞价交易方式回购A股股份进展情况的公告"
+        },
+        {
+          "announcement_id": "1225608830",
+          "sec_code": "600732",
+          "sec_name": "爱旭股份",
+          "title": "关于股权激励限制性股票回购注销实施公告"
+        },
+        {
+          "announcement_id": "1225608815",
+          "sec_code": "600732",
+          "sec_name": "爱旭股份",
+          "title": "北京国枫律师事务所关于上海爱旭新能源股份有限公司2025年限制性股票与股票期权激励计划部分限制性股票回购注销实施情况的法律意见书"
+        },
+        {
+          "announcement_id": "1225608720",
+          "sec_code": "600547",
+          "sec_name": "山东黄金",
+          "title": "山东黄金矿业股份有限公司关于以集中竞价交易方式回购股份的方案"
+        },
+        {
+          "announcement_id": "1225608707",
+          "sec_code": "002998",
+          "sec_name": "优彩资源",
+          "title": "关于本次回购股份注销完成不调整可转债转股价格的公告"
+        },
+        {
+          "announcement_id": "1225608706",
+          "sec_code": "002998",
+          "sec_name": "优彩资源",
+          "title": "优彩环保资源科技股份有限公司回购股份注销完成暨股份变动的公告"
+        },
+        {
+          "announcement_id": "1225608694",
+          "sec_code": "688733",
+          "sec_name": "壹石通",
+          "title": "壹石通关于2026年以集中竞价交易方式回购公司股份方案的公告"
+        },
+        {
+          "announcement_id": "1225608683",
+          "sec_code": "002299",
+          "sec_name": "圣农发展",
+          "title": "关于调整2025年限制性股票激励计划限制性股票回购价格的公告"
+        },
+        {
+          "announcement_id": "1225608682",
+          "sec_code": "002299",
+          "sec_name": "圣农发展",
+          "title": "关于福建圣农发展股份有限公司2025年限制性股票激励计划调整回购价格及部分限制性股票回购并注销相关事项的法律意见书"
+        },
+        {
+          "announcement_id": "1225608679",
+          "sec_code": "002299",
+          "sec_name": "圣农发展",
+          "title": "关于回购注销2025年限制性股票激励计划部分限制性股票的公告"
+        },
+        {
+          "announcement_id": "1225608664",
+          "sec_code": "002478",
+          "sec_name": "常宝股份",
+          "title": "关于部分限制性股票回购注销完成的公告"
+        },
+        {
+          "announcement_id": "1225608662",
+          "sec_code": "002224",
+          "sec_name": "三 力 士",
+          "title": "关于股份回购完成暨股份变动的公告"
+        }
+      ],
+      "total_announcement": 11582
+    },
+    {
+      "keyword": "质押",
+      "titles": [
+        {
+          "announcement_id": "1225609818",
+          "sec_code": "603880",
+          "sec_name": "南卫股份",
+          "title": "南卫股份关于控股股东部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225609783",
+          "sec_code": "002583",
+          "sec_name": "海能达",
+          "title": "关于控股股东部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225609704",
+          "sec_code": "003004",
+          "sec_name": "声迅股份",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225609496",
+          "sec_code": "600400",
+          "sec_name": "红豆股份",
+          "title": "红豆股份关于控股股东及其一致行动人部分股份解除质押、冻结及被冻结的公告"
+        },
+        {
+          "announcement_id": "1225608696",
+          "sec_code": "600641",
+          "sec_name": "先导基电",
+          "title": "上海先导基电科技股份有限公司关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608552",
+          "sec_code": "002348",
+          "sec_name": "高乐股份",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608427",
+          "sec_code": "603439",
+          "sec_name": "三力制药",
+          "title": "贵州三力制药股份有限公司关于控股股东部分股份解除质押及质押的公告"
+        },
+        {
+          "announcement_id": "1225608317",
+          "sec_code": "000735",
+          "sec_name": "罗 牛 山",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608279",
+          "sec_code": "603283",
+          "sec_name": "赛腾股份",
+          "title": "苏州赛腾精密电子股份有限公司关于股东部分股份质押及解除质押的公告"
+        },
+        {
+          "announcement_id": "1225608264",
+          "sec_code": "603569",
+          "sec_name": "长久物流",
+          "title": "长久物流：关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608122",
+          "sec_code": "002008",
+          "sec_name": "大族激光",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608116",
+          "sec_code": "002481",
+          "sec_name": "双塔食品",
+          "title": "控股股东部分股份解除质押及再质押的公告"
+        },
+        {
+          "announcement_id": "1225608108",
+          "sec_code": "001267",
+          "sec_name": "汇绿生态",
+          "title": "关于持股5%以上股东部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225608106",
+          "sec_code": "002311",
+          "sec_name": "海大集团",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608096",
+          "sec_code": "600763",
+          "sec_name": "通策医疗",
+          "title": "通策医疗股份有限公司关于控股股东部分股票质押及解除质押的公告"
+        },
+        {
+          "announcement_id": "1225608085",
+          "sec_code": "002103",
+          "sec_name": "广博股份",
+          "title": "关于公司股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608017",
+          "sec_code": "688665",
+          "sec_name": "四方光电",
+          "title": "四方光电关于持股5%以上股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225607985",
+          "sec_code": "603329",
+          "sec_name": "上海雅仕",
+          "title": "关于持股5%以上股东部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225607959",
+          "sec_code": "000407",
+          "sec_name": "胜利股份",
+          "title": "关于公司股东股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225607890",
+          "sec_code": "601908",
+          "sec_name": "京运通",
+          "title": "关于控股股东部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225609345",
+          "sec_code": "300666",
+          "sec_name": "江丰电子",
+          "title": "关于控股股东、实际控制人部分股份解除质押的公告"
+        },
+        {
+          "announcement_id": "1225609114",
+          "sec_code": "300348",
+          "sec_name": "长亮科技",
+          "title": "深圳市长亮科技股份有限公司关于控股股东部分股份补充质押以及延长质押期限的公告"
+        },
+        {
+          "announcement_id": "1225609112",
+          "sec_code": "300682",
+          "sec_name": "朗新科技",
+          "title": "关于控股股东、实际控制人部分股份补充质押的公告"
+        },
+        {
+          "announcement_id": "1225608544",
+          "sec_code": "300676",
+          "sec_name": "华大基因",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608242",
+          "sec_code": "300538",
+          "sec_name": "同益股份",
+          "title": "关于控股股东、实际控制人部分股份质押及解除质押的公告"
+        },
+        {
+          "announcement_id": "1225608139",
+          "sec_code": "300806",
+          "sec_name": "斯迪克",
+          "title": "关于控股股东部分股份质押的公告"
+        },
+        {
+          "announcement_id": "1225608062",
+          "sec_code": "301268",
+          "sec_name": "铭利达",
+          "title": "关于公司控股股东部分股份解除质押及再质押的公告"
+        },
+        {
+          "announcement_id": "1225607507",
+          "sec_code": "000785",
+          "sec_name": "居然智家",
+          "title": "关于控股股东及其一致行动人部分股份质押及被冻结的公告"
+        },
+        {
+          "announcement_id": "1225607295",
+          "sec_code": "002846",
+          "sec_name": "英联股份",
+          "title": "关于公司股东部分股份解除质押及质押展期的公告"
+        },
+        {
+          "announcement_id": "1225607132",
+          "sec_code": "600358",
+          "sec_name": "国旅联合",
+          "title": "国旅文化投资集团股份有限公司关于股东部分股份解除质押的公告"
+        }
+      ],
+      "total_announcement": 4648
+    }
+  ],
+  "source": {
+    "captured_on": "2026-10-17",
+    "page_size": 30,
+    "url": "http://www.cninfo.com.cn/new/hisAnnouncement/query",
+    "window": "2026-01-01~2026-10-17"
+  }
+}

@@ -1,0 +1,1049 @@
+{
+  "counts": {
+    "negative": 5,
+    "positive": 78,
+    "unclassified": 3
+  },
+  "format": "cnwatch.classify_truth",
+  "format_version": 1,
+  "rules_source": "src/cnwatch/resources/rules/rules-v1.json",
+  "rules_version": "v1",
+  "samples": [
+    {
+      "announcement_id": "1225060852",
+      "case": "positive",
+      "code": "601916",
+      "evidence": "category_jshgg_szsh via '监事会'; no keyword patch",
+      "expect": {
+        "category": "category_jshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "浙商银行股份有限公司第七届监事会第十六次会议决议公告"
+    },
+    {
+      "announcement_id": "1225097407",
+      "case": "positive",
+      "code": "601916",
+      "evidence": "category_jshgg_szsh via '监事会'; no keyword patch",
+      "expect": {
+        "category": "category_jshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "浙商银行股份有限公司第七届监事会第十七次会议决议公告"
+    },
+    {
+      "announcement_id": "1225259229",
+      "case": "positive",
+      "code": "601916",
+      "evidence": "category_jshgg_szsh via '监事会'; no keyword patch",
+      "expect": {
+        "category": "category_jshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "浙商银行股份有限公司第七届监事会第十八次会议决议公告"
+    },
+    {
+      "announcement_id": "1225290973",
+      "case": "unclassified",
+      "code": "002493",
+      "evidence": "no official class matched; no keyword patch",
+      "expect": {
+        "category": "unclassified",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026 First Quarterly Report"
+    },
+    {
+      "announcement_id": "1225290974",
+      "case": "unclassified",
+      "code": "002493",
+      "evidence": "no official class matched; no keyword patch",
+      "expect": {
+        "category": "unclassified",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2025 Annual Report"
+    },
+    {
+      "announcement_id": "1225337866",
+      "case": "unclassified",
+      "code": "000703",
+      "evidence": "no official class matched; no keyword patch",
+      "expect": {
+        "category": "unclassified",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2025 Annual Report"
+    },
+    {
+      "announcement_id": "1225479034",
+      "case": "positive",
+      "code": "300176",
+      "evidence": "category_pg_szsh via '配股'; no keyword patch",
+      "expect": {
+        "category": "category_pg_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "广东鸿特科技股份有限公司配股提示性公告"
+    },
+    {
+      "announcement_id": "1225486243",
+      "case": "positive",
+      "code": "300176",
+      "evidence": "category_pg_szsh via '配股'; no keyword patch",
+      "expect": {
+        "category": "category_pg_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "广东鸿特科技股份有限公司配股发行结果公告"
+    },
+    {
+      "announcement_id": "1225522398",
+      "case": "positive",
+      "code": "688478",
+      "evidence": "category_yjdbg_szsh via '第一季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_yjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "南京晶升装备股份有限公司2025年第一季度报告（更正版）"
+    },
+    {
+      "announcement_id": "1225522401",
+      "case": "positive",
+      "code": "688478",
+      "evidence": "category_yjdbg_szsh via '第一季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_yjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "南京晶升装备股份有限公司2026年第一季度报告（更正版）"
+    },
+    {
+      "announcement_id": "1225526102",
+      "case": "positive",
+      "code": "301152",
+      "evidence": "category_ndbg_szsh via '年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_ndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "天力锂能集团股份有限公司2024年年度报告（更正后）"
+    },
+    {
+      "announcement_id": "1225529278",
+      "case": "positive",
+      "code": "301123",
+      "evidence": "category_yjdbg_szsh via '第一季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_yjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "奕东电子科技股份有限公司2025年第一季度报告（更正后）"
+    },
+    {
+      "announcement_id": "1225530947",
+      "case": "positive",
+      "code": "300176",
+      "evidence": "category_pg_szsh via '配股'; no keyword patch",
+      "expect": {
+        "category": "category_pg_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "广东鸿特科技股份有限公司配股新增股份变动报告及上市公告书"
+    },
+    {
+      "announcement_id": "1225561078",
+      "case": "positive",
+      "code": "002195",
+      "evidence": "category_ndbg_szsh via '年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_ndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2025年年度报告（更正后）"
+    },
+    {
+      "announcement_id": "1225561079",
+      "case": "positive",
+      "code": "002195",
+      "evidence": "category_ndbg_szsh via '年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_ndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2024年年度报告（更正后）"
+    },
+    {
+      "announcement_id": "1225577605",
+      "case": "positive",
+      "code": "301330",
+      "evidence": "category_bndbg_szsh via '半年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_bndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "熵基科技股份有限公司2026年半年度报告（英文版）"
+    },
+    {
+      "announcement_id": "1225586700",
+      "case": "positive",
+      "code": "000963",
+      "evidence": "category_bndbg_szsh via '半年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_bndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年半年度报告（英文版）"
+    },
+    {
+      "announcement_id": "1225587751",
+      "case": "positive",
+      "code": "301139",
+      "evidence": "category_tszlq_szsh via '退市整理期'; no keyword patch",
+      "expect": {
+        "category": "category_tszlq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于公司股票进入退市整理期交易首日的风险提示公告"
+    },
+    {
+      "announcement_id": "1225591210",
+      "case": "positive",
+      "code": "300666",
+      "evidence": "category_bndbg_szsh via '半年度报告'; no keyword patch",
+      "expect": {
+        "category": "category_bndbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年半年度报告（更正后）"
+    },
+    {
+      "announcement_id": "1225596607",
+      "case": "positive",
+      "code": "301111",
+      "evidence": "category_cqdq_szsh via '澄清'; no keyword patch",
+      "expect": {
+        "category": "category_cqdq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于网络传闻的澄清公告"
+    },
+    {
+      "announcement_id": "1225600465",
+      "case": "positive",
+      "code": "000509",
+      "evidence": "category_cqdq_szsh via '澄清'; no keyword patch",
+      "expect": {
+        "category": "category_cqdq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "澄清及致歉公告"
+    },
+    {
+      "announcement_id": "1225601689",
+      "case": "positive",
+      "code": "301139",
+      "evidence": "category_tszlq_szsh via '退市整理期'; no keyword patch",
+      "expect": {
+        "category": "category_tszlq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于公司股票进入退市整理期交易的第二次风险提示公告"
+    },
+    {
+      "announcement_id": "1225603518",
+      "case": "positive",
+      "code": "000665",
+      "evidence": "category_bcgz_szsh via '更正公告'; no keyword patch",
+      "expect": {
+        "category": "category_bcgz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于公司董事辞职公告的更正公告"
+    },
+    {
+      "announcement_id": "1225604169",
+      "case": "positive",
+      "code": "300399",
+      "evidence": "category_cqdq_szsh via '澄清'; no keyword patch",
+      "expect": {
+        "category": "category_cqdq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "2026-062号 关于市场传闻的澄清公告"
+    },
+    {
+      "announcement_id": "1225606033",
+      "case": "negative",
+      "code": "300274",
+      "evidence": "category_gqbd_szsh via '质押'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于控股股东部分股份解除质押的公告"
+    },
+    {
+      "announcement_id": "1225606101",
+      "case": "negative",
+      "code": "301557",
+      "evidence": "category_gqbd_szsh via '质押'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于控股股东股份解除质押的公告"
+    },
+    {
+      "announcement_id": "1225606126",
+      "case": "negative",
+      "code": "301263",
+      "evidence": "category_gqbd_szsh via '质押'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于控股股东、实际控制人部分股份解除质押的公告"
+    },
+    {
+      "announcement_id": "1225607164",
+      "case": "positive",
+      "code": "688202",
+      "evidence": "category_bcgz_szsh via '更正公告'; no keyword patch",
+      "expect": {
+        "category": "category_bcgz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "美迪西：关于2026年第一次临时股东会通知的更正公告"
+    },
+    {
+      "announcement_id": "1225607489",
+      "case": "positive",
+      "code": "002731",
+      "evidence": "category_tszlq_szsh via '退市整理期'; no keyword patch",
+      "expect": {
+        "category": "category_tszlq_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于公司股票进入退市整理期交易的公告"
+    },
+    {
+      "announcement_id": "1225607491",
+      "case": "positive",
+      "code": "200706",
+      "evidence": "category_tbclts_szsh via '终止上市'; no keyword patch",
+      "expect": {
+        "category": "category_tbclts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于公司股票终止上市暨摘牌的公告"
+    },
+    {
+      "announcement_id": "1225608143",
+      "case": "positive",
+      "code": "000016",
+      "evidence": "category_tbclts_szsh via '终止上市'; no keyword patch",
+      "expect": {
+        "category": "category_tbclts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于收到股票终止上市决定的公告"
+    },
+    {
+      "announcement_id": "1225608318",
+      "case": "positive",
+      "code": "000860",
+      "evidence": "category_qtrz_szsh via '中期票据'; no keyword patch",
+      "expect": {
+        "category": "category_qtrz_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于2026年度第一期中期票据发行结果的公告"
+    },
+    {
+      "announcement_id": "1225608478",
+      "case": "positive",
+      "code": "000881",
+      "evidence": "category_jj_szsh via '限售股份上市流通'; no keyword patch",
+      "expect": {
+        "category": "category_jj_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于部分限售股份上市流通的提示性公告"
+    },
+    {
+      "announcement_id": "1225608655",
+      "case": "negative",
+      "code": "300115",
+      "evidence": "category_gqbd_szsh via '减持'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于控股股东及实际控制人自愿承诺未来6个月不减持公司股份的公告"
+    },
+    {
+      "announcement_id": "1225608826",
+      "case": "positive",
+      "code": "920015",
+      "evidence": "category_jj_szsh via '解除限售'; no keyword patch",
+      "expect": {
+        "category": "category_jj_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "股票解除限售公告"
+    },
+    {
+      "announcement_id": "1225608831",
+      "case": "positive",
+      "code": "920288",
+      "evidence": "category_jj_szsh via '解除限售'; no keyword patch",
+      "expect": {
+        "category": "category_jj_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "股票解除限售公告"
+    },
+    {
+      "announcement_id": "1225608855",
+      "case": "positive",
+      "code": "600011",
+      "evidence": "category_qtrz_szsh via '中期票据'; no keyword patch",
+      "expect": {
+        "category": "category_qtrz_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "华能国际关于第十二期中期票据发行的公告"
+    },
+    {
+      "announcement_id": "1225609144",
+      "case": "negative",
+      "code": "300722",
+      "evidence": "category_gqbd_szsh via '减持'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于公司董事、高级管理人员减持计划期限届满未减持的公告"
+    },
+    {
+      "announcement_id": "1225609327",
+      "case": "positive",
+      "code": "688508",
+      "evidence": "category_sjdbg_szsh via '三季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_sjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年第三季度报告"
+    },
+    {
+      "announcement_id": "1225609392",
+      "case": "positive",
+      "code": "601238",
+      "evidence": "category_qtrz_szsh via '债务融资工具'; no keyword patch",
+      "expect": {
+        "category": "category_qtrz_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "广汽集团关于申请发行债务融资工具获注册的公告"
+    },
+    {
+      "announcement_id": "1225609425",
+      "case": "positive",
+      "code": "300852",
+      "evidence": "category_sjdbg_szsh via '三季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_sjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年三季度报告"
+    },
+    {
+      "announcement_id": "1225609433",
+      "case": "positive",
+      "code": "002648",
+      "evidence": "category_sjdbg_szsh via '三季度报告'; no keyword patch",
+      "expect": {
+        "category": "category_sjdbg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年三季度报告"
+    },
+    {
+      "announcement_id": "1225609494",
+      "case": "positive",
+      "code": "688008",
+      "evidence": "category_qyfpxzcs_szsh via '权益分派'; no keyword patch",
+      "expect": {
+        "category": "category_qyfpxzcs_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "澜起科技2026年半年度权益分派实施公告"
+    },
+    {
+      "announcement_id": "1225609620",
+      "case": "positive",
+      "code": "300773",
+      "evidence": "category_fxts_szsh via '风险提示'; no keyword patch",
+      "expect": {
+        "category": "category_fxts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于披露预案暨公司股票复牌及一般风险提示性公告"
+    },
+    {
+      "announcement_id": "1225609635",
+      "case": "positive",
+      "code": "688247",
+      "evidence": "category_qyfpxzcs_szsh via '权益分派'; no keyword patch",
+      "expect": {
+        "category": "category_qyfpxzcs_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年半年度权益分派实施公告"
+    },
+    {
+      "announcement_id": "1225609698",
+      "case": "positive",
+      "code": "000987",
+      "evidence": "category_qyfpxzcs_szsh via '权益分派'; no keyword patch",
+      "expect": {
+        "category": "category_qyfpxzcs_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "2026年半年度权益分派实施公告"
+    },
+    {
+      "announcement_id": "1225609701",
+      "case": "positive",
+      "code": "002717",
+      "evidence": "category_tbclts_szsh via '终止上市'; no keyword patch",
+      "expect": {
+        "category": "category_tbclts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于收到终止上市事先告知书的公告"
+    },
+    {
+      "announcement_id": "1225609705",
+      "case": "positive",
+      "code": "003004",
+      "evidence": "category_kzzq_szsh via '转债'; no keyword patch",
+      "expect": {
+        "category": "category_kzzq_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于声迅转债回售的第三次提示性公告"
+    },
+    {
+      "announcement_id": "1225609710",
+      "case": "positive",
+      "code": "001314",
+      "evidence": "category_gqjl_szsh via '限制性股票'; no keyword patch",
+      "expect": {
+        "category": "category_gqjl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于2025年限制性股票激励计划首次授予限制性股票第一个解除限售期解除限售股份上市流通的提示性公告"
+    },
+    {
+      "announcement_id": "1225609713",
+      "case": "positive",
+      "code": "002413",
+      "evidence": "category_gqjl_szsh via '限制性股票'; no keyword patch",
+      "expect": {
+        "category": "category_gqjl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于2026年限制性股票激励计划内幕信息知情人及激励对象买卖公司股票情况的自查报告"
+    },
+    {
+      "announcement_id": "1225609725",
+      "case": "positive",
+      "code": "002726",
+      "evidence": "category_fxts_szsh via '风险提示'; no keyword patch",
+      "expect": {
+        "category": "category_fxts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "关于遴选确定重整投资人暨风险提示补充公告的更正公告"
+    },
+    {
+      "announcement_id": "1225609758",
+      "case": "positive",
+      "code": "920306",
+      "evidence": "category_sf_szsh via '向不特定合格投资者公开发行'; no keyword patch",
+      "expect": {
+        "category": "category_sf_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "向不特定合格投资者公开发行股票并在北京证券交易所上市发行公告"
+    },
+    {
+      "announcement_id": "1225609761",
+      "case": "positive",
+      "code": "920306",
+      "evidence": "category_sf_szsh via '向不特定合格投资者公开发行'; no keyword patch",
+      "expect": {
+        "category": "category_sf_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "向不特定合格投资者公开发行股票并在北京证券交易所上市网上路演公告"
+    },
+    {
+      "announcement_id": "1225609762",
+      "case": "positive",
+      "code": "920306",
+      "evidence": "category_sf_szsh via '向不特定合格投资者公开发行'; no keyword patch",
+      "expect": {
+        "category": "category_sf_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "向不特定合格投资者公开发行股票并在北京证券交易所上市投资风险特别公告"
+    },
+    {
+      "announcement_id": "1225609763",
+      "case": "positive",
+      "code": "000801",
+      "evidence": "category_gqbd_szsh via '增持'; no keyword patch",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "四川九洲电器股份有限公司关于控股股东一致行动人及部分董事、高级管理人员增持公司股份计划的进展公告"
+    },
+    {
+      "announcement_id": "1225609764",
+      "case": "positive",
+      "code": "002939",
+      "evidence": "category_gszq_szsh via '公司债'; no keyword patch",
+      "expect": {
+        "category": "category_gszq_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "长城证券股份有限公司2026年面向专业投资者公开发行公司债券（第三期）信用评级报告"
+    },
+    {
+      "announcement_id": "1225609766",
+      "case": "positive",
+      "code": "002939",
+      "evidence": "category_gszq_szsh via '公司债'; no keyword patch",
+      "expect": {
+        "category": "category_gszq_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "长城证券股份有限公司2024年面向专业投资者公开发行公司债券更名公告"
+    },
+    {
+      "announcement_id": "1225609772",
+      "case": "positive",
+      "code": "002939",
+      "evidence": "category_gszq_szsh via '公司债'; no keyword patch",
+      "expect": {
+        "category": "category_gszq_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "长城证券股份有限公司2026年面向专业投资者公开发行公司债券（第三期）发行公告"
+    },
+    {
+      "announcement_id": "1225609784",
+      "case": "positive",
+      "code": "002583",
+      "evidence": "category_gqjl_szsh via '限制性股票'; no keyword patch",
+      "expect": {
+        "category": "category_gqjl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于2026年限制性股票与股票期权激励计划激励对象及内幕知情人买卖公司股票情况的自查报告"
+    },
+    {
+      "announcement_id": "1225609786",
+      "case": "positive",
+      "code": "001301",
+      "evidence": "category_kzzq_szsh via '转债'; no keyword patch",
+      "expect": {
+        "category": "category_kzzq_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于不向下修正尚太转债转股价格的公告"
+    },
+    {
+      "announcement_id": "1225609797",
+      "case": "positive",
+      "code": "301117",
+      "evidence": "category_bcgz_szsh via '更正及'; no keyword patch",
+      "expect": {
+        "category": "category_bcgz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于公司前期会计差错更正及追溯调整的公告"
+    },
+    {
+      "announcement_id": "1225609806",
+      "case": "positive",
+      "code": "600962",
+      "evidence": "category_gddh_szsh via '股东会'; no keyword patch",
+      "expect": {
+        "category": "category_gddh_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "国投中鲁关于召开2026年第三次临时股东会的通知"
+    },
+    {
+      "announcement_id": "1225609810",
+      "case": "positive",
+      "code": "001309",
+      "evidence": "category_yjygjxz_szsh via '业绩预告'; no keyword patch",
+      "expect": {
+        "category": "category_yjygjxz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "2026年前三季度业绩预告"
+    },
+    {
+      "announcement_id": "1225609819",
+      "case": "positive",
+      "code": "603220",
+      "evidence": "category_kzzq_szsh via '转债'; no keyword patch",
+      "expect": {
+        "category": "category_kzzq_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于”中贝转债“预计满足转股价格修正条件的提示性公告"
+    },
+    {
+      "announcement_id": "1225609837",
+      "case": "positive",
+      "code": "603507",
+      "evidence": "category_gddh_szsh via '股东会'; no keyword patch",
+      "expect": {
+        "category": "category_gddh_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "振江股份2026年第一次临时股东会决议公告"
+    },
+    {
+      "announcement_id": "1225609844",
+      "case": "positive",
+      "code": "688279",
+      "evidence": "category_yjygjxz_szsh via '业绩预告'; no keyword patch",
+      "expect": {
+        "category": "category_yjygjxz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "2026年前三季度业绩预告的自愿性披露公告"
+    },
+    {
+      "announcement_id": "1225609857",
+      "case": "positive",
+      "code": "688620",
+      "evidence": "category_gqbd_szsh via '回购'; buyback tag",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": [
+          "buyback"
+        ]
+      },
+      "title": "广州安凯微电子股份有限公司关于增加以集中竞价交易方式回购公司股份资金总额的公告"
+    },
+    {
+      "announcement_id": "1225609860",
+      "case": "positive",
+      "code": "688825",
+      "evidence": "category_yjygjxz_szsh via '业绩预告'; no keyword patch",
+      "expect": {
+        "category": "category_yjygjxz_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "2026年前三季度业绩预告的自愿性披露公告"
+    },
+    {
+      "announcement_id": "1225609861",
+      "case": "positive",
+      "code": "688825",
+      "evidence": "category_gqbd_szsh via '回购'; buyback tag",
+      "expect": {
+        "category": "category_gqbd_szsh",
+        "risk_level": "mid",
+        "tags": [
+          "buyback"
+        ]
+      },
+      "title": "关于收到公司董事长提议回购公司股份的提示性公告"
+    },
+    {
+      "announcement_id": "1225609866",
+      "case": "positive",
+      "code": "688808",
+      "evidence": "category_gddh_szsh via '股东会'; no keyword patch",
+      "expect": {
+        "category": "category_gddh_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于召开2026年第二次临时股东会的通知"
+    },
+    {
+      "announcement_id": "1225609869",
+      "case": "positive",
+      "code": "688808",
+      "evidence": "category_dshgg_szsh via '董事会'; no keyword patch",
+      "expect": {
+        "category": "category_dshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "第二届董事会第十次会议决议公告"
+    },
+    {
+      "announcement_id": "1225609895",
+      "case": "positive",
+      "code": "688808",
+      "evidence": "category_gszl_szsh via '管理制度'; no keyword patch",
+      "expect": {
+        "category": "category_gszl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "对外投资管理制度（草案）（H股发行上市后适用）"
+    },
+    {
+      "announcement_id": "1225609896",
+      "case": "positive",
+      "code": "688808",
+      "evidence": "category_gszl_szsh via '管理制度'; no keyword patch",
+      "expect": {
+        "category": "category_gszl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "募集资金管理制度（草案）（H股发行上市后适用）"
+    },
+    {
+      "announcement_id": "1225609897",
+      "case": "positive",
+      "code": "688808",
+      "evidence": "category_gszl_szsh via '管理制度'; no keyword patch",
+      "expect": {
+        "category": "category_gszl_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "信息披露管理制度（草案）（H股发行上市后适用）"
+    },
+    {
+      "announcement_id": "1225609913",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_rcjy_szsh via '重大资产购买'; no keyword patch",
+      "expect": {
+        "category": "category_rcjy_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "方大特钢科技股份有限公司重大资产购买暨关联交易报告书（草案）摘要"
+    },
+    {
+      "announcement_id": "1225609924",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_zj_szsh via '核查意见'; no keyword patch",
+      "expect": {
+        "category": "category_zj_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "兴业证券股份有限公司关于方大特钢科技股份有限公司本次交易前12个月内购买、出售资产情况的核查意见"
+    },
+    {
+      "announcement_id": "1225609926",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_zj_szsh via '审计报告'; no keyword patch",
+      "expect": {
+        "category": "category_zj_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "江西方大钢铁集团企业投资有限公司重大资产重组备考合并审计报告"
+    },
+    {
+      "announcement_id": "1225609927",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_zj_szsh via '核查意见'; no keyword patch",
+      "expect": {
+        "category": "category_zj_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "兴业证券股份有限公司关于方大特钢科技股份有限公司本次交易符合《关于加强证券公司在投资银行类业务中聘请第三方等廉洁从业风险防控的意见》相关规定的核查意见"
+    },
+    {
+      "announcement_id": "1225609929",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_rcjy_szsh via '重大资产购买'; no keyword patch",
+      "expect": {
+        "category": "category_rcjy_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "方大特钢科技股份有限公司重大资产购买暨关联交易报告书（草案）"
+    },
+    {
+      "announcement_id": "1225609931",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_dshgg_szsh via '董事会'; no keyword patch",
+      "expect": {
+        "category": "category_dshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "方大特钢第九届董事会第二十次会议决议公告"
+    },
+    {
+      "announcement_id": "1225609932",
+      "case": "positive",
+      "code": "600507",
+      "evidence": "category_fxts_szsh via '风险提示'; no keyword patch",
+      "expect": {
+        "category": "category_fxts_szsh",
+        "risk_level": "high",
+        "tags": []
+      },
+      "title": "方大特钢关于披露重组报告书暨一般风险提示公告"
+    },
+    {
+      "announcement_id": "1225609945",
+      "case": "positive",
+      "code": "300152",
+      "evidence": "category_rcjy_szsh via '行政处罚'; no keyword patch",
+      "expect": {
+        "category": "category_rcjy_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "关于公司及相关人员收到河北监管局行政处罚决定书的公告"
+    },
+    {
+      "announcement_id": "1225609966",
+      "case": "positive",
+      "code": "688757",
+      "evidence": "category_dshgg_szsh via '董事会'; no keyword patch",
+      "expect": {
+        "category": "category_dshgg_szsh",
+        "risk_level": "low",
+        "tags": []
+      },
+      "title": "第二届董事会第十九次会议决议公告"
+    },
+    {
+      "announcement_id": "1225609974",
+      "case": "positive",
+      "code": "688757",
+      "evidence": "category_zf_szsh via '向特定对象发行'; no keyword patch",
+      "expect": {
+        "category": "category_zf_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "胜科纳米（苏州）股份有限公司2026年度向特定对象发行A股股票证券募集说明书（申报稿）"
+    },
+    {
+      "announcement_id": "1225609976",
+      "case": "positive",
+      "code": "688757",
+      "evidence": "category_zf_szsh via '向特定对象发行'; no keyword patch",
+      "expect": {
+        "category": "category_zf_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "关于2026年度向特定对象发行A股股票的审核问询函回复及募集说明书等申请文件更新的提示性公告"
+    },
+    {
+      "announcement_id": "1225609978",
+      "case": "positive",
+      "code": "688757",
+      "evidence": "category_zf_szsh via '向特定对象发行'; no keyword patch",
+      "expect": {
+        "category": "category_zf_szsh",
+        "risk_level": "mid",
+        "tags": []
+      },
+      "title": "2026年度向特定对象发行A股股票方案论证分析报告（二次修订稿）"
+    }
+  ]
+}

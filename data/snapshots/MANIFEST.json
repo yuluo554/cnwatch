@@ -1,0 +1,53 @@
+{
+  "captured_on": "2026-10-17",
+  "files": [
+    {
+      "bytes": 445545,
+      "path": "announce-day-2026-10-15.json",
+      "records": 1097,
+      "sha256": "ad41264b07f49de87b2c936ac4b019cb8ab855ece63cf1d5aa97ca007dda5ffe"
+    },
+    {
+      "bytes": 532520,
+      "path": "announce-day-2026-10-16.json",
+      "records": 1313,
+      "sha256": "3b1b8a1c4d1697c653d8efdf19463cd37face26c79c9d7c59ea5959f698701bf"
+    },
+    {
+      "bytes": 88019,
+      "path": "bj_stock.json",
+      "records": 604,
+      "sha256": "656426462ebf542dedf403dd232d69762a7f7f6de8e24e1aa1f34db293c0c067"
+    },
+    {
+      "bytes": 973761,
+      "path": "category-samples-2026-01-01_2026-10-17.json",
+      "records": 26,
+      "sha256": "f310df9916dff8190e360839cca4419054a1d569f95ba14a5ccb4f7bec1cdb0d"
+    },
+    {
+      "bytes": 34321,
+      "path": "keyword-samples-2026-01-01_2026-10-17.json",
+      "records": 5,
+      "sha256": "8dfac09011b63cbdda6cba03ad40dc086faf603a640b4b613ce14bdc8b5dba75"
+    },
+    {
+      "bytes": 2080,
+      "path": "new-notice.js",
+      "sha256": "55b12ae3cb20a448ec5e304497a281e0bbc75df21cadb9abbd416b99c5f24d74"
+    },
+    {
+      "bytes": 906034,
+      "path": "szse_stock.json",
+      "records": 6261,
+      "sha256": "5a3604754a4fcca3b109cd5df8ddb9ebc80a00194dacde3fa957a76c3e5c0798"
+    },
+    {
+      "bytes": 2958,
+      "path": "volume-ledger-2026-09-17_2026-10-17.json",
+      "sha256": "04e3e063e3689d057d83692bdefe824b8f659ab1e6e641730922ef2b701d447e"
+    }
+  ],
+  "format": "cnwatch.snapshot_manifest",
+  "format_version": 1
+}

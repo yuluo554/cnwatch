@@ -41,7 +41,7 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [tool.setuptools.package-data]
-cnwatch = ["resources/*.json"]
+cnwatch = ["resources/*.json", "resources/rules/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
