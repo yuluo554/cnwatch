@@ -38,12 +38,17 @@ jobs:
           version_code=$?
           cnwatch --home ./ci-runtime selftest
           selftest_code=$?
+          # `run` is the only command still behind the stage gate (exit 3).
+          cnwatch --home ./ci-runtime run
+          stage_gate_code=$?
+          # No database under this home yet, so `report` is unusable input.
           cnwatch --home ./ci-runtime report
-          not_ready_code=$?
+          no_data_code=$?
           set -e
           test "$version_code" = "0"
           test "$selftest_code" = "0"
-          test "$not_ready_code" = "3"
+          test "$stage_gate_code" = "3"
+          test "$no_data_code" = "2"
 
       - name: Offline replay smoke (frozen snapshots, no network)
         shell: bash
@@ -70,6 +75,42 @@ jobs:
           cnwatch --home ./ci-runtime classify > classify2.out
           cat classify2.out
           grep -q "pending 0" classify2.out
+
+      - name: Report, notify and archive smoke (offline, zero external calls)
+        shell: bash
+        run: |
+          set -e
+          cnwatch --home ./ci-runtime report \
+            --date 2026-10-16 --generated-at 2026-10-16T12:00:00Z > report.out
+          cat report.out
+          grep -q "items 5" report.out
+          # The shared disclaimer must reach the report footer verbatim.
+          python - <<'PY'
+          import pathlib, re
+          page = pathlib.Path("ci-runtime/out/reports/2026-10-16/daily.html").read_text(
+              encoding="utf-8"
+          )
+          assert "\u672c\u5de5\u5177\u4ec5\u805a\u5408\u516c\u5f00\u4fe1\u606f\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002" in page, "disclaimer missing from the report"
+          assert not re.search(r"<(link|script|iframe)\b", page, re.I), "external resource in report"
+          assert not re.search(r"@import", page, re.I), "css @import in report"
+          print("report page: shared disclaimer present, no external resource")
+          PY
+
+          # Default channel is `none`: returns before opening the database.
+          cnwatch --home ./ci-runtime notify --date 2026-10-16 --data-dir data > notify.out
+          cat notify.out
+          grep -q "no external call was made" notify.out
+
+          # Dry run composes the message but sends nothing.
+          cnwatch --home ./ci-runtime notify --channel desktop --dry-run \
+            --date 2026-10-16 --data-dir data > dryrun.out
+          grep -q "dry run: composed but not sent" dryrun.out
+
+          # Archive policy comes from data/README.md section 4; nothing downloads.
+          cnwatch --home ./ci-runtime archive --show-config --data-dir data > archive.out
+          cat archive.out
+          grep -q "suffix: .PDF" archive.out
+          grep -q "default_extract: off" archive.out
 
       - name: Module-entry smoke
         shell: bash

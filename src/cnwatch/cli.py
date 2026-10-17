@@ -41,11 +41,13 @@ from .selftest import format_report, run_selftest
 
 # command -> (milestone, one-line reason)
 STAGE_NOT_READY = {
-    # M5 shipped `archive` and `notify`. The end-to-end `run` shortcut chains
-    # commands that already work one by one, but it is not part of the M5 DoD
-    # (plan/06 M5, plan/04 module 5) — it keeps the stage gate rather than
-    # pretending to orchestrate a round nobody specified.
-    "run": ("M5", "端到端编排"),
+    # Every other command ships through v0.1.0. The end-to-end `run` shortcut
+    # chains commands that already work one by one, but no milestone DoD
+    # specified what a round should do with the results, so it keeps the stage
+    # gate rather than pretending to orchestrate a round nobody specified
+    # (plan/06 M5 deviation). The label is not a milestone number on purpose:
+    # v0.1.0 is released without this command.
+    "run": ("a later milestone", "端到端编排"),
 }
 
 EXIT_CODE_HELP = """exit codes:
