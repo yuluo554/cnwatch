@@ -33,11 +33,12 @@ server, no Redis/Kafka, no model calls.
 | M2 | Fetch and dedupe | ✅ watchlist + incremental fetch, offline replay |
 | M3 | Rule engine | ✅ 26 categories + 4 patches + risk grading |
 | M4 | Daily report | ✅ dual view + baseline comparison |
-| M5 | Archive and notify | ⬜ on-demand PDF + alerts |
+| M5 | Archive and notify | ✅ on-demand PDF + optional text + alerts off by default |
 | M6 | Release | ⬜ tag + GitHub Release + release ledger |
 
-Commands that belong to a future milestone currently exit with code `3` and write
-nothing. That is temporary and intentional: see `plan/03-架构与技术选型.md` §七.
+One command is still a placeholder: `run` (end-to-end orchestration) exits with
+code `3` and writes nothing. That is temporary and intentional — it chains
+commands that already work individually; see `plan/06-里程碑.md` M5 偏差.
 
 ## Quick start
 
@@ -79,8 +80,8 @@ cnwatch [--home PATH] <command> [options]
   classify    规则打标 (M3)
   report      生成日报 (M4)
   archive     按需归档 PDF (M5)
-  notify      发送提醒 (M5)
-  run         端到端编排 (M4)
+  notify      发送提醒，默认关闭 (M5)
+  run         端到端编排 (未实现，退出码 3)
   selftest    环境与安装面自检 (M0)
 ```
 
@@ -91,7 +92,7 @@ Exit codes are part of the contract:
 | 0 | completed |
 | 1 | completed with a reported degradation (partial results, e.g. some stocks failed) |
 | 2 | bad usage or unusable input; nothing was produced |
-| 3 | the command belongs to a milestone that is not implemented yet |
+| 3 | the command is not implemented yet (`run` only) |
 
 ### Watchlist
 
@@ -187,7 +188,6 @@ cnwatch report
 # an explicit day, with a pinned timestamp so two runs are byte-identical
 cnwatch report --date 2026-10-16 --generated-at 2026-10-16T12:00:00Z
 ```
-
 Two files land in `out/reports/<date>/`: `daily.md` and a single-file
 `daily.html` (stylesheet inlined, no external resource of any kind — the page
 opens on a laptop with no network). Both are rendered from one assembled
@@ -221,6 +221,71 @@ failed some stocks (the header is marked incomplete and the failed codes are
 listed), `2` no database, or the day has neither rows nor a baseline. A day with
 rows that were never classified also exits `2` and points at `cnwatch classify`
 — the report will not invent a label.
+
+### Archive
+
+```bash
+# one named filing, or one stock, or everything graded high
+cnwatch archive --announcement-id 1225601360
+cnwatch archive --code 601318 --code 300750
+cnwatch archive --risk high
+cnwatch archive --all-high
+
+# also extract the first pages of the text layer
+cnwatch archive --code 601318 --text
+
+# print the policy parsed from data/README.md section 4
+cnwatch archive --show-config
+```
+
+Archiving is **on demand**: nothing is downloaded unless a filter names it, and a
+run with no filter exits `2`. Files land in
+`data/pdf/<code>/<date>/<announcement_id>.PDF`, and `archive_records` stores the
+local path, the byte size, the download time, the text status and the excerpt.
+`--announcement-id` is the one way to name a row outside the watchlist; the
+`--risk` / `--category` filters never reach a market-wide sweep, for the same
+reason the report does not.
+
+Re-archiving a filing whose file is already on disk with the recorded size
+performs **no download and writes no second row** — the row is updated only when
+the local file is missing or the wrong size. A run with `--text` after a run
+without it recovers the text from the local file, again without downloading.
+
+Text extraction is optional and ordered PyMuPDF → `pdftotext` → nothing (the
+core install has no dependencies). Asking for text when neither backend exists
+exits `2` with an install hint and writes **nothing at all** — no PDF, no row, no
+empty excerpt. A filing that downloads but yields no usable text is recorded as
+`text_status=unavailable` with an empty excerpt and the run still exits `0`; the
+text layer of real filings is genuinely inconsistent, so an empty extraction is
+reported as such rather than dressed up as success. The excerpt is for a human
+reading an alert and is never a classification input — a static check fails the
+build if the archive package imports the matcher at all.
+
+### Notify
+
+```bash
+# default: nothing is sent, nothing is read, nothing is contacted
+cnwatch notify
+
+# compose the message and print it without sending
+cnwatch notify --channel desktop --dry-run --date 2026-10-16
+
+cnwatch notify --channel webhook --webhook-url https://example.invalid/hook
+cnwatch notify --channel email --email-host smtp.example.invalid --email-to me@example.invalid
+```
+
+The default channel is `none`, and it is read from `data/README.md` section 4
+rather than hard-coded. With `none` selected the command returns before it opens
+the database, creates a directory or builds a channel object: zero external calls
+by construction, not by a code path that happens to do nothing.
+
+A message lists the day's classified watchlist items (risk first, capped, with the
+disclaimer from the single definition in `cnwatch/disclaimer.py`). A day with
+nothing stored sends nothing and exits `0`.
+
+A failed send exits `1`, appends one line to `out/logs/notify.log`, and changes
+nothing else: the notification layer has no write path to the database, and the
+daily report regenerates byte-for-byte after a failure.
 
 ## Data source and measured limits
 
@@ -264,6 +329,8 @@ Known limitations, stated plainly:
 - **Deterministic**: no LLM, no random sampling, no relevance scores. Same input
   and same rule package produce the same `category/tags/risk_level`.
 - **Local only**: single process, SQLite, files on disk. No accounts, no uploads.
+- **On demand, never bulk**: archiving downloads only what a filter names, and
+  notifications are off (`none`) until a channel is chosen explicitly.
 - **Zero core dependencies**: fetching, tagging and reporting use the standard
   library. `PyMuPDF` is an optional extra for PDF text extraction only.
 - **Fail visibly**: unknown groups, missing `orgId`, unusable CSV and untagged

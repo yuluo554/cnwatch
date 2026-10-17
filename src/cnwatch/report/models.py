@@ -25,7 +25,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Tuple
 
-from ..fetch.models import STATIC_BASE
+from ..fetch.models import source_url_for
 
 UNCLASSIFIED = "unclassified"
 
@@ -58,14 +58,9 @@ def safe_date_ordinal(value: str) -> int:
 
 
 def source_url(adjunct_url: str) -> str:
-    """The same link rule ``fetch`` applies, kept identical on purpose."""
+    """The same link rule ``fetch`` applies; one definition, reused."""
 
-    text = (adjunct_url or "").strip()
-    if not text:
-        return ""
-    if text.startswith("http://") or text.startswith("https://"):
-        return text
-    return STATIC_BASE + text.lstrip("/")
+    return source_url_for(adjunct_url)
 
 
 @dataclass(frozen=True)

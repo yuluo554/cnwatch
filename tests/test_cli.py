@@ -71,17 +71,30 @@ def test_stage_not_ready_registry_covers_planned_commands():
         action for action in parser._actions if action.dest == "command"
     ][0]
     registered = set(subparsers.choices)
-    implemented = {"selftest", "watchlist", "fetch", "classify", "report"}
+    implemented = {
+        "selftest",
+        "watchlist",
+        "fetch",
+        "classify",
+        "report",
+        "archive",
+        "notify",
+    }
     assert registered == implemented | set(STAGE_NOT_READY)
 
 
 def test_stage_not_ready_shrinks_as_milestones_land():
-    """M2, M3 and M4 landed: those commands must no longer be stage-gated."""
+    """M2–M5 landed: those commands must no longer be stage-gated."""
 
     assert "watchlist" not in STAGE_NOT_READY
     assert "fetch" not in STAGE_NOT_READY
     assert "classify" not in STAGE_NOT_READY
     assert "report" not in STAGE_NOT_READY
+    assert "archive" not in STAGE_NOT_READY
+    assert "notify" not in STAGE_NOT_READY
+    # `run` (end-to-end orchestration) is still unwired: it chains commands that
+    # work individually, and it is not part of the M5 DoD.
+    assert set(STAGE_NOT_READY) == {"run"}
 
 
 def test_selftest_on_clean_home_passes(tmp_path, capsys):

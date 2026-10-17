@@ -878,7 +878,9 @@ def test_a_render_failure_writes_no_files(tmp_path, labels, monkeypatch):
 
 def test_report_is_no_longer_stage_gated():
     assert "report" not in STAGE_NOT_READY
-    assert set(STAGE_NOT_READY) == {"archive", "notify", "run"}
+    assert "archive" not in STAGE_NOT_READY
+    assert "notify" not in STAGE_NOT_READY
+    assert set(STAGE_NOT_READY) == {"run"}
 
 
 def test_report_help_states_the_disclaimer(capsys):

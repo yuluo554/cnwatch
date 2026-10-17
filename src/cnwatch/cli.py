@@ -17,7 +17,14 @@ from pathlib import Path
 from typing import Optional, Sequence
 
 from . import __version__, db
-from .clock import Clock, ClockError, SystemClock, parse_date, resolve_clock
+from .clock import (
+    Clock,
+    ClockError,
+    PinnedTimestamp,
+    SystemClock,
+    parse_date,
+    resolve_clock,
+)
 from .datadir import resolve_data_dir, stock_master_path
 from .disclaimer import DISCLAIMER
 from .encoding import ensure_utf8_stdio
@@ -29,14 +36,15 @@ from .exit_codes import (
     EXIT_USAGE,
 )
 from .paths import Paths, paths_for
+from .policy import README_RELPATH
 from .selftest import format_report, run_selftest
 
 # command -> (milestone, one-line reason)
 STAGE_NOT_READY = {
-    "archive": ("M5", "按需归档"),
-    "notify": ("M5", "提醒渠道"),
-    # M4 shipped `report`; the end-to-end `run` shortcut is still unwired, so it
-    # keeps the stage gate rather than pretending to orchestrate.
+    # M5 shipped `archive` and `notify`. The end-to-end `run` shortcut chains
+    # commands that already work one by one, but it is not part of the M5 DoD
+    # (plan/06 M5, plan/04 module 5) — it keeps the stage gate rather than
+    # pretending to orchestrate a round nobody specified.
     "run": ("M5", "端到端编排"),
 }
 
@@ -130,21 +138,104 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     archive_parser = subparsers.add_parser(
-        "archive", help="download PDFs on demand and extract the first pages (M5)"
+        "archive",
+        help="download PDFs on demand and optionally extract their first pages (M5)",
+        description="Download the filings the filters name into "
+        "data/pdf/<code>/<date>/<announcement_id>.PDF and record local path, byte "
+        "size and time. Nothing is downloaded unless a filter names it. The "
+        "extracted text is for reading an alert; it is never a classification "
+        "input.",
     )
-    archive_parser.add_argument("--announcement-id", action="append", default=[])
-    archive_parser.add_argument("--code", action="append", default=[])
-    archive_parser.add_argument("--risk", choices=["high", "mid", "low"], default=None)
+    archive_parser.add_argument(
+        "--announcement-id",
+        action="append",
+        default=[],
+        metavar="ID",
+        help="one filing by id (repeatable); not limited to the watchlist",
+    )
+    archive_parser.add_argument(
+        "--code", action="append", default=[], metavar="CODE", help="one stock code (repeatable)"
+    )
+    archive_parser.add_argument(
+        "--category", metavar="CATEGORY", default=None, help="official category id"
+    )
+    archive_parser.add_argument(
+        "--risk", choices=["high", "mid", "low"], default=None, help="stored risk level"
+    )
+    archive_parser.add_argument(
+        "--all-high",
+        action="store_true",
+        help="explicit batch: every stored watchlist filing graded high",
+    )
+    archive_parser.add_argument(
+        "--text",
+        action="store_true",
+        help="also extract the first pages; needs PyMuPDF or pdftotext (exit 2 if neither)",
+    )
+    archive_parser.add_argument(
+        "--downloaded-at",
+        metavar="ISO8601",
+        default=None,
+        help="pin the recorded download time, so a re-run is reproducible",
+    )
+    archive_parser.add_argument(
+        "--data-dir",
+        metavar="PATH",
+        default=None,
+        help="directory holding data/README.md (the policy table)",
+    )
+    archive_parser.add_argument(
+        "--show-config",
+        action="store_true",
+        help="print the archive policy parsed from data/README.md section 4",
+    )
 
     notify_parser = subparsers.add_parser(
-        "notify", help="send alerts through the configured channel (M5)"
+        "notify",
+        help="send an alert through the configured channel; none by default (M5)",
+        description="Compose one message from the stored items of a day and send "
+        "it through desktop, email or webhook. The default channel is none, and "
+        "none performs no external call at all. A failed send is logged and exits "
+        "1; it never touches the report or the database.",
     )
     notify_parser.add_argument(
-        "--channel", choices=["none", "desktop", "email", "webhook"], default="none"
+        "--channel",
+        choices=["none", "desktop", "email", "webhook"],
+        default=None,
+        help="none (default, read from data/README.md), desktop, email or webhook",
+    )
+    notify_parser.add_argument(
+        "--date",
+        metavar="YYYY-MM-DD",
+        default=None,
+        help="day to report on (default: today in the exchange timezone, UTC+8)",
+    )
+    notify_parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="compose and print the message without sending it",
+    )
+    notify_parser.add_argument("--webhook-url", metavar="URL", default=None)
+    notify_parser.add_argument("--email-host", metavar="HOST", default=None)
+    notify_parser.add_argument("--email-port", metavar="PORT", type=int, default=25)
+    notify_parser.add_argument("--email-from", metavar="ADDRESS", default="")
+    notify_parser.add_argument("--email-to", metavar="ADDRESS", action="append", default=[])
+    notify_parser.add_argument("--email-user", metavar="USER", default="")
+    notify_parser.add_argument("--email-password", metavar="SECRET", default="")
+    notify_parser.add_argument(
+        "--data-dir",
+        metavar="PATH",
+        default=None,
+        help="directory holding data/README.md (the policy table)",
+    )
+    notify_parser.add_argument(
+        "--show-config",
+        action="store_true",
+        help="print the notify policy parsed from data/README.md section 4",
     )
 
     run_parser = subparsers.add_parser(
-        "run", help="fetch, classify and report in one pass (M5)"
+        "run", help="fetch, classify and report in one pass (not implemented)"
     )
     run_parser.add_argument("--date", metavar="YYYY-MM-DD", default=None)
 
@@ -568,6 +659,248 @@ def cmd_report(paths: Paths, args: argparse.Namespace) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# archive
+# --------------------------------------------------------------------------- #
+
+
+def cmd_archive(paths: Paths, args: argparse.Namespace) -> int:
+    from .archive import (
+        ArchiveRepository,
+        ArchiveRequest,
+        archive_targets,
+        load_config as load_archive_config,
+        resolve_extractor,
+    )
+    from .archive.config import table_rows
+    from .archive.service import require_extractor
+    from .archive.transport import PdfDownloader, UrllibPdfTransport
+    from .fetch.transport import RateLimiter, RealSleep, SystemMonotonic
+
+    # This command needs the policy table, not the stock master; say so, so an
+    # install outside a checkout is told which file is actually missing.
+    data_dir = resolve_data_dir(args.data_dir, paths, require=README_RELPATH)
+    config = load_archive_config(data_dir)
+    if args.show_config:
+        print("\n".join(table_rows(config)))
+        return EXIT_OK
+
+    risk = "high" if args.all_high else args.risk
+    if not args.announcement_id and not args.code and not args.category and not risk:
+        raise UsageError(
+            "archive downloads only what you name",
+            hint="pass --announcement-id, --code, --category, --risk or --all-high",
+        )
+
+    # ``--text`` is the explicit request; the documented default for the row is
+    # off. Validated before anything is created, so a missing backend writes
+    # nothing at all (plan/04 5.3).
+    text_requested = bool(args.text) or config.default_extract
+    extractor = resolve_extractor()
+    require_extractor(extractor, text_requested)
+
+    clock: Clock = resolve_clock(None, getattr(args, "clock", None))
+    if args.downloaded_at is not None:
+        try:
+            clock = PinnedTimestamp(clock, args.downloaded_at)
+        except ClockError as exc:
+            raise UsageError(
+                "--downloaded-at is not an ISO-8601 timestamp: %r" % (args.downloaded_at,),
+                hint="for example 2026-10-16T12:00:00Z",
+            )
+
+    if not paths.db_path.is_file():
+        raise UsageError(
+            "no database at %s" % paths.db_path,
+            hint="run `cnwatch fetch` first; archive works on stored rows",
+        )
+
+    paths.ensure_runtime_dirs()
+    connection = db.initialize(paths.db_path)
+    try:
+        repository = ArchiveRepository(connection)
+        targets = repository.targets(
+            announcement_ids=args.announcement_id,
+            codes=args.code,
+            category=args.category,
+            risk=risk,
+        )
+        if not targets:
+            raise UsageError(
+                "no stored announcement matches the given filters",
+                hint="run `cnwatch fetch` (and `cnwatch classify` for --risk/--category) "
+                "before archiving",
+            )
+
+        sleep = RealSleep()
+        limiter = RateLimiter(config.min_interval_seconds, sleep, SystemMonotonic())
+        downloader = PdfDownloader(
+            UrllibPdfTransport(),
+            limiter,
+            config.request_timeout_seconds,
+            config.retry_delays,
+            sleeper=sleep,
+        )
+        summary = archive_targets(
+            ArchiveRequest(
+                paths=paths,
+                repository=repository,
+                downloader=downloader,
+                clock=clock,
+                config=config,
+                targets=targets,
+                extractor=extractor,
+                text_requested=text_requested,
+            )
+        )
+        print(summary.render())
+        _write_archive_log(paths, summary, clock.timestamp())
+        return EXIT_OK if summary.complete else EXIT_DEGRADED
+    finally:
+        connection.close()
+
+
+def _write_archive_log(paths: Paths, summary, at: str) -> None:
+    """Per-filing detail (byte sizes, text outcome, download failures) to out/logs.
+
+    Appended like the classify log: a later run must not erase the record of
+    which filing failed and why.
+    """
+
+    log_path = paths.logs_dir / "archive.log"
+    lines = []
+    for item in summary.items:
+        lines.append(
+            "%s %s %s bytes=%d text=%s %s"
+            % (
+                item.announcement_id,
+                item.code,
+                item.status,
+                item.byte_size,
+                item.text_status or "-",
+                item.reason or item.detail or "-",
+            )
+        )
+    header = "# %s  requested=%d archived=%d already=%d failed=%d text=%s\n" % (
+        at,
+        summary.targets,
+        summary.archived,
+        summary.skipped,
+        summary.failed,
+        "requested" if summary.text_requested else "off",
+    )
+    body = header + "".join(line + "\n" for line in lines)
+    with open(str(log_path), "a", encoding="utf-8", newline="\n") as handle:
+        handle.write(body)
+
+
+# --------------------------------------------------------------------------- #
+# notify
+# --------------------------------------------------------------------------- #
+
+
+def cmd_notify(paths: Paths, args: argparse.Namespace) -> int:
+    from .fetch.transport import UrllibTransport
+    from .notify import (
+        NotifyRepository,
+        NotifyRequest,
+        SmtpSettings,
+        build_notifier,
+        load_config as load_notify_config,
+        log_line,
+        notify_day,
+    )
+    from .notify.config import table_rows
+
+    data_dir = resolve_data_dir(args.data_dir, paths, require=README_RELPATH)
+    config = load_notify_config(data_dir)
+    if args.show_config:
+        print("\n".join(table_rows(config)))
+        return EXIT_OK
+
+    channel = args.channel or config.default_channel
+
+    clock: Clock = resolve_clock(None, getattr(args, "clock", None))
+    if args.date is not None:
+        try:
+            parse_date(args.date)
+        except ClockError as exc:
+            raise UsageError(str(exc))
+        day = args.date
+    else:
+        day = clock.exchange_today().strftime("%Y-%m-%d")
+
+    # The documented default is off, and "off" means nothing is composed, read
+    # or contacted — not even the runtime directories are touched.
+    if channel == "none":
+        print(
+            "notify  channel=none  day=%s\ndisabled: the channel is none; "
+            "no external call was made" % day
+        )
+        return EXIT_OK
+
+    smtp = None
+    if channel == "email":
+        if not args.email_host or not args.email_to:
+            raise UsageError(
+                "--channel email needs --email-host and --email-to",
+                hint="nothing was sent; SMTP host and at least one recipient are required",
+            )
+        smtp = SmtpSettings(
+            host=args.email_host,
+            port=int(args.email_port),
+            sender=args.email_from or args.email_to[0],
+            recipients=tuple(args.email_to),
+            username=args.email_user,
+            password=args.email_password,
+        )
+
+    notifier = build_notifier(
+        channel,
+        transport=UrllibTransport(),
+        webhook_url=args.webhook_url,
+        smtp=smtp,
+    )
+
+    if not paths.db_path.is_file():
+        raise UsageError(
+            "no database at %s" % paths.db_path,
+            hint="run `cnwatch fetch` first; notify reports on stored rows",
+        )
+
+    connection = db.connect(paths.db_path)
+    try:
+        outcome = notify_day(
+            NotifyRequest(
+                repository=NotifyRepository(connection),
+                notifier=notifier,
+                clock=clock,
+                day=day,
+                channel=channel,
+                dry_run=bool(args.dry_run),
+            )
+        )
+    finally:
+        connection.close()
+
+    print(outcome.render(show_message=bool(args.dry_run) or outcome.failed))
+    if outcome.failed:
+        _write_notify_log(paths, outcome, clock.timestamp())
+        return EXIT_DEGRADED
+    return EXIT_OK
+
+
+def _write_notify_log(paths: Paths, outcome, at: str) -> None:
+    """One appended line per failed send. The only trace a failure is allowed."""
+
+    from .notify import log_line
+
+    paths.ensure_runtime_dirs()
+    log_path = paths.logs_dir / "notify.log"
+    with open(str(log_path), "a", encoding="utf-8", newline="\n") as handle:
+        handle.write("%s  %s\n" % (at, log_line(outcome)))
+
+
+# --------------------------------------------------------------------------- #
 
 COMMANDS = ("selftest", "watchlist", "fetch", "classify", "report", "archive", "notify", "run")
 
@@ -597,6 +930,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return cmd_classify(paths, args)
         if command == "report":
             return cmd_report(paths, args)
+        if command == "archive":
+            return cmd_archive(paths, args)
+        if command == "notify":
+            return cmd_notify(paths, args)
     except UsageError as exc:
         print("cnwatch: %s" % exc, file=sys.stderr)
         return EXIT_USAGE

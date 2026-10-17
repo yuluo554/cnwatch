@@ -37,6 +37,22 @@ def clean_title(raw: Optional[str]) -> str:
     return text[:MAX_TITLE_LENGTH]
 
 
+def source_url_for(adjunct_url: Optional[str]) -> str:
+    """The one link rule: a stored ``adjunctUrl`` becomes the CNINFO direct link.
+
+    Defined once and reused by ``Announcement.source_url``, the report layer and
+    the archive layer, so a filing's link cannot differ between the page, the
+    alert and the downloaded file.
+    """
+
+    text = (adjunct_url or "").strip()
+    if not text:
+        return ""
+    if text.startswith("http://") or text.startswith("https://"):
+        return text
+    return STATIC_BASE + text.lstrip("/")
+
+
 def has_markup(text: str) -> bool:
     return bool(_TAG_RE.search(text or ""))
 
@@ -55,11 +71,7 @@ class Announcement:
 
     @property
     def source_url(self) -> str:
-        if not self.adjunct_url:
-            return ""
-        if self.adjunct_url.startswith("http://") or self.adjunct_url.startswith("https://"):
-            return self.adjunct_url
-        return STATIC_BASE + self.adjunct_url.lstrip("/")
+        return source_url_for(self.adjunct_url)
 
 
 @dataclass(frozen=True)

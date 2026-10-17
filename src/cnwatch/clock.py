@@ -46,6 +46,25 @@ def format_date(value: _dt.date) -> str:
     return value.strftime(DATE_FORMAT)
 
 
+def parse_instant(value: str) -> str:
+    """Validate an ISO-8601 instant and return it verbatim.
+
+    Kept verbatim (not normalised) so an injected timestamp appears exactly as
+    the caller wrote it: normalising would make two spellings of the same
+    instant produce different bytes for no benefit.
+    """
+
+    text = str(value).strip()
+    if not text:
+        raise ClockError("expected an ISO-8601 timestamp, got %r" % (value,))
+    candidate = text[:-1] + "+00:00" if text.endswith("Z") else text
+    try:
+        _dt.datetime.fromisoformat(candidate)
+    except ValueError:
+        raise ClockError("invalid ISO-8601 timestamp %r" % (value,))
+    return text
+
+
 def shift_days(value: str, days: int) -> str:
     return format_date(parse_date(value) + _dt.timedelta(days=days))
 
@@ -116,6 +135,28 @@ def fixed_clock_for(day: str, hour: int = 12) -> FixedClock:
     return FixedClock(
         _dt.datetime(parsed.year, parsed.month, parsed.day, hour, 0, 0, tzinfo=_dt.timezone.utc)
     )
+
+
+@dataclass(frozen=True)
+class PinnedTimestamp(Clock):
+    """Wraps a clock so ``timestamp()`` returns a fixed string.
+
+    Used by the commands that record when they ran (``report``,
+    ``archive``): pinning the instant is what makes a repeated run reproduce
+    the same stored value, and therefore the same artifact.
+    """
+
+    base: Clock
+    pinned: str
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "pinned", parse_instant(self.pinned))
+
+    def now(self) -> _dt.datetime:
+        return self.base.now()
+
+    def timestamp(self) -> str:
+        return self.pinned
 
 
 def resolve_clock(today: Optional[str] = None, clock: Optional[Clock] = None) -> Clock:

@@ -27,13 +27,12 @@ value comes from ``classifications``; this module does not import the matcher
 
 from __future__ import annotations
 
-import datetime as _dt
 import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Sequence, Tuple
 
-from ..clock import Clock, ClockError, parse_date
+from ..clock import Clock, ClockError, parse_date, parse_instant
 from ..errors import UsageError
 from ..paths import Paths
 from .assembly import build_document
@@ -97,23 +96,18 @@ class ReportOutcome:
 def parse_generated_at(value: str) -> str:
     """Validate ``--generated-at`` and keep it verbatim.
 
-    Kept verbatim (not normalised) so the injected timestamp appears in the
-    report exactly as the caller wrote it; normalising would make two spellings
-    of the same instant produce different bytes for no benefit.
+    Delegates the syntax to ``clock.parse_instant`` (one ISO-8601 definition for
+    the whole project) and re-raises as a usage error, because the CLI is the
+    only place that turns a failure into an exit code.
     """
 
-    text = str(value).strip()
-    if not text:
-        raise UsageError("--generated-at needs an ISO-8601 timestamp")
-    candidate = text[:-1] + "+00:00" if text.endswith("Z") else text
     try:
-        _dt.datetime.fromisoformat(candidate)
-    except ValueError:
+        return parse_instant(value)
+    except ClockError:
         raise UsageError(
             "--generated-at is not an ISO-8601 timestamp: %r" % (value,),
             hint="for example 2026-10-16T12:00:00Z",
         )
-    return text
 
 
 def report_dir(paths: Paths, report_date: str) -> Path:
