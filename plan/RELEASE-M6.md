@@ -97,6 +97,45 @@
 注意：上表的"逐 blob 完整性"只比 zip 与 tag；解压目录里若出现 `build/`、`src/cnwatch.egg-info/`、
 `cnwatch.db`，那是本次 `pip install -e .` 与 `selftest` 的产物，不在 zip 内（zip 只有 114 个文件）。
 
+### 4.1 README 逐条跑通（全部在 Release 附件解压出的树里执行）
+
+解压后新 venv `pip install -e .`，随后按 README 原文逐条执行（home 用 `./rt`、`./rt-market`、`./rt-real`，
+均在被解压的树内、仓库之外）。退出码按 README「Exit codes」表核对：
+
+| README 命令 | 预期 | 实得 | 末行摘要 |
+|---|---|---|---|
+| `cnwatch selftest` | 0 | 0 | `result: pass` |
+| `PYTHONPATH=src python -m cnwatch selftest` | 0 | 0 | `result: pass` |
+| `cnwatch --home ./rt selftest` | 0 | 0 | `result: pass` |
+| `watchlist import` | 0 | 0 | `imported: added 20, updated 0, unchanged 0, rejected 0` |
+| `watchlist add --code 300750` | — | 2 | 该码已在样例清单内 → 提示 `--update`（文档化行为，非缺陷） |
+| `watchlist edit --code 300750 --group 风险` | 0 | 0 | `updated 300750: group=风险` |
+| `watchlist remove --code 300750` | 0 | 0 | `removed 300750 宁德时代` |
+| `watchlist list` / `--group 持仓` / `search --query gzmt` / `list --audit` | 0 | 0 | 均返回目标行；`--audit` 显示 `edit` 前后值 |
+| `watchlist sync-master` | 0 | 0 | `master 6261 codes; checked 20, refreshed 0, marked missing 0` |
+| `cnwatch fetch`（真实联网） | 0 | 0 | `stocks 20 (ok 20, failed 0) requests 20 (first 20, pages 0, retries 0)`；**19.7s**，基线 51 条 |
+| `fetch --snapshots-dir … --today 2026-10-16` | 0 | 0 | `result: complete` |
+| `fetch --show-config` | 0 | 0 | 回显第四节口径（interval 1.0s / page_size 30 …） |
+| `fetch --all --date 2026-10-16`（用冻结快照回放，零网络） | 0 | 0 | `window 2026-10-16..2026-10-16 (market)`；**1313 条 / 44 页**，来源标 market |
+| `fetch --all --date 2026-10-15`（同上） | 0 | 0 | 1097 条，与 M1 冻结快照同值 |
+| `classify` / `classify --since 2026-10-16` | 0 | 0 | `database: announcements 11, classifications 11` |
+| `report --date 2026-10-16 --generated-at …` | 0 | 0 | `daily.md` 与 `daily.html` 落盘 |
+| `archive --show-config` | 0 | 0 | `suffix: .PDF` / `default_extract: off` |
+| `archive --code 601318`（真实下载） | 0 | 0 | `requests 2 (retries 0)`；**94,871 B + 169,445 B**（与 M5 记录同值） |
+| 再次 `archive --code 601318` | 0 | 0 | `already archived` ×2，**不重下**（幂等） |
+| `archive --code 601318 --text` | 0 | 0 | `text extracted 2`；从本地文件补抽，未重下 |
+| `archive --announcement-id 1225604248`（真实下载） | 0 | 0 | **92,960 B**，落 `data/pdf/601000/2026-10-15/`（点到市场兜底行 = K26 例外） |
+| `archive --risk high` / `--all-high` | 2 | 2 | 当日无 high 行 → 明确用法错误 + 提示先 fetch/classify |
+| `archive`（无筛选） | 2 | 2 | 提示需要 `--announcement-id/--code/--category/--risk/--all-high` |
+| `notify`（默认） | 0 | 0 | `disabled: the channel is none; no external call was made` |
+| `notify --channel desktop --dry-run` | 0 | 0 | `dry run: composed but not sent` |
+| `notify --channel webhook`（`example.invalid`） | 1 | 1 | `getaddrinfo failed`；失败只进 `out/logs/notify.log` |
+| `notify --channel email`（`smtp.example.invalid`） | 1 | 1 | 同上；两个接收端都是 RFC 2606 保留域名，永不可解析 |
+
+结论：README 里出现的每条命令都在这棵树上执行过，退出码与文档表一致；
+需要出网的四条（`fetch`、`archive --code`、`archive --announcement-id`，以及被 `fetch` 覆盖的请求路径）
+走了真实接口，其余全部离线。`fetch --all` 用冻结快照回放，没有为验证 README 再发一轮全市场请求。
+
 ## 五、未做项（不得写成已完成）
 
 - **`run`（端到端编排）未实现**，仍返回退出码 `3`，产出一律为空。已交付的六条命令
@@ -112,7 +151,9 @@
 
 ## 六、真实基准（发布说明引用同一数值）
 
-- NFR-04：真实联网 `fetch` 20 只 **22.07s**（1.1s/只，20 请求 0 失败 0 重试，7 天窗口 51 条）
-  → 50 只 ≈ **55s**，仍在 `<60s` 口径内但余量约 8%。这是实测值，不用估算。
+- NFR-04：真实联网 `fetch` 在**发布物**上再测一次 20 只 = **19.7s**（`real 0m19.706s`，20 请求 0 失败 0 重试，
+  7 天窗口 51 条基线），与 M5 的 22.07s 同量级；两次都不含任何估算 →
+  50 只 ≈ **49–55s**，仍在 `<60s` 口径内，但余量只有 8%–18%。**未做真实 50 只整轮**，
+  所以这两个数是 20 只实测的线性外推，不是 50 只实测。
 - 数据源实测与六条硬约束见 `data/README.md`；接口、PDF 直连、26 类枚举的来源
   与「无显式 robots 规则 ≠ 授权，因此自律限频」的记录同在该文件 §三。
