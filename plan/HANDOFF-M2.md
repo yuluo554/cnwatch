@@ -19,7 +19,7 @@
 | 规则包 | `src/cnwatch/resources/rules/rules-v1.json`（26 类 + 4 补丁 + 风险表 + 季节性） |
 | 真值台账 | `data/fixtures/truth/{fetch,classify}-v1.json` |
 | 生成器 | `tools/gen_snapshots.py`、`tools/gen_rules.py`、`tools/gen_truth.py`（均带 `--check`） |
-| 测试 | `tests/test_m1_data.py`（37 项 M1 门禁），双解释器各 **95** 项通过 |
+| 测试 | `tests/test_m1_data.py`（39 项 M1 门禁，含独立复算），双解释器各 **97** 项通过 |
 
 ### 尚未发生的事（不得写进 DoD 打勾）
 

@@ -449,6 +449,84 @@ def test_rule_package_is_declared_as_package_data():
     )
 
 
+def _independent_label(title: str, rules: dict):
+    """Recompute a label from the frozen rule JSON, sharing no code with tools/.
+
+    This is the "expectations are recomputable from the input" requirement in
+    executable form: it reads only the published contract (patterns,
+    neutralizers, negations, priorities, risk lists), never ``gen_rules``.
+    """
+
+    def normalize(text: str) -> str:
+        table = {}
+        for full, half in zip(
+            "０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ（）",
+            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()",
+        ):
+            table[ord(full)] = half
+        cleaned = text.translate(table).replace("<em>", "").replace("</em>", "")
+        return "".join(cleaned.split())
+
+    normalized = normalize(title)
+    ordered = sorted(
+        rules["official_categories"], key=lambda rule: (rule["priority"], rule["id"])
+    )
+    category = "unclassified"
+    for rule in ordered:
+        candidate = normalized
+        for neutralizer in rule.get("neutralizers", []):
+            candidate = candidate.replace(neutralizer, "")
+        if any(pattern in candidate for pattern in rule["patterns"]):
+            category = rule["id"]
+            break
+
+    tags = []
+    for patch in rules["keyword_patches"]:
+        if any(negation in normalized for negation in patch.get("negations", [])):
+            continue
+        stripped = normalized
+        for neutralizer in patch.get("neutralizers", []):
+            stripped = stripped.replace(neutralizer, "")
+        if any(pattern in stripped for pattern in patch["patterns"]):
+            tags.append(patch["id"])
+    tags.sort(key=lambda tag: [item["id"] for item in rules["keyword_patches"]].index(tag))
+
+    levels = [
+        "high" if category in rules["risk"]["high"] else
+        "mid" if category in rules["risk"]["mid"] else "low"
+    ]
+    for tag in tags:
+        levels.append(
+            "high" if tag in rules["risk"]["high"] else
+            "mid" if tag in rules["risk"]["mid"] else "low"
+        )
+    risk = "high" if "high" in levels else ("mid" if "mid" in levels else "low")
+    return {"category": category, "tags": tags, "risk_level": risk}
+
+
+def test_every_truth_expectation_recomputes_independently():
+    truth = _json(TRUTH / "classify-v1.json")
+    rules = _json(RULES)
+    for sample in truth["samples"]:
+        recomputed = _independent_label(sample["title"], rules)
+        assert recomputed == sample["expect"], (
+            "%s (%s): expected %s, independent recompute gives %s"
+            % (sample["announcement_id"], sample["title"], sample["expect"], recomputed)
+        )
+
+
+def test_independent_recompute_is_falsifiable():
+    """Positive control: a wrong expectation must be caught by the recompute."""
+
+    rules = _json(RULES)
+    correct = _independent_label("关于控股股东部分股份质押的公告", rules)
+    assert correct["tags"] == ["pledge"]
+    assert correct["risk_level"] == "high"
+    tampered = dict(correct)
+    tampered["risk_level"] = "low"
+    assert tampered != correct
+
+
 def test_snapshot_check_passes():
     result = _run_tool("gen_snapshots.py", "--check")
     assert result.returncode == 0, result.stdout + result.stderr
