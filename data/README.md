@@ -172,6 +172,20 @@
 - 样本量（20 只自选股在两日内共 13 条）由冻结文件现算，不写死在测试里：
   测试里所有期望值都来自 `announce-day-*.json` 的 id 集合。
 
+## 六之二、M4 日报口径（两日快照如何被消费）
+
+`report` 不重放快照，它只读 `announcements` + `classifications`。测试先用上面的回放
+把两日数据落库，再生成两天的日报：
+
+- 10-15：自选股 **8** 条（`mid 4 / low 4`，`unclassified 1`）→ 首次运行，`baseline_created=1`，`added 0`；
+- 10-16：自选股 **5** 条（`low 5`，`unclassified 4`）→ 对比 10-15：`added 5 / removed 8`；
+- 两日自选股 id 交集为 **0**（与第五节“两日重叠为 0”一致），所以新增/消失就是两日全集之差；
+- `data/fixtures/truth/fetch-v1.json` 里的 1097 → 1313 是**全市场**口径，不是这 20 只的子集，
+  不要拿它和日报的 5 / 8 直接比对。
+
+日报的基线是 `report_baseline_items` 里按 `report_date` 存的 id 集合；新增/消失是对它的集合差，
+不做文本 diff。`removed_at` 归抓取层（标记“上游不再返回”），日报不写这个字段。
+
 ## 七、目录约定
 
 | 路径 | 内容 | 是否入库 |

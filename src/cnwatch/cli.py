@@ -19,6 +19,7 @@ from typing import Optional, Sequence
 from . import __version__, db
 from .clock import Clock, ClockError, SystemClock, parse_date, resolve_clock
 from .datadir import resolve_data_dir, stock_master_path
+from .disclaimer import DISCLAIMER
 from .encoding import ensure_utf8_stdio
 from .errors import UsageError
 from .exit_codes import (
@@ -32,10 +33,11 @@ from .selftest import format_report, run_selftest
 
 # command -> (milestone, one-line reason)
 STAGE_NOT_READY = {
-    "report": ("M4", "本地日报"),
     "archive": ("M5", "按需归档"),
     "notify": ("M5", "提醒渠道"),
-    "run": ("M4", "端到端编排"),
+    # M4 shipped `report`; the end-to-end `run` shortcut is still unwired, so it
+    # keeps the stage gate rather than pretending to orchestrate.
+    "run": ("M5", "端到端编排"),
 }
 
 EXIT_CODE_HELP = """exit codes:
@@ -100,10 +102,32 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     report_parser = subparsers.add_parser(
-        "report", help="generate the Markdown and single-file HTML daily report (M4)"
+        "report",
+        help="generate the Markdown and single-file HTML daily report (M4)",
+        description="Render the stored announcements of one report day as Markdown "
+        "and a self-contained HTML page, and record the day's baseline. The report "
+        "renders existing labels; it never recomputes category or risk.",
+        epilog=DISCLAIMER,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    report_parser.add_argument("--date", metavar="YYYY-MM-DD", default=None)
-    report_parser.add_argument("--generated-at", metavar="ISO8601", default=None)
+    report_parser.add_argument(
+        "--date",
+        metavar="YYYY-MM-DD",
+        default=None,
+        help="report day (default: today in the exchange timezone, UTC+8)",
+    )
+    report_parser.add_argument(
+        "--generated-at",
+        metavar="ISO8601",
+        default=None,
+        help="pin the timestamp printed in the report, so two runs are byte-identical",
+    )
+    report_parser.add_argument(
+        "--resources",
+        metavar="PATH",
+        default=None,
+        help="override the bundled resources directory (used by tests)",
+    )
 
     archive_parser = subparsers.add_parser(
         "archive", help="download PDFs on demand and extract the first pages (M5)"
@@ -120,7 +144,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     run_parser = subparsers.add_parser(
-        "run", help="fetch, classify and report in one pass (M4)"
+        "run", help="fetch, classify and report in one pass (M5)"
     )
     run_parser.add_argument("--date", metavar="YYYY-MM-DD", default=None)
 
@@ -493,6 +517,57 @@ def _write_classify_log(paths: Paths, summary, at: str) -> None:
 
 
 # --------------------------------------------------------------------------- #
+# report
+# --------------------------------------------------------------------------- #
+
+
+def cmd_report(paths: Paths, args: argparse.Namespace) -> int:
+    from .report import (
+        ReportRepository,
+        generate_report,
+        load_label_table,
+        parse_generated_at,
+    )
+
+    # Both arguments are validated before anything is opened: a bad --date or
+    # --generated-at must exit 2 with no runtime directory created, the same
+    # way a broken rule package does for `classify` (K17).
+    if args.date is not None:
+        try:
+            parse_date(args.date)
+        except ClockError as exc:
+            raise UsageError(str(exc))
+    if args.generated_at is not None:
+        parse_generated_at(args.generated_at)
+
+    if not paths.db_path.is_file():
+        raise UsageError(
+            "no database at %s" % paths.db_path,
+            hint="run `cnwatch fetch` and `cnwatch classify` before generating a report",
+        )
+
+    resources = getattr(args, "resources", None)
+    labels = load_label_table(Path(resources) if resources else None)
+
+    paths.ensure_runtime_dirs()
+    connection = db.initialize(paths.db_path)
+    try:
+        clock: Clock = resolve_clock(None, getattr(args, "clock", None))
+        outcome = generate_report(
+            paths,
+            ReportRepository(connection),
+            clock,
+            report_date=args.date,
+            generated_at=args.generated_at,
+            labels=labels,
+        )
+        print(outcome.render())
+        return EXIT_OK if outcome.complete else EXIT_DEGRADED
+    finally:
+        connection.close()
+
+
+# --------------------------------------------------------------------------- #
 
 COMMANDS = ("selftest", "watchlist", "fetch", "classify", "report", "archive", "notify", "run")
 
@@ -520,6 +595,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return cmd_fetch(paths, args)
         if command == "classify":
             return cmd_classify(paths, args)
+        if command == "report":
+            return cmd_report(paths, args)
     except UsageError as exc:
         print("cnwatch: %s" % exc, file=sys.stderr)
         return EXIT_USAGE

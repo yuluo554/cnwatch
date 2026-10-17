@@ -31,8 +31,8 @@ server, no Redis/Kafka, no model calls.
 | M0 | Plan and skeleton | ✅ CLI contract, SQLite schema, encoding guard, falsifiable self-test, tests, CI |
 | M1 | Data first | ✅ frozen snapshots, stock master, rule package v1, truth ledger |
 | M2 | Fetch and dedupe | ✅ watchlist + incremental fetch, offline replay |
-| M3 | Rule engine | ⬜ 26 categories + 4 patches + risk grading |
-| M4 | Daily report | ⬜ dual view + baseline comparison |
+| M3 | Rule engine | ✅ 26 categories + 4 patches + risk grading |
+| M4 | Daily report | ✅ dual view + baseline comparison |
 | M5 | Archive and notify | ⬜ on-demand PDF + alerts |
 | M6 | Release | ⬜ tag + GitHub Release + release ledger |
 
@@ -177,6 +177,50 @@ the classify package at all. Categories that matched but lost are written to
 A missing, unreadable or incomplete rule package (not 26 categories, not the four
 patches in order) exits `2` **before the database is opened**, so a broken package
 cannot leave a half-labelled table behind.
+
+### Report
+
+```bash
+# today, in the exchange timezone (UTC+8)
+cnwatch report
+
+# an explicit day, with a pinned timestamp so two runs are byte-identical
+cnwatch report --date 2026-10-16 --generated-at 2026-10-16T12:00:00Z
+```
+
+Two files land in `out/reports/<date>/`: `daily.md` and a single-file
+`daily.html` (stylesheet inlined, no external resource of any kind — the page
+opens on a laptop with no network). Both are rendered from one assembled
+document, so the two formats cannot disagree about content.
+
+The report has two views of the same items — **by stock** and **by category**.
+They are two partitions produced by the same function, so the id sets are equal
+by construction; a test asserts it anyway, and also asserts the counts match per
+group so a duplicated row cannot hide behind set equality.
+
+Every item shows its risk level, date, title, category (plus any keyword tags)
+and a link to the original filing on CNINFO. The risk printed is the stored one:
+the report renders existing labels and never re-runs the matcher. A static check
+fails the build if the report package imports the classify package at all.
+
+Comparison against the previous report day is a set difference against
+`report_baseline_items`:
+
+- **First run**: no earlier baseline exists, so a baseline is recorded silently
+  and `added` is `0`. The page says so explicitly instead of presenting the
+  whole history as today's news.
+- **Later runs**: `added` = today − previous day, `removed` = previous day −
+  today. Removed items are counted and listed, never deleted; `removed_at` stays
+  the fetch layer's field.
+
+Only `source_kind='watchlist'` rows enter the report. A `fetch --all` market
+sweep stores the whole market under a different source and never mixes in.
+
+Exit codes: `0` normal, `1` a report was produced but the covering fetch run
+failed some stocks (the header is marked incomplete and the failed codes are
+listed), `2` no database, or the day has neither rows nor a baseline. A day with
+rows that were never classified also exits `2` and points at `cnwatch classify`
+— the report will not invent a label.
 
 ## Data source and measured limits
 
