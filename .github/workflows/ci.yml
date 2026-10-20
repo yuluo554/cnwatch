@@ -5,6 +5,15 @@ on:
   pull_request:
   workflow_dispatch:
 
+# The workflow only reads the repository.
+permissions:
+  contents: read
+
+# A newer push on the same ref cancels the older run instead of queueing.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: test (${{ matrix.os }} / py${{ matrix.python }})
@@ -13,14 +22,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python: ["3.8", "3.12"]
+        python: ["3.12"]
     env:
       PYTHONUTF8: "1"
       PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
 

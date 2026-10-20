@@ -36,10 +36,11 @@ server, no Redis/Kafka, no model calls.
 | M3 | Rule engine | ✅ 26 categories + 4 patches + risk grading |
 | M4 | Daily report | ✅ dual view + baseline comparison |
 | M5 | Archive and notify | ✅ on-demand PDF + optional text + alerts off by default |
-| M6 | Release | ✅ `v0.1.0` — tag, GitHub Release, downloadable archive + checksum, CI on four platforms |
+| M6 | Release | ✅ `v0.1.0` — tag, GitHub Release, downloadable archive + checksum, CI on two platforms |
+| run (end-to-end) | ⬜ not implemented — exits 3, writes nothing | — |
 
 `v0.1.0` is the first release, published from a commit whose CI run is green on
-all four legs (ubuntu/windows × Python 3.8/3.12). The release ships
+all legs (ubuntu/windows × Python 3.12). The release ships
 `cnwatch-0.1.0.zip` — a `git archive` of the tag — next to a sibling
 `cnwatch-0.1.0.zip.sha256`. What was verified for this release, and what is
 explicitly **not** done yet, is recorded in `plan/RELEASE-M6.md`.
@@ -50,7 +51,7 @@ commands that already work individually; see `plan/06-里程碑.md` M5 偏差.
 
 ## Quick start
 
-Requires Python 3.8+.
+Requires Python 3.12+.
 
 ```bash
 pip install -e ".[dev]"
@@ -380,8 +381,8 @@ pip install -e ".[dev]"
 python -m pytest -q
 ```
 
-Tests must pass on Python 3.8 and 3.12. CI runs four combinations
-(ubuntu/windows × 3.8/3.12).
+Tests must pass on Python 3.12. CI runs two combinations
+(ubuntu/windows × 3.12).
 
 ## Scope
 
